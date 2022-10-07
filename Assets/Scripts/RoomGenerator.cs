@@ -4,8 +4,7 @@ using UnityEngine;
 public class RoomGenerator : MonoBehaviour
 {
     protected Vector2Int startPosition = Vector2Int.zero;
-    [SerializeField]
-    private int iterations = 10;
+    public int iterations = 10;
     public int walkLength = 10;
 
     [SerializeField]
