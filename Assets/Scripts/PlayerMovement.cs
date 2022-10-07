@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public Rigidbody2D rb;
     private Vector2 moveDirection;
+    public SpriteRenderer sr;
 
     private bool canDash = true;
     private bool isDashing = false;
@@ -28,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
         {
             StartCoroutine(Dash());
         }
+
+        Flip(rb.velocity.x);
     }
 
     void FixedUpdate() //Physics Calculation
@@ -51,6 +54,14 @@ public class PlayerMovement : MonoBehaviour
     void Move()
     {
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+    }
+
+    void Flip(float _velocity)
+    {
+        if (_velocity > 0.1f)
+            sr.flipX = true;
+        else if (_velocity < -0.1f)
+            sr.flipX = false;
     }
 
     private IEnumerator Dash()
