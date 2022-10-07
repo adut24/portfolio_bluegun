@@ -633,5 +633,13 @@ PrefabInstance:
       propertyPath: tilemap
       value: 
       objectReference: {fileID: 2118883393}
+    - target: {fileID: 5528559318250508117, guid: a0a87998f514b4053853760db9dfd2a6, type: 3}
+      propertyPath: iterations
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528559318250508117, guid: a0a87998f514b4053853760db9dfd2a6, type: 3}
+      propertyPath: walkLength
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0a87998f514b4053853760db9dfd2a6, type: 3}
