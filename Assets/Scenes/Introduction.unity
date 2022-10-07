@@ -9358,6 +9358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 8
   rb: {fileID: 1929888721}
+  sr: {fileID: 1929888722}
   tr: {fileID: 1929888725}
 --- !u!50 &1929888721
 Rigidbody2D:
