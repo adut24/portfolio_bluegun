@@ -1,29 +1,30 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SpawnPortal : MonoBehaviour
 {
-    private GameObject portal;
     private SpriteRenderer sprite;
     private Animator animator;
     private new CapsuleCollider2D collider;
+    private Animator fadeSystem;
     public string sceneName;
 
     private void Start()
     {
-        portal = GameObject.Find("Portal");
-        sprite = portal.GetComponent<SpriteRenderer>();
+        sprite = gameObject.GetComponent<SpriteRenderer>();
+        animator = gameObject.GetComponent<Animator>();
+        collider = gameObject.GetComponent<CapsuleCollider2D>();
+        fadeSystem = GameObject.Find("FadeSystem").GetComponent<Animator>();
         sprite.enabled = false;
-        animator = portal.GetComponent<Animator>();
         animator.enabled = false;
-        collider = portal.GetComponent<CapsuleCollider2D>();
         collider.enabled = false;
     }
 
     private void Update()
     {
-        GC.Collect();
+        GC.Collect();   /* Start the Garbage Collector */
         if (Enemy.enemyNumber == 0)
         {
             sprite.enabled = true;
@@ -35,6 +36,15 @@ public class SpawnPortal : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
-            SceneManager.LoadScene(sceneName);
+        {
+            StartCoroutine(LoadNextScene());
+        }
+    }
+
+    private IEnumerator LoadNextScene()
+    {
+        fadeSystem.SetTrigger("FadeIn");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(sceneName);
     }
 }

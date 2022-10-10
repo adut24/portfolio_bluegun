@@ -1,14 +1,14 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class RoomGenerator : MonoBehaviour
 {
-    protected Vector2Int startPosition = Vector2Int.zero;
+    private Vector2Int startPosition = Vector2Int.zero;
     public int iterations = 10;
     public int walkLength = 10;
-
-    [SerializeField]
-    private TilemapVisualiser tilemap;
+    public bool randomStart = true;
+    public TilemapVisualiser tilemap;
 
     private void Awake()
     {
@@ -18,7 +18,7 @@ public class RoomGenerator : MonoBehaviour
     public void RunProceduralGeneration()
     {
         HashSet<Vector2Int> floorPositions = RunRandomWalk();
-        tilemap.Clear();
+        floorPositions = FillHoles(floorPositions);
         tilemap.PaintFloorTiles(floorPositions);
         WallGenerator.CreateWalls(floorPositions, tilemap);
     }
@@ -32,8 +32,25 @@ public class RoomGenerator : MonoBehaviour
         {
             HashSet<Vector2Int> path = RandomWalk.RunRandomWalk(currentPosition, walkLength);
             floorPositions.UnionWith(path); /* Add element from path not already in floorPositions */
+            if (randomStart)
+                currentPosition = floorPositions.ElementAt(Random.Range(0, floorPositions.Count));
         }
 
+        return floorPositions;
+    }
+
+    protected HashSet<Vector2Int> FillHoles(HashSet<Vector2Int> floorPositions)
+    {
+        foreach (Vector2Int position in floorPositions.ToList())
+        {
+            foreach (Vector2Int direction in Distance2D.direction)
+            {
+                Vector2Int neighbourPosition = position + direction;
+
+                if (!floorPositions.Contains(neighbourPosition))
+                    floorPositions.Add(neighbourPosition);
+            }
+        }
         return floorPositions;
     }
 }
