@@ -1,32 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed;
-    public Rigidbody2D rb;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private SpriteRenderer sr;
     private Vector2 moveDirection;
-    public SpriteRenderer sr;
 
     private bool canDash = true;
     private bool isDashing = false;
     private float dashingPower = 24f;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 2f;
-    public TrailRenderer tr;
+    [SerializeField] private TrailRenderer tr;
+    [SerializeField] private Slider slider;
+    private float fillTime = 0f;
 
     void Update() //Player Inputs
     {
+        if (!canDash)
+            UpdateDashBar();
         if (isDashing)
-        {
             return;
-        }
 
         ProcessInputs();
 
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
         {
+            slider.value = 0;
             StartCoroutine(Dash());
         }
 
@@ -36,9 +40,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate() //Physics Calculation
     {
         if (isDashing)
-        {
             return;
-        }
 
         Move();
     }
@@ -48,12 +50,12 @@ public class PlayerMovement : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        moveDirection = new Vector2(moveX, moveY).normalized;
+        moveDirection = new Vector2(moveX, moveY).normalized;//Movement direction
     }
 
     void Move()
     {
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);//Movement apply
     }
 
     void Flip(float _velocity)
@@ -68,12 +70,19 @@ public class PlayerMovement : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
-        rb.velocity = new Vector2(moveDirection.x * dashingPower, moveDirection.y * dashingPower);
+        rb.velocity = new Vector2(moveDirection.x * dashingPower, moveDirection.y * dashingPower);//Dash
         tr.emitting = true;
-        yield return new WaitForSeconds(dashingTime);
+        yield return new WaitForSeconds(dashingTime);//0.2f for the dashing time
         tr.emitting = false;
         isDashing = false;
-        yield return new WaitForSeconds(dashingCooldown);
+        yield return new WaitForSeconds(dashingCooldown);//2f for the cooldown
+        fillTime = 0f;
         canDash = true;
+    }
+
+    void UpdateDashBar()//Update DashBar with time
+    {
+        slider.value = Mathf.Lerp(slider.minValue, slider.maxValue, fillTime);
+        fillTime += 0.45f * Time.deltaTime;
     }
 }
