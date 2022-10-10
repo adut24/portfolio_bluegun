@@ -17,13 +17,12 @@ public class WallGenerator
 
     public static void CreateWalls(HashSet<Vector2Int> floorPositions, TilemapVisualiser tilemap)
     {
-        IEnumerable<Vector2Int> wallsPositions = FindWallsPositions(floorPositions, allDirections);
+        HashSet<Vector2Int> wallsPositions = FindWallsPositions(floorPositions, allDirections);
 
         foreach (Vector2Int position in wallsPositions)
         {
             tilemap.PaintSingleWall(position);
         }
-
     }
 
     private static HashSet<Vector2Int> FindWallsPositions(HashSet<Vector2Int> floorPositions, List<Vector2Int> directions)
@@ -40,7 +39,6 @@ public class WallGenerator
                     wallsPositions.Add(neighbourPosition);
             }
         }
-
         return wallsPositions;
     }
 }
