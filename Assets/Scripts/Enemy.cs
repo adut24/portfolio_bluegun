@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -14,11 +15,15 @@ public class Enemy : MonoBehaviour
         enemyNumber--;
     }
 
-    private void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            Destroy(GameObject.Find("Dummy"));
-        }
+        StartCoroutine(ShowDamage());
+    }
+
+    private IEnumerator ShowDamage()
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.3f);
+        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
     }
 }
