@@ -4,6 +4,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public static int enemyNumber = 0;
+    public int health;
 
     Enemy()
     {
@@ -17,13 +18,24 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        StartCoroutine(ShowDamage());
+        if (!collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("Bomb"))
+        {
+            StartCoroutine(ShowDamage());
+        }
     }
 
-    private IEnumerator ShowDamage()
+    public IEnumerator ShowDamage()
     {
         gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(0.3f);
-        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        if (this)
+            this.GetComponent<SpriteRenderer>().color = Color.white;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+            Destroy(gameObject);
     }
 }
