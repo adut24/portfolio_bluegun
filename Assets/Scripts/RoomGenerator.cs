@@ -7,7 +7,7 @@ public class RoomGenerator : MonoBehaviour
     private Vector2Int startPosition = Vector2Int.zero;
     public int iterations = 10;
     public int walkLength = 10;
-    public bool randomStart = true;
+    public bool randomStart;
     public TilemapVisualiser tilemap;
 
     private void Awake()
@@ -21,6 +21,7 @@ public class RoomGenerator : MonoBehaviour
         floorPositions = FillHoles(floorPositions);
         tilemap.PaintFloorTiles(floorPositions);
         WallGenerator.CreateWalls(floorPositions, tilemap);
+        GameObject.Find("Player").transform.position = (Vector2)floorPositions.ElementAt(Random.Range(0, floorPositions.Count));
     }
 
     protected HashSet<Vector2Int> RunRandomWalk()

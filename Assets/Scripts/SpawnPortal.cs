@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SpawnPortal : MonoBehaviour
 {
-    private SpriteRenderer sprite;
     private Animator animator;
     private new CapsuleCollider2D collider;
     private Animator fadeSystem;
@@ -13,11 +12,9 @@ public class SpawnPortal : MonoBehaviour
 
     private void Start()
     {
-        sprite = gameObject.GetComponent<SpriteRenderer>();
         animator = gameObject.GetComponent<Animator>();
         collider = gameObject.GetComponent<CapsuleCollider2D>();
         fadeSystem = GameObject.Find("FadeSystem").GetComponent<Animator>();
-        sprite.enabled = false;
         animator.enabled = false;
         collider.enabled = false;
     }
@@ -27,9 +24,7 @@ public class SpawnPortal : MonoBehaviour
         GC.Collect();   /* Start the Garbage Collector */
         if (Enemy.enemyNumber == 0)
         {
-            sprite.enabled = true;
-            animator.enabled = true;
-            collider.enabled = true;
+            StartCoroutine(EnablePortal());
         }
     }
 
@@ -39,6 +34,19 @@ public class SpawnPortal : MonoBehaviour
         {
             StartCoroutine(LoadNextScene());
         }
+    }
+
+    private IEnumerator EnablePortal()
+    {
+        if (GameObject.Find("Lock"))
+        {
+            GameObject.Find("Lock").GetComponent<AudioSource>().enabled = true;
+            yield return new WaitForSeconds(1f);
+            Destroy(GameObject.Find("Lock"));
+        }
+        animator.enabled = true;
+        collider.enabled = true;
+
     }
 
     private IEnumerator LoadNextScene()
