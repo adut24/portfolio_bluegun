@@ -1,13 +1,17 @@
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 
 public class RoomGenerator : MonoBehaviour
 {
     private Vector2Int startPosition = Vector2Int.zero;
+    private GameObject createdBomb;
     public int iterations = 10;
     public int walkLength = 10;
     public bool randomStart;
+    public int bombNumber;
+    public int bombPower;
     public TilemapVisualiser tilemap;
 
     private void Awake()
@@ -21,7 +25,18 @@ public class RoomGenerator : MonoBehaviour
         floorPositions = FillHoles(floorPositions);
         tilemap.PaintFloorTiles(floorPositions);
         WallGenerator.CreateWalls(floorPositions, tilemap);
-        GameObject.Find("Player").transform.position = (Vector2)floorPositions.ElementAt(Random.Range(0, floorPositions.Count));
+        bool goodSpawn = false;
+        Vector2Int playerSpawn = new(0, 0);
+        while (!goodSpawn)
+        {
+            playerSpawn = floorPositions.ElementAt(Random.Range(0, floorPositions.Count));
+
+            if (floorPositions.Contains(playerSpawn + new Vector2Int(0, 1)) && floorPositions.Contains(playerSpawn + new Vector2Int(0, -1)))
+                goodSpawn = true;
+        }
+
+        GameObject.Find("Player").transform.position = (Vector2)playerSpawn;
+        SetBombs(floorPositions, bombNumber);
     }
 
     protected HashSet<Vector2Int> RunRandomWalk()
@@ -53,5 +68,15 @@ public class RoomGenerator : MonoBehaviour
             }
         }
         return floorPositions;
+    }
+
+    private void SetBombs(HashSet<Vector2Int> floorPositions, int bombNumber)
+    {
+        GameObject bomb = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Bomb.prefab", typeof(GameObject));
+        for (int i = 0; i < bombNumber; i++)
+        {
+            createdBomb = Instantiate(bomb, (Vector2)floorPositions.ElementAt(Random.Range(0, floorPositions.Count)), Quaternion.identity);
+            createdBomb.GetComponent<BombExplosion>().bombDamage = bombPower;
+        }
     }
 }

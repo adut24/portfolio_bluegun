@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 430194805}
   m_Layer: 0
   m_Name: dummy
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -628,7 +628,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iterations: 100
   walkLength: 50
-  randomStart: 1
+  randomStart: 0
+  bombNumber: 0
+  bombPower: 70
   tilemap: {fileID: 2118883393}
 --- !u!1 &1881968382
 GameObject:
