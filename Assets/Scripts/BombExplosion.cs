@@ -3,7 +3,13 @@ using UnityEngine;
 
 public class BombExplosion : MonoBehaviour
 {
+    private PlayerHealth playerHealth;
     public int bombDamage;
+
+    private void Start()
+    {
+        playerHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -16,7 +22,8 @@ public class BombExplosion : MonoBehaviour
     private void Explode()
     {
         Collider2D[] objectsPresent = Physics2D.OverlapCircleAll(gameObject.transform.position, 2f);
-        gameObject.GetComponent<CircleCollider2D>().radius = 2f;
+        gameObject.transform.localScale = new Vector2(7, 7);
+        gameObject.GetComponent<CircleCollider2D>().radius = 0.7f;
         foreach (Collider2D element in objectsPresent)
         {
             if (element.gameObject.CompareTag("Enemy"))
@@ -25,9 +32,8 @@ public class BombExplosion : MonoBehaviour
             }
             else if (element.gameObject.CompareTag("Player"))
             {
-                
+                playerHealth.TakeDamage(bombDamage);
             }
-
         }
     }
 
