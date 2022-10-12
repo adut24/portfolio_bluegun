@@ -12,7 +12,6 @@ public class TilemapVisualiser : MonoBehaviour
         /* IEnumerable makes possible to loop through a collection */
         PaintTiles(floorPositions, floorTilemap, floorTile);
     }
-
     private void PaintTiles(IEnumerable<Vector2Int> positions, Tilemap tilemap, TileBase tile)
     {
         foreach (Vector2Int position in positions)
