@@ -550,7 +550,6 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 172840997}
   m_OnClick:
     m_PersistentCalls:
-<<<<<<< Updated upstream
       m_Calls:
       - m_Target: {fileID: 721326847}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -576,9 +575,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-=======
-      m_Calls: []
->>>>>>> Stashed changes
 --- !u!114 &172840997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1843,7 +1839,6 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1157667139}
   m_OnClick:
     m_PersistentCalls:
-<<<<<<< Updated upstream
       m_Calls:
       - m_Target: {fileID: 721326847}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -1869,9 +1864,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-=======
-      m_Calls: []
->>>>>>> Stashed changes
 --- !u!114 &1157667139
 MonoBehaviour:
   m_ObjectHideFlags: 0
