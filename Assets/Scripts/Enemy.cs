@@ -7,8 +7,9 @@ public class Enemy : MonoBehaviour
     public int health;
     public int power;
     public float moveSpeed;
-    public float maxDistance;
-    private GameObject player;
+    public float minDistance;
+    public float detectionZone;
+    private GameObject player = null;
 
     Enemy()
     {
@@ -22,7 +23,7 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!player || Vector2.Distance(transform.position, player.transform.position) > maxDistance)
+        if (!player || Vector2.Distance(transform.position, player.transform.position) > minDistance)
             Pathfinding();
         else
             gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
@@ -30,16 +31,19 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Projectile"))
         {
             StartCoroutine(ShowDamage());
+            TakeDamage(10);
         }
     }
 
     public IEnumerator ShowDamage()
     {
         gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+
         yield return new WaitForSeconds(0.3f);
+
         if (this)
             this.GetComponent<SpriteRenderer>().color = Color.white;
     }
@@ -47,6 +51,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+
         if (health <= 0)
             Destroy(gameObject);
     }
@@ -55,7 +60,7 @@ public class Enemy : MonoBehaviour
     {
         if (!player)
         {
-            Collider2D[] detectZone = Physics2D.OverlapCircleAll(gameObject.transform.position, 10f);
+            Collider2D[] detectZone = Physics2D.OverlapCircleAll(transform.position, detectionZone);
 
             foreach (Collider2D element in detectZone)
             {
@@ -70,6 +75,9 @@ public class Enemy : MonoBehaviour
         {
             gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed);
+
+            if (Vector2.Distance(transform.position, player.transform.position) > 20f)
+                player = null;
         }
     }
 }
