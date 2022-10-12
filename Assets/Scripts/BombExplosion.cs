@@ -21,9 +21,9 @@ public class BombExplosion : MonoBehaviour
 
     private void Explode()
     {
-        Collider2D[] objectsPresent = Physics2D.OverlapCircleAll(gameObject.transform.position, 6f);
-        gameObject.transform.localScale = new Vector2(6, 6);
-        gameObject.GetComponent<CircleCollider2D>().radius = 1.5f;
+        Collider2D[] objectsPresent = Physics2D.OverlapCircleAll(gameObject.transform.position, 2f);
+        gameObject.transform.localScale = new Vector2(7, 7);
+        gameObject.GetComponent<CircleCollider2D>().radius = 0.7f;
         foreach (Collider2D element in objectsPresent)
         {
             if (element.gameObject.CompareTag("Enemy"))
@@ -34,7 +34,6 @@ public class BombExplosion : MonoBehaviour
             {
                 playerHealth.TakeDamage(bombDamage);
             }
-
         }
     }
 

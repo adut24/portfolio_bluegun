@@ -25,18 +25,8 @@ public class RoomGenerator : MonoBehaviour
         floorPositions = FillHoles(floorPositions);
         tilemap.PaintFloorTiles(floorPositions);
         WallGenerator.CreateWalls(floorPositions, tilemap);
-        bool goodSpawn = false;
-        Vector2Int playerSpawn = new(0, 0);
-        while (!goodSpawn)
-        {
-            playerSpawn = floorPositions.ElementAt(Random.Range(0, floorPositions.Count));
-
-            if (floorPositions.Contains(playerSpawn + new Vector2Int(0, 1)) && floorPositions.Contains(playerSpawn + new Vector2Int(0, -1)))
-                goodSpawn = true;
-        }
-
-        GameObject.Find("Player").transform.position = (Vector2)playerSpawn;
-        SetBombs(floorPositions, bombNumber);
+        SpawnPlayer(floorPositions);
+        SpawnBombs(floorPositions, bombNumber);
     }
 
     protected HashSet<Vector2Int> RunRandomWalk()
@@ -70,13 +60,51 @@ public class RoomGenerator : MonoBehaviour
         return floorPositions;
     }
 
-    private void SetBombs(HashSet<Vector2Int> floorPositions, int bombNumber)
+    private void SpawnPlayer(HashSet<Vector2Int> floorPositions)
+    {
+        Vector2 playerSpawn = VerifySpawn(floorPositions);
+
+        GameObject.Find("Player").transform.position = playerSpawn;
+    }
+
+    private void SpawnBombs(HashSet<Vector2Int> floorPositions, int bombNumber)
     {
         GameObject bomb = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Bomb.prefab", typeof(GameObject));
         for (int i = 0; i < bombNumber; i++)
         {
-            createdBomb = Instantiate(bomb, (Vector2)floorPositions.ElementAt(Random.Range(0, floorPositions.Count)), Quaternion.identity);
+            Vector2 bombSpawn = VerifySpawn(floorPositions);
+
+            createdBomb = Instantiate(bomb, bombSpawn, Quaternion.identity);
             createdBomb.GetComponent<BombExplosion>().bombDamage = bombPower;
         }
+    }
+
+    private Vector2 VerifySpawn(HashSet<Vector2Int> floorPositions)
+    {
+        bool goodSpawn = false;
+        Vector2Int spawn = new(0, 0);
+
+        while (!goodSpawn)
+        {
+            int count = 0;
+            spawn = floorPositions.ElementAt(Random.Range(0, floorPositions.Count));
+
+            foreach (Vector2Int direction in WallGenerator.allDirections)
+            {
+                floorPositions.ElementAt(Random.Range(0, floorPositions.Count));
+                if (!floorPositions.Contains(spawn + direction))
+                    break;
+                count++;
+            }
+
+            if (count == 8)
+            {
+                Collider2D[] surrounding = Physics2D.OverlapCircleAll(spawn, 7f);
+                if (surrounding.Length == 0)
+                    goodSpawn = true;
+            }
+        }
+
+        return spawn;
     }
 }
