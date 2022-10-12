@@ -21,6 +21,7 @@ public class BombExplosion : MonoBehaviour
 
     private void Explode()
     {
+        gameObject.GetComponent<AudioSource>().enabled = true;
         Collider2D[] objectsPresent = Physics2D.OverlapCircleAll(gameObject.transform.position, 2f);
         gameObject.transform.localScale = new Vector2(7, 7);
         gameObject.GetComponent<CircleCollider2D>().radius = 0.7f;
