@@ -1,15 +1,18 @@
 using System.Collections.Generic;
+using System.Linq;
+using UnityEditor;
 using UnityEngine;
 
 public class RoomGenerator : MonoBehaviour
 {
-    protected Vector2Int startPosition = Vector2Int.zero;
-    [SerializeField]
-    private int iterations = 10;
+    private Vector2Int startPosition = Vector2Int.zero;
+    private GameObject createdBomb;
+    public int iterations = 10;
     public int walkLength = 10;
-
-    [SerializeField]
-    private TilemapVisualiser tilemap;
+    public bool randomStart;
+    public int bombNumber;
+    public int bombPower;
+    public TilemapVisualiser tilemap;
 
     private void Awake()
     {
@@ -19,9 +22,11 @@ public class RoomGenerator : MonoBehaviour
     public void RunProceduralGeneration()
     {
         HashSet<Vector2Int> floorPositions = RunRandomWalk();
-        tilemap.Clear();
+        floorPositions = FillHoles(floorPositions);
         tilemap.PaintFloorTiles(floorPositions);
         WallGenerator.CreateWalls(floorPositions, tilemap);
+        SpawnPlayer(floorPositions);
+        SpawnBombs(floorPositions, bombNumber);
     }
 
     protected HashSet<Vector2Int> RunRandomWalk()
@@ -33,8 +38,73 @@ public class RoomGenerator : MonoBehaviour
         {
             HashSet<Vector2Int> path = RandomWalk.RunRandomWalk(currentPosition, walkLength);
             floorPositions.UnionWith(path); /* Add element from path not already in floorPositions */
+            if (randomStart)
+                currentPosition = floorPositions.ElementAt(Random.Range(0, floorPositions.Count));
         }
 
         return floorPositions;
+    }
+
+    protected HashSet<Vector2Int> FillHoles(HashSet<Vector2Int> floorPositions)
+    {
+        foreach (Vector2Int position in floorPositions.ToList())
+        {
+            foreach (Vector2Int direction in Distance2D.direction)
+            {
+                Vector2Int neighbourPosition = position + direction;
+
+                if (!floorPositions.Contains(neighbourPosition))
+                    floorPositions.Add(neighbourPosition);
+            }
+        }
+        return floorPositions;
+    }
+
+    private void SpawnPlayer(HashSet<Vector2Int> floorPositions)
+    {
+        Vector2 playerSpawn = VerifySpawn(floorPositions);
+
+        GameObject.Find("Player").transform.position = playerSpawn;
+    }
+
+    private void SpawnBombs(HashSet<Vector2Int> floorPositions, int bombNumber)
+    {
+        GameObject bomb = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Bomb.prefab", typeof(GameObject));
+        for (int i = 0; i < bombNumber; i++)
+        {
+            Vector2 bombSpawn = VerifySpawn(floorPositions);
+
+            createdBomb = Instantiate(bomb, bombSpawn, Quaternion.identity);
+            createdBomb.GetComponent<BombExplosion>().bombDamage = bombPower;
+        }
+    }
+
+    private Vector2 VerifySpawn(HashSet<Vector2Int> floorPositions)
+    {
+        bool goodSpawn = false;
+        Vector2Int spawn = new(0, 0);
+
+        while (!goodSpawn)
+        {
+            int count = 0;
+            spawn = floorPositions.ElementAt(Random.Range(0, floorPositions.Count));
+
+            foreach (Vector2Int direction in WallGenerator.allDirections)
+            {
+                floorPositions.ElementAt(Random.Range(0, floorPositions.Count));
+                if (!floorPositions.Contains(spawn + direction))
+                    break;
+                count++;
+            }
+
+            if (count == 8)
+            {
+                Collider2D[] surrounding = Physics2D.OverlapCircleAll(spawn, 7f);
+                if (surrounding.Length == 0)
+                    goodSpawn = true;
+            }
+        }
+
+        return spawn;
     }
 }

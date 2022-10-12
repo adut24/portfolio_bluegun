@@ -2,17 +2,19 @@ using UnityEngine;
 
 public class LightTorch : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject offTorch, onTorch;
+    public GameObject offTorch, onTorch;
 
-    void Start()
+    private void Start()
     {
         onTorch.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(offTorch);
-        onTorch.SetActive(true);
+        if (collision.CompareTag("Player"))
+        {
+            Destroy(offTorch);
+            onTorch.SetActive(true);
+        }
     }
 }
