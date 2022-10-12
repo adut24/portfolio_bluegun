@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor;
 using UnityEngine;
 
 public class RoomGenerator : MonoBehaviour
@@ -69,7 +68,8 @@ public class RoomGenerator : MonoBehaviour
 
     private void SpawnBombs(HashSet<Vector2Int> floorPositions, int bombNumber)
     {
-        GameObject bomb = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Bomb.prefab", typeof(GameObject));
+        GameObject bomb = Resources.Load<GameObject>("Bomb");
+
         for (int i = 0; i < bombNumber; i++)
         {
             Vector2 bombSpawn = VerifySpawn(floorPositions);

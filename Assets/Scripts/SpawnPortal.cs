@@ -6,17 +6,14 @@ using UnityEngine.SceneManagement;
 public class SpawnPortal : MonoBehaviour
 {
     private Animator animator;
-    private new CapsuleCollider2D collider;
     private Animator fadeSystem;
     public string sceneName;
 
     private void Start()
     {
         animator = gameObject.GetComponent<Animator>();
-        collider = gameObject.GetComponent<CapsuleCollider2D>();
         fadeSystem = GameObject.Find("FadeSystem").GetComponent<Animator>();
         animator.enabled = false;
-        collider.enabled = false;
     }
 
     private void Update()
@@ -45,8 +42,6 @@ public class SpawnPortal : MonoBehaviour
             Destroy(GameObject.Find("Lock"));
         }
         animator.enabled = true;
-        collider.enabled = true;
-
     }
 
     private IEnumerator LoadNextScene()
