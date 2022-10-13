@@ -5,21 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class SpawnPortal : MonoBehaviour
 {
-    private Animator animator;
+    private Animator portalAnimation;
     private Animator fadeSystem;
     public string sceneName;
+    private bool functionCalled = false;
 
     private void Start()
     {
-        animator = gameObject.GetComponent<Animator>();
+        portalAnimation = gameObject.GetComponent<Animator>();
         fadeSystem = GameObject.Find("FadeSystem").GetComponent<Animator>();
-        animator.enabled = false;
+        portalAnimation.enabled = false;
     }
 
     private void Update()
     {
         GC.Collect();   /* Start the Garbage Collector */
-        if (Enemy.enemyNumber == 0)
+        if (Enemy.enemyNumber == 0 && !functionCalled)
         {
             StartCoroutine(EnablePortal());
         }
@@ -35,13 +36,11 @@ public class SpawnPortal : MonoBehaviour
 
     private IEnumerator EnablePortal()
     {
-        if (GameObject.Find("Lock"))
-        {
-            GameObject.Find("Lock").GetComponent<AudioSource>().enabled = true;
-            yield return new WaitForSeconds(1f);
-            Destroy(GameObject.Find("Lock"));
-        }
-        animator.enabled = true;
+        gameObject.transform.GetChild(0).GetComponent<AudioSource>().enabled = true;
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject.transform.GetChild(0).gameObject);
+        portalAnimation.enabled = true;
+        functionCalled = true;
     }
 
     private IEnumerator LoadNextScene()
