@@ -1032,6 +1032,7 @@ GameObject:
   - component: {fileID: 410391175}
   - component: {fileID: 410391174}
   - component: {fileID: 410391173}
+  - component: {fileID: 410391177}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1122,6 +1123,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &410391177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410391172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7293b8c4e9954e51685baf2be4d8505b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 9443ccb758d52f26c940112d8212d9ce, type: 2}
+  startVolume: 20
 --- !u!1 &465897205
 GameObject:
   m_ObjectHideFlags: 0
@@ -2180,7 +2195,7 @@ MonoBehaviour:
   m_MinValue: 0.001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2209,7 +2224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: 9443ccb758d52f26c940112d8212d9ce, type: 2}
-  volumeText: {fileID: 0}
+  volumeText: {fileID: 2013570412}
 --- !u!1 &1519028184
 GameObject:
   m_ObjectHideFlags: 0
