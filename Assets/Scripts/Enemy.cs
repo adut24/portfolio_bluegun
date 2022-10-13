@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
@@ -7,7 +8,9 @@ public class Enemy : MonoBehaviour
     public int health;
     public int power;
     public float moveSpeed;
-    public float maxDistance;
+    public float minDistance;
+    public float detectionZone;
+    public float maxFollowDistance;
     private GameObject player;
 
     Enemy()
@@ -22,24 +25,25 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!player || Vector2.Distance(transform.position, player.transform.position) > maxDistance)
+        if (!player || Vector2.Distance(transform.position, player.transform.position) > minDistance)
             Pathfinding();
-        else
-            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Projectile"))
         {
             StartCoroutine(ShowDamage());
+            TakeDamage(10);
         }
     }
 
     public IEnumerator ShowDamage()
     {
         gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+
         yield return new WaitForSeconds(0.3f);
+
         if (this)
             this.GetComponent<SpriteRenderer>().color = Color.white;
     }
@@ -47,6 +51,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+
         if (health <= 0)
             Destroy(gameObject);
     }
@@ -55,7 +60,7 @@ public class Enemy : MonoBehaviour
     {
         if (!player)
         {
-            Collider2D[] detectZone = Physics2D.OverlapCircleAll(gameObject.transform.position, 10f);
+            Collider2D[] detectZone = Physics2D.OverlapCircleAll(transform.position, detectionZone);
 
             foreach (Collider2D element in detectZone)
             {
@@ -65,11 +70,30 @@ public class Enemy : MonoBehaviour
                     break;
                 }
             }
+
+            if (player)
+            {
+                Collider2D[] detectCollider = Physics2D.OverlapAreaAll(transform.position, player.transform.position);
+                foreach (Collider2D item in detectCollider)
+                {
+                    if (item.gameObject.name == "Walls")
+                    {
+                        player = null;
+                        break;
+                    }
+                }
+            }
         }
         else
         {
-            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed);
+
+            if (transform.rotation != Quaternion.identity)
+                transform.rotation = Quaternion.identity;
+
+
+            if (Vector2.Distance(transform.position, player.transform.position) > maxFollowDistance)
+                player = null;
         }
     }
 }

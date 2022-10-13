@@ -92,6 +92,7 @@ public class RoomGenerator : MonoBehaviour
             foreach (Vector2Int direction in WallGenerator.allDirections)
             {
                 floorPositions.ElementAt(Random.Range(0, floorPositions.Count));
+
                 if (!floorPositions.Contains(spawn + direction))
                     break;
                 count++;

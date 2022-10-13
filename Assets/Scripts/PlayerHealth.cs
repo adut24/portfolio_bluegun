@@ -17,4 +17,12 @@ public class PlayerHealth : MonoBehaviour
         currenthealth -= damage;
         hb.SetHealth(currenthealth);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            TakeDamage(collision.gameObject.GetComponent<Enemy>().power);
+        }
+    }
 }
