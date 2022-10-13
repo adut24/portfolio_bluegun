@@ -25,8 +25,6 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!player)
-            StartCoroutine(RandomMove());
         if (!player || Vector2.Distance(transform.position, player.transform.position) > minDistance)
             Pathfinding();
     }
@@ -93,20 +91,9 @@ public class Enemy : MonoBehaviour
             if (transform.rotation != Quaternion.identity)
                 transform.rotation = Quaternion.identity;
 
+
             if (Vector2.Distance(transform.position, player.transform.position) > maxFollowDistance)
                 player = null;
         }
-    }
-
-    private IEnumerator RandomMove()
-    {
-        Vector2 direction = new Vector2(Random.Range(-100, 100), Random.Range(-10, 100));
-        float force = 10000f;
-
-        if (transform.rotation != Quaternion.identity)
-            transform.rotation = Quaternion.identity;
-
-        gameObject.GetComponent<Rigidbody2D>().AddForce(direction * force);
-        yield return new WaitForSeconds(2f);
     }
 }

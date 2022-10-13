@@ -581,7 +581,7 @@ MonoBehaviour:
   power: 5
   moveSpeed: 0.05
   minDistance: 0.5
-  detectionZone: 1
+  detectionZone: 10
   maxFollowDistance: 20
 --- !u!95 &1622892029
 Animator:
