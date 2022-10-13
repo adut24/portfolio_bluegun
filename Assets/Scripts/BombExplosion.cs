@@ -27,22 +27,13 @@ public class BombExplosion : MonoBehaviour
         foreach (Collider2D element in objectsPresent)
         {
             if (element.gameObject.CompareTag("Enemy"))
-                StartCoroutine(EnemyTouched(element.gameObject));
+            {
+                StartCoroutine(element.gameObject.GetComponent<Enemy>().ShowDamage());
+                element.gameObject.GetComponent<Enemy>().TakeDamage(bombDamage);
+            }
             else if (element.gameObject.CompareTag("Player"))
                 playerHealth.TakeDamage(bombDamage);
         }
-    }
-
-    private IEnumerator EnemyTouched(GameObject enemy)
-    {
-        enemy.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-        StartCoroutine(enemy.GetComponent<Enemy>().ShowDamage());
-        enemy.GetComponent<Enemy>().TakeDamage(bombDamage);
-
-        yield return new WaitForSeconds(0.5f);
-
-        if (enemy)
-            enemy.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
     }
 
     private void AfterExplosion()
