@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class KeepOnLoad : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class KeepOnLoad : MonoBehaviour
     {
         foreach (GameObject element in objects)
         {
-            DontDestroyOnLoad(element);
+                DontDestroyOnLoad(element);
         }
     }
 }
