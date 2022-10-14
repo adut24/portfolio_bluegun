@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using Random = UnityEngine.Random;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -12,6 +12,10 @@ public class Enemy : MonoBehaviour
     public float detectionZone;
     public float maxFollowDistance;
     private GameObject player;
+    private SpriteRenderer sprite;
+    private Rigidbody2D rb;
+    private float execTime = 2f;
+    private Vector2 dir;
 
     Enemy()
     {
@@ -23,8 +27,24 @@ public class Enemy : MonoBehaviour
         enemyNumber--;
     }
 
+    private void Start()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
+        rb.freezeRotation = true;
+    }
+
+    private void Update()
+    {
+        execTime -= Time.deltaTime;
+        if (!player && execTime <= 0)
+            dir = new Vector2(Random.Range(-1000, 1000), Random.Range(-1000, 1000));
+    }
+
     private void FixedUpdate()
     {
+        if (SceneManager.GetActiveScene().name != "Introduction" && !player && execTime <= 0)
+            MoveRandom();
         if (!player || Vector2.Distance(transform.position, player.transform.position) > minDistance)
             Pathfinding();
     }
@@ -40,12 +60,12 @@ public class Enemy : MonoBehaviour
 
     public IEnumerator ShowDamage()
     {
-        gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        sprite.color = Color.red;
 
         yield return new WaitForSeconds(0.3f);
 
         if (this)
-            this.GetComponent<SpriteRenderer>().color = Color.white;
+            sprite.color = Color.white;
     }
 
     public void TakeDamage(int damage)
@@ -62,11 +82,11 @@ public class Enemy : MonoBehaviour
         {
             Collider2D[] detectZone = Physics2D.OverlapCircleAll(transform.position, detectionZone);
 
-            foreach (Collider2D element in detectZone)
+            foreach (Collider2D obj in detectZone)
             {
-                if (element.gameObject.CompareTag("Player"))
+                if (obj.gameObject.CompareTag("Player"))
                 {
-                    player = element.gameObject;
+                    player = obj.gameObject;
                     break;
                 }
             }
@@ -74,9 +94,9 @@ public class Enemy : MonoBehaviour
             if (player)
             {
                 Collider2D[] detectCollider = Physics2D.OverlapAreaAll(transform.position, player.transform.position);
-                foreach (Collider2D item in detectCollider)
+                foreach (Collider2D obj in detectCollider)
                 {
-                    if (item.gameObject.name == "Walls")
+                    if (obj.gameObject.name == "Walls")
                     {
                         player = null;
                         break;
@@ -88,12 +108,15 @@ public class Enemy : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed);
 
-            if (transform.rotation != Quaternion.identity)
-                transform.rotation = Quaternion.identity;
-
-
             if (Vector2.Distance(transform.position, player.transform.position) > maxFollowDistance)
                 player = null;
         }
+    }
+
+    private void MoveRandom()
+    {
+        rb.velocity = Vector3.zero;
+        rb.AddForce(dir * 100000f);
+        execTime = 2f;
     }
 }

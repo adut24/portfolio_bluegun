@@ -8,7 +8,6 @@ public class SpawnPortal : MonoBehaviour
     private Animator portalAnimation;
     private Animator fadeSystem;
     public string sceneName;
-    private bool functionCalled = false;
 
     private void Start()
     {
@@ -20,7 +19,7 @@ public class SpawnPortal : MonoBehaviour
     private void Update()
     {
         GC.Collect();   /* Start the Garbage Collector */
-        if (Enemy.enemyNumber == 0 && !functionCalled)
+        if (Enemy.enemyNumber == 0)
         {
             StartCoroutine(EnablePortal());
         }
@@ -36,17 +35,23 @@ public class SpawnPortal : MonoBehaviour
 
     private IEnumerator EnablePortal()
     {
-        gameObject.transform.GetChild(0).GetComponent<AudioSource>().enabled = true;
+        if (transform.childCount > 0)
+            transform.GetChild(0).GetComponent<AudioSource>().enabled = true;
+
         yield return new WaitForSeconds(1f);
-        Destroy(gameObject.transform.GetChild(0).gameObject);
+
+        if (transform.childCount > 0)
+            Destroy(transform.GetChild(0).gameObject);
+
         portalAnimation.enabled = true;
-        functionCalled = true;
     }
 
     private IEnumerator LoadNextScene()
     {
         fadeSystem.SetTrigger("FadeIn");
+
         yield return new WaitForSeconds(1f);
+
         SceneManager.LoadScene(sceneName);
     }
 }
