@@ -106,8 +106,9 @@ public class Enemy : MonoBehaviour
         }
         else
         {
+            rb.velocity = Vector3.zero;
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed);
-
+            Flip(transform.position, player.transform.position);
             if (Vector2.Distance(transform.position, player.transform.position) > maxFollowDistance)
                 player = null;
         }
@@ -117,6 +118,15 @@ public class Enemy : MonoBehaviour
     {
         rb.velocity = Vector3.zero;
         rb.AddForce(dir * 100000f);
+        Flip(transform.position, dir);
         execTime = 2f;
+    }
+
+    private void Flip(Vector2 position, Vector2 target)
+    {
+        if (position.x > target.x)
+            sprite.flipX = true;
+        else
+            sprite.flipX = false;
     }
 }
