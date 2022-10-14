@@ -12418,7 +12418,7 @@ MonoBehaviour:
   rb: {fileID: 1929888721}
   sr: {fileID: 1929888722}
   tr: {fileID: 1929888725}
-  slider: {fileID: 0}
+  slider: {fileID: 2104296662}
 --- !u!50 &1929888721
 Rigidbody2D:
   serializedVersion: 4
