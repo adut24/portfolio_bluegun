@@ -43,4 +43,12 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(1f);
         isInvicible = false;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            TakeDamage(collision.gameObject.GetComponent<Enemy>().power);
+        }
+    }
 }

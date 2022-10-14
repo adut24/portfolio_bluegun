@@ -11,6 +11,7 @@ public class RoomGenerator : MonoBehaviour
     public bool randomStart;
     public int bombNumber;
     public int bombPower;
+    public int enemyNumber;
     public TilemapVisualiser tilemap;
 
     private void Awake()
@@ -79,6 +80,11 @@ public class RoomGenerator : MonoBehaviour
         }
     }
 
+    private void SpawnEnemies(HashSet<Vector2Int> floorPositions, int enemyNumber)
+    {
+
+    }
+
     private Vector2 VerifySpawn(HashSet<Vector2Int> floorPositions)
     {
         bool goodSpawn = false;
@@ -92,6 +98,7 @@ public class RoomGenerator : MonoBehaviour
             foreach (Vector2Int direction in WallGenerator.allDirections)
             {
                 floorPositions.ElementAt(Random.Range(0, floorPositions.Count));
+
                 if (!floorPositions.Contains(spawn + direction))
                     break;
                 count++;
@@ -104,7 +111,6 @@ public class RoomGenerator : MonoBehaviour
                     goodSpawn = true;
             }
         }
-
         return spawn;
     }
 }

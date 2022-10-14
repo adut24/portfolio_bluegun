@@ -5,15 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class SpawnPortal : MonoBehaviour
 {
-    private Animator animator;
+    private Animator portalAnimation;
     private Animator fadeSystem;
     public string sceneName;
 
     private void Start()
     {
-        animator = gameObject.GetComponent<Animator>();
+        portalAnimation = gameObject.GetComponent<Animator>();
         fadeSystem = GameObject.Find("FadeSystem").GetComponent<Animator>();
-        animator.enabled = false;
+        portalAnimation.enabled = false;
     }
 
     private void Update()
@@ -35,19 +35,23 @@ public class SpawnPortal : MonoBehaviour
 
     private IEnumerator EnablePortal()
     {
-        if (GameObject.Find("Lock"))
-        {
-            GameObject.Find("Lock").GetComponent<AudioSource>().enabled = true;
-            yield return new WaitForSeconds(1f);
-            Destroy(GameObject.Find("Lock"));
-        }
-        animator.enabled = true;
+        if (transform.childCount > 0)
+            transform.GetChild(0).GetComponent<AudioSource>().enabled = true;
+
+        yield return new WaitForSeconds(1f);
+
+        if (transform.childCount > 0)
+            Destroy(transform.GetChild(0).gameObject);
+
+        portalAnimation.enabled = true;
     }
 
     private IEnumerator LoadNextScene()
     {
         fadeSystem.SetTrigger("FadeIn");
+
         yield return new WaitForSeconds(1f);
+
         SceneManager.LoadScene(sceneName);
     }
 }
