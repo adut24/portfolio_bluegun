@@ -21,18 +21,19 @@ public class BombExplosion : MonoBehaviour
     {
         gameObject.GetComponent<AudioSource>().enabled = true;
         Collider2D[] objectsPresent = Physics2D.OverlapCircleAll(gameObject.transform.position, 2f);
-        gameObject.transform.localScale = new Vector2(7, 7);
-        gameObject.GetComponent<CircleCollider2D>().radius = 0.7f;
+        transform.localScale = new Vector2(4, 4);
 
         foreach (Collider2D element in objectsPresent)
         {
             if (element.gameObject.CompareTag("Enemy"))
             {
-                StartCoroutine(element.gameObject.GetComponent<Enemy>().ShowDamage());
-                element.gameObject.GetComponent<Enemy>().TakeDamage(bombDamage);
+                StartCoroutine(element.GetComponent<Enemy>().ShowDamage());
+                element.GetComponent<Enemy>().TakeDamage(bombDamage);
             }
             else if (element.gameObject.CompareTag("Player"))
+            {
                 playerHealth.TakeDamage(bombDamage);
+            }
         }
     }
 
