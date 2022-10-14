@@ -5,9 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void PlayGame ()
+    public KeepOnLoad script = null;
+    public void ChangeScene (string sceneName)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (script)
+        {
+            foreach (GameObject element in script.objects)
+            {
+                Destroy(element);
+            }
+        }
+        SceneManager.LoadScene(sceneName);
     }
     
     public void QuitGame ()
