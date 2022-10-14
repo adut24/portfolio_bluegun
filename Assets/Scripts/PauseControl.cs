@@ -12,14 +12,12 @@ public class PauseControl : MonoBehaviour
     {
         	if (pause is true)
         	{
-            UnityEngine.Debug.Log("nuuuuuuuuuu");
-            Time.timeScale = 0f;
+            	Time.timeScale = 0f;
 				pauseMenuUI.SetActive(true);
 				isPaused = true;
         	}
         	else
         	{
-            UnityEngine.Debug.Log("Hello");
         		Time.timeScale = 1;
 				pauseMenuUI.SetActive(false);
 				isPaused = false;
