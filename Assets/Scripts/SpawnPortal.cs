@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,8 +17,8 @@ public class SpawnPortal : MonoBehaviour
 
     private void Update()
     {
-        GC.Collect();   /* Start the Garbage Collector */
-        if (Enemy.enemyNumber == 0)
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        if (enemies.Length == 0)
         {
             StartCoroutine(EnablePortal());
         }
