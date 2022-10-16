@@ -11,7 +11,10 @@ public class RoomGenerator : MonoBehaviour
     public bool randomStart;
     public int bombNumber;
     public int bombPower;
+    public int enemyNumber;
+    public string difficulty;
     public TilemapVisualiser tilemap;
+    public HashSet<Vector2Int> floorPositions;
 
     private void Awake()
     {
@@ -20,12 +23,13 @@ public class RoomGenerator : MonoBehaviour
 
     public void RunProceduralGeneration()
     {
-        HashSet<Vector2Int> floorPositions = RunRandomWalk();
+        floorPositions = RunRandomWalk();
         floorPositions = FillHoles(floorPositions);
         tilemap.PaintFloorTiles(floorPositions);
         WallGenerator.CreateWalls(floorPositions, tilemap);
-        SpawnPlayer(floorPositions);
-        SpawnBombs(floorPositions, bombNumber);
+        SpawnBombs(bombNumber);
+        SpawnEnemies(enemyNumber);
+        SpawnPlayer();
     }
 
     protected HashSet<Vector2Int> RunRandomWalk()
@@ -59,14 +63,14 @@ public class RoomGenerator : MonoBehaviour
         return floorPositions;
     }
 
-    private void SpawnPlayer(HashSet<Vector2Int> floorPositions)
+    private void SpawnPlayer()
     {
         Vector2 playerSpawn = VerifySpawn(floorPositions);
 
         GameObject.Find("Player").transform.position = playerSpawn;
     }
 
-    private void SpawnBombs(HashSet<Vector2Int> floorPositions, int bombNumber)
+    private void SpawnBombs(int bombNumber)
     {
         GameObject bomb = Resources.Load<GameObject>("Bomb");
 
@@ -76,6 +80,17 @@ public class RoomGenerator : MonoBehaviour
 
             createdBomb = Instantiate(bomb, bombSpawn, Quaternion.identity);
             createdBomb.GetComponent<BombExplosion>().bombDamage = bombPower;
+        }
+    }
+
+    private void SpawnEnemies(int enemyNumber)
+    {
+        GameObject[] enemies = Resources.LoadAll<GameObject>("Enemies/" + difficulty);
+
+        for (int i = 0; i < enemyNumber; i++)
+        {
+            Vector2 position = VerifySpawn(floorPositions);
+            Instantiate(enemies[Random.Range(0, enemies.Length)], position, Quaternion.identity);
         }
     }
 
@@ -100,12 +115,11 @@ public class RoomGenerator : MonoBehaviour
 
             if (count == 8)
             {
-                Collider2D[] surrounding = Physics2D.OverlapCircleAll(spawn, 7f);
-                if (surrounding.Length == 0)
+                Collider2D[] objectsFound = Physics2D.OverlapCircleAll(spawn, 7f);
+                if (objectsFound.Length == 0)
                     goodSpawn = true;
             }
         }
-
         return spawn;
     }
 }

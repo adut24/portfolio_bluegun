@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
-    public static int enemyNumber = 0;
     public int health;
     public int power;
     public float moveSpeed;
@@ -16,16 +15,6 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D rb;
     private float execTime = 2f;
     private Vector2 dir;
-
-    Enemy()
-    {
-        enemyNumber++;
-    }
-
-    ~Enemy()
-    {
-        enemyNumber--;
-    }
 
     private void Start()
     {
@@ -51,7 +40,7 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Projectile"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             StartCoroutine(ShowDamage());
             TakeDamage(10);
@@ -106,8 +95,9 @@ public class Enemy : MonoBehaviour
         }
         else
         {
+            rb.velocity = Vector3.zero;
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed);
-
+            Flip(transform.position, player.transform.position);
             if (Vector2.Distance(transform.position, player.transform.position) > maxFollowDistance)
                 player = null;
         }
@@ -116,7 +106,16 @@ public class Enemy : MonoBehaviour
     private void MoveRandom()
     {
         rb.velocity = Vector3.zero;
-        rb.AddForce(dir * 100000f);
+        rb.AddForce(dir * 1.25f);
+        Flip(transform.position, dir);
         execTime = 2f;
+    }
+
+    private void Flip(Vector2 position, Vector2 target)
+    {
+        if (position.x > target.x)
+            sprite.flipX = true;
+        else
+            sprite.flipX = false;
     }
 }
