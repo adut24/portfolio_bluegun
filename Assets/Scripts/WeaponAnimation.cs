@@ -37,12 +37,12 @@ public class WeaponAnimation : MonoBehaviour
         rotValue = RotateSpeed * Time.deltaTime;
 
         Debug.LogFormat("Target angle: {0} || Cur Angle: {1}", targetAngle, _angle);
-        if (_angle < targetAngle && targetAngle - _angle > rotValue)
+        if (Mathf.Abs(_angle - targetAngle) < Mathf.PI && targetAngle - _angle > rotValue)
         {
             Debug.Log("A");
             _angle += rotValue;
         }
-        else if (_angle > targetAngle && _angle - targetAngle > rotValue)
+        else if (Mathf.Abs(targetAngle - _angle) < Mathf.PI && _angle - targetAngle > rotValue)
         {
             Debug.Log("B");
             _angle -= rotValue;
