@@ -1,0 +1,3294 @@
+fileFormatVersion: 2
+guid: 6d5594d8724ec7048b7c62cf79b20822
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: magic_orbs_lowres_0
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 450
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a25b12a796c9248a5d5db7350ed364
+      internalID: -726273245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_1
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 466
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996e349e2d23cd246924f0e0c2ebfb38
+      internalID: 1184137269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_2
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 450
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5151178808dbe44d857ac9b93a2cd86
+      internalID: 1851107434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_4
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 417
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a0ff8c7eb4ef3429045e0100c63487
+      internalID: 649105672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 434
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95adbcb52fb28b549bb9e0eff3c07b0c
+      internalID: 1786133813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_6
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 417
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701435a0b441681488201531595ff728
+      internalID: 972044141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_7
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 434
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d8b7d247a607e40ade817feeed91f7
+      internalID: -2100856958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_8
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 417
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e628e3a30f5400a45bb6455013153eb9
+      internalID: 678519150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_9
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 434
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342b70f91f884ea4abc87da2a1eeb438
+      internalID: -1165876402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_10
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 417
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee1be580d490ffd438799d1f0d2ea107
+      internalID: 690464316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_11
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 384
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 016901d1215ceae4696185150a442d03
+      internalID: 1485750908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_12
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 400
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baff023ef84ab6647b75cb3f5a1943ee
+      internalID: 450196622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_13
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 384
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3206f1d0ad3128143b82de92476fa5b4
+      internalID: 248828726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_14
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 400
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84be6eb8e1437164f8936e63b22f253d
+      internalID: 1353605462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_15
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 384
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2d15b1c2de5564b9eef37f38c0ca9c
+      internalID: -456442948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_16
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 400
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea292a09da06369459faebb1559ca5d5
+      internalID: -1181907337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_17
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 384
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b363d5b0be6606a4eaed8c2036bda334
+      internalID: 1978487873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_18
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 400
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0472d5ca4bf33b479d1bce1fa02e1cd
+      internalID: 1141298225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_19
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 384
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c7eeaf0db019849a2bb2e8dbfa31b8
+      internalID: 82800937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_20
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 400
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a080892f90acb4bbf9d2d97d9020b1
+      internalID: -23160747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_21
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 384
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a85c1fefd0e054984b6519c860289e
+      internalID: -1999506090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_22
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 351
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251524de46001af4eb118a89d071e2f1
+      internalID: -1111853147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_23
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 368
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a452875e2313ce41a67b2b74a7ed081
+      internalID: -463118998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_24
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 351
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca02a664b1e5ea2468ac140929b44dd7
+      internalID: -644663733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_25
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 368
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d31f5f8f81bec40b24d0734aefd1d0
+      internalID: 1154190906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_26
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 351
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713d1a85c378a3a49952cc0b7008e0d9
+      internalID: 391340557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_27
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 368
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0fd5da124e364f43a36d3b28acc8847
+      internalID: 1254653747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_28
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 351
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9af19b9af29774aa3cc0e6c977c5dd
+      internalID: -712918074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_29
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 368
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f744b96f0c6b7af4990ca87e6b586b3f
+      internalID: -944416640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_30
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 351
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e7339fd58987f46808cfb451c1769a
+      internalID: -1882888968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_31
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 368
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef0a00251855534cacad738b69b608a
+      internalID: 1047024613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_32
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 351
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dbb6868cd5bd644c911a4e65f1c2401
+      internalID: 1058776481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_33
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 368
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f48920e5c8072184bb770ce4ab5f6b2c
+      internalID: -803587294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_34
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 351
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73db4060bdb049949bf621f2a19cbd4a
+      internalID: -2094807729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_35
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 368
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c601b01589e97734789340764e7c2a89
+      internalID: -916445293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_36
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 351
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c97ce23ee172249a357f437afce683
+      internalID: 1644396832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_37
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 318
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb3ac240ddb91c4183d5f1918c379c7
+      internalID: -1988086968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_38
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 335
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae97357cdbc14a46897e1a1ccb79e4c
+      internalID: -305698108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_39
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 318
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d0290490d0cfe4da59d3689a7e53e7
+      internalID: -1617509848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_40
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 335
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9bee607711cec640803d69c90356130
+      internalID: 403991553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_41
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 318
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06603ca7726761e478bc868d8a7bc4bd
+      internalID: 1387410884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_42
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 335
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db73c759b4d390b4aa7bc6ea9d8d933b
+      internalID: 435143001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_43
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 318
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b085b8f91489f843b166d88b9f23a3e
+      internalID: -360471458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_44
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 335
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f33d5195ebb1684bbd7a5cea4fb7337
+      internalID: -1530430475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_45
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 318
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a23abe028c779a439cf475d8527919a
+      internalID: 1618107441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_46
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 335
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80bf76f245f293a4692c5b77adc849fe
+      internalID: -1852634872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_47
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 318
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d216b8433e7f7994cb7a83b85e317a1a
+      internalID: 1332348387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_48
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 335
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca776b2f9b24f0047addc985e1592920
+      internalID: -416836560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_49
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 318
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f9fe23e14d5812498fbc57117e1d372
+      internalID: -1436246699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_50
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 335
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 360b9745222c4f24681a26384280d89f
+      internalID: 221334175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_51
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 318
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361335cbab5c8624cabba8947a2d02e8
+      internalID: -354354538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_52
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 335
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc08e33cc4270e54e96e425a0a9bbf9e
+      internalID: 337568083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_53
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 318
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd1f47be8f60614997b8a4c7486e870
+      internalID: -895642292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_54
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 335
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ee64b8a4a77a84eb33531cb731c62c
+      internalID: -1868537163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_55
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 318
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0c4a7190f604d4c8fdc7aed8dab159
+      internalID: 1557806895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_56
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 286
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd4ae5445d2c4474c9db320395cac085
+      internalID: -467326663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_57
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 302
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ba5aaa52247f1488d3684c76cc2ebd
+      internalID: -348184614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_58
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 286
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0d7c3aba443ad44a0ad840bd728518
+      internalID: 1399399112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_59
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 302
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d020a592db7417247baa10166bb6768b
+      internalID: 1420850337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_60
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 286
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468be7cb0c519f24fbcce035972e3889
+      internalID: -1273212218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_61
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 302
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 940d8712a94769948afd55a90af7b81f
+      internalID: -2023886225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_62
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 286
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f534523b9b834b44afc8ed937a85778
+      internalID: -1879020776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_63
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 302
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ccc29afcb77d14dbfe20280e2f8167
+      internalID: -1966707796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_64
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 286
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cb606229909ba04899c4c03077f6928
+      internalID: 802687405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_65
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 302
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0933ed6925b4df04b942b41aaa4bff1a
+      internalID: -1447422809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_66
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 286
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c411c0226ceb8c942bf0f596482c2527
+      internalID: -1905899292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_67
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 302
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b342382acfe21f54fbd1b23ea6e1120c
+      internalID: -1889275182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_68
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 286
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c4f2a440b26a084eb1600322dfdd592
+      internalID: -486867734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_69
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 302
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 455140f3ae00c52479bb2da4e89aa52b
+      internalID: -1258963389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_70
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 286
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b384fc93d4e4c849a6305ad589f1233
+      internalID: 673124287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_71
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 302
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 281889d91ddf86b44af365559a28bccb
+      internalID: 1135499974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_72
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 286
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0878339c59c6e0147b2c2fa122f88e40
+      internalID: 945555148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_73
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 302
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 784fe626eda4a9b43ae9c9641b20d35c
+      internalID: 1954657227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_74
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 286
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9bfbb1d1bc1d0e4e9a3db4da5f50ffe
+      internalID: -80476316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_75
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 302
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ebe3553b62aca4f8efc0dc76b67b3e
+      internalID: -1460929474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_76
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 286
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56de736d07a05994899bcf8305c44fb1
+      internalID: -598370287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_77
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 302
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76583d7458c967044ab206a2c058f0c5
+      internalID: 357736854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_78
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 286
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a8a543673cf57b4e8fd5bb93fe231e6
+      internalID: 1030746965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_79
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 269
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990daf9f4f65b0140904e2b2261b50f0
+      internalID: -1079915029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_80
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 253
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6eab9afee304e41996ea8640de4521
+      internalID: 1828364427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_81
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 269
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6cb57adf6a3e442a45fb0d08ceaa0d
+      internalID: -748712933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_82
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 253
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb26557975873b448a82bd6711b3450
+      internalID: -397820176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_83
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 269
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c6cc77e7e83a345bf8d8997b104878
+      internalID: -938113230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_84
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 253
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ef3d58b8abb9343aaea6ee1b82de67
+      internalID: -2007908144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_85
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 269
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33eb231b74decd64286fe0b57f5f7588
+      internalID: -1768044131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_86
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 253
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d912538b8d4ef8946990cab66c94e83e
+      internalID: -2088130887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_87
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 269
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3ff40f95ca3184e88366ff73e7d396
+      internalID: 1144350798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_88
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 253
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb9730731f77a042aad6025f7bd4867
+      internalID: -449244809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_89
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 269
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cda22733583ef449b785b36791b8893
+      internalID: -1208370396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_90
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 253
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b12f7c36b5f6b41bb9b551316b68b4
+      internalID: 1330275873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_91
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 269
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b3bb4d0c88af85489548c48edd8d303
+      internalID: -753090477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_92
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 253
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea3cba0a9567174d8d69ba3a6ac9f76
+      internalID: 1911585425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_93
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 269
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e40aca77d9a44469b6127df1e0f4d9
+      internalID: 546970902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_94
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 253
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7694314debb7e814d87e9c81b4e65a94
+      internalID: 1067085975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_95
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 269
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9fffd7580becc4caaf9e258b2e991b
+      internalID: 1847299345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_96
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 253
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b43ed65c38e3834f96afc8641763b17
+      internalID: -109654870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_97
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 269
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89132a565b32404c96651b6253e2c03
+      internalID: -555474146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_98
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 253
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa85f9abd5eacd459d325cc9abfd10a
+      internalID: -1583205824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_99
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 269
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f29ea4486d24242a134b1212244473
+      internalID: -1384915451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_100
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 236
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f0ab1bde2e3de4eabc6dd72ed37828
+      internalID: 1916094899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_101
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 220
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c20659a16dc9d7948b121557f8580a0a
+      internalID: 217847581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_102
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 236
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e11257de2110084f9fa5a358628fe6d
+      internalID: 699912682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_103
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 220
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52cb7083359623642a6980ef537d2872
+      internalID: 714802749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_104
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 236
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47904250c0b4f394fa27c43ec3887ab0
+      internalID: 1210942343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_105
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 220
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d86d95009a9f0742b5c4f9fae9980ec
+      internalID: 1751067050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_106
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 236
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feaaf59d67892bb48ae88e62436be019
+      internalID: -1364198383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_107
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 220
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e98f6b4fe46454e899acd9cbf3c12c
+      internalID: 321396319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_108
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 236
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e2fd381870089418aca9209efdc0b9
+      internalID: -741517212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_109
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 220
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f832ffaf36b824e99d581e73a55e05
+      internalID: -1032097227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_110
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 236
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 595669af37176c74fa6be80430df2abc
+      internalID: -1086064430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_111
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 220
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef14af2da01729348bc6393764b41a88
+      internalID: 1328043570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_112
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 236
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7304319bd8469564b8efd1fd9793d8cd
+      internalID: -2061779656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_113
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 220
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85da43584bf13c046b2d7e2f0e844e3a
+      internalID: -1298005502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_114
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 236
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eda5c3eabad8ae43a69205fc1622351
+      internalID: 1024085601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_115
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 220
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c4b7f4698a255488f26b0e001afd06
+      internalID: 1832850764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_116
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 236
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579bad5db38f8d4479c2300794ff2c02
+      internalID: 1991982232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_117
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 204
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d7277eb1c9f6b74cb25cb1f3e1076b1
+      internalID: -1544871066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_118
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 187
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6735c95af99c38a4e87df322e01242ad
+      internalID: -1909794807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_119
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 204
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 404aad4e218c3bb47aea29989c74a904
+      internalID: -1961577220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_120
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 187
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a4047b6ad84b7449b7ea2cf794704e
+      internalID: 1297867033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_121
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 204
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262dd6acf5840144bac63729a852e62a
+      internalID: 867700552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_122
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 187
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f53adc0aa9b5b54592000677ada2d7b
+      internalID: 2044024500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_123
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 204
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49030929efa6454395286a234db6257
+      internalID: -1226631997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_124
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 187
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 006b33de5962ed240982038407fae74f
+      internalID: 856013949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_125
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 204
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93fba65955d48c44dad4f0e0ef6edd63
+      internalID: -899284665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_126
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 187
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca015cb6bf8a0f44810e604e2978c5e
+      internalID: -1801693139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_127
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 204
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6801a577b2debfe45a430ae90cdefc10
+      internalID: -68256652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_128
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 187
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac56b63971482774cb2f6a3c3ac5035a
+      internalID: 156824746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_129
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 204
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184c7a625c1e1e04fa1e01ec83378d0e
+      internalID: 949777507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_130
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 170
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb143b05b1e68f4e9b1a1b4374b7b06
+      internalID: 695681110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_131
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 154
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62834d9fe570c3f4eafba2a660cb02fe
+      internalID: 776842176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_132
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 170
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 456225f2156af8d44b8457089f56c587
+      internalID: -187821416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_133
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 154
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f5fc70cf6f96845936f34dcf9f8044
+      internalID: 533201274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_134
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 170
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45de1597ca23cd049a4321c0ef3bef46
+      internalID: -2073322093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_135
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 154
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2923774d05fd954aba37542ae99e09c
+      internalID: 156704497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_136
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 170
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df0d446bb217874690091fec83e8d1b
+      internalID: 532116013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_137
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 154
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a5c2e2011dd0d4989532f55e27fc16
+      internalID: -1446100965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_138
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 170
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dee0ec7d6909c343a48a82704c1854b
+      internalID: 1874560701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_139
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 138
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa9679095be4d749a7058ca9853c09b
+      internalID: -1523907744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_140
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 121
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478906b599a325f45bd3c06bc35e531c
+      internalID: -1397241024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_141
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 138
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97bb895f71710044e9fb47497681a94b
+      internalID: -137082909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_142
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 121
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798626a802224284ca16594c9a17aede
+      internalID: -419295890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_143
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 138
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660dbacb680f9e9428c8fc50975b2785
+      internalID: 1590470907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_lowres_144
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 105
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9741413a0fa2b894db36c3d5f0b99714
+      internalID: -229693069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      magic_orbs_lowres_35: -916445293
+      magic_orbs_lowres_82: -397820176
+      magic_orbs_lowres_100: 1916094899
+      magic_orbs_lowres_0: -726273245
+      magic_orbs_lowres_28: -712918074
+      magic_orbs_lowres_77: 357736854
+      magic_orbs_lowres_126: -1801693139
+      magic_orbs_lowres_17: 1978487873
+      magic_orbs_lowres_78: 1030746965
+      magic_orbs_lowres_23: -463118998
+      magic_orbs_lowres_38: -305698108
+      magic_orbs_lowres_13: 248828726
+      magic_orbs_lowres_43: -360471458
+      magic_orbs_lowres_145: 144315420
+      magic_orbs_lowres_109: -1032097227
+      magic_orbs_lowres_98: -1583205824
+      magic_orbs_lowres_138: 1874560701
+      magic_orbs_lowres_96: -109654870
+      magic_orbs_lowres_128: 156824746
+      magic_orbs_lowres_1: 1184137269
+      magic_orbs_lowres_2: 1851107434
+      magic_orbs_lowres_29: -944416640
+      magic_orbs_lowres_34: -2094807729
+      magic_orbs_lowres_50: 221334175
+      magic_orbs_lowres_97: -555474146
+      magic_orbs_lowres_113: -1298005502
+      magic_orbs_lowres_7: -2100856958
+      magic_orbs_lowres_24: -644663733
+      magic_orbs_lowres_111: 1328043570
+      magic_orbs_lowres_121: 867700552
+      magic_orbs_lowres_110: -1086064430
+      magic_orbs_lowres_127: -68256652
+      magic_orbs_lowres_42: 435143001
+      magic_orbs_lowres_48: -416836560
+      magic_orbs_lowres_44: -1530430475
+      magic_orbs_lowres_5: 1786133813
+      magic_orbs_lowres_31: 1047024613
+      magic_orbs_lowres_64: 802687405
+      magic_orbs_lowres_61: -2023886225
+      magic_orbs_lowres_90: 1330275873
+      magic_orbs_lowres_129: 949777507
+      magic_orbs_lowres_107: 321396319
+      magic_orbs_lowres_108: -741517212
+      magic_orbs_lowres_146: -1244198909
+      magic_orbs_lowres_56: -467326663
+      magic_orbs_lowres_47: 1332348387
+      magic_orbs_lowres_143: 1590470907
+      magic_orbs_lowres_80: 1828364427
+      magic_orbs_lowres_104: 1210942343
+      magic_orbs_lowres_45: 1618107441
+      magic_orbs_lowres_141: -137082909
+      magic_orbs_lowres_20: -23160747
+      magic_orbs_lowres_94: 1067085975
+      magic_orbs_lowres_37: -1988086968
+      magic_orbs_lowres_21: -1999506090
+      magic_orbs_lowres_53: -895642292
+      magic_orbs_lowres_76: -598370287
+      magic_orbs_lowres_91: -753090477
+      magic_orbs_lowres_63: -1966707796
+      magic_orbs_lowres_84: -2007908144
+      magic_orbs_lowres_66: -1905899292
+      magic_orbs_lowres_70: 673124287
+      magic_orbs_lowres_15: -456442948
+      magic_orbs_lowres_81: -748712933
+      magic_orbs_lowres_93: 546970902
+      magic_orbs_lowres_75: -1460929474
+      magic_orbs_lowres_137: -1446100965
+      magic_orbs_lowres_86: -2088130887
+      magic_orbs_lowres_46: -1852634872
+      magic_orbs_lowres_87: 1144350798
+      magic_orbs_lowres_60: -1273212218
+      magic_orbs_lowres_54: -1868537163
+      magic_orbs_lowres_19: 82800937
+      magic_orbs_lowres_55: 1557806895
+      magic_orbs_lowres_142: -419295890
+      magic_orbs_lowres_3: -1873122511
+      magic_orbs_lowres_102: 699912682
+      magic_orbs_lowres_10: 690464316
+      magic_orbs_lowres_51: -354354538
+      magic_orbs_lowres_9: -1165876402
+      magic_orbs_lowres_58: 1399399112
+      magic_orbs_lowres_115: 1832850764
+      magic_orbs_lowres_32: 1058776481
+      magic_orbs_lowres_25: 1154190906
+      magic_orbs_lowres_83: -938113230
+      magic_orbs_lowres_59: 1420850337
+      magic_orbs_lowres_130: 695681110
+      magic_orbs_lowres_85: -1768044131
+      magic_orbs_lowres_116: 1991982232
+      magic_orbs_lowres_134: -2073322093
+      magic_orbs_lowres_101: 217847581
+      magic_orbs_lowres_103: 714802749
+      magic_orbs_lowres_26: 391340557
+      magic_orbs_lowres_144: -229693069
+      magic_orbs_lowres_67: -1889275182
+      magic_orbs_lowres_95: 1847299345
+      magic_orbs_lowres_57: -348184614
+      magic_orbs_lowres_11: 1485750908
+      magic_orbs_lowres_49: -1436246699
+      magic_orbs_lowres_33: -803587294
+      magic_orbs_lowres_133: 533201274
+      magic_orbs_lowres_30: -1882888968
+      magic_orbs_lowres_69: -1258963389
+      magic_orbs_lowres_22: -1111853147
+      magic_orbs_lowres_72: 945555148
+      magic_orbs_lowres_105: 1751067050
+      magic_orbs_lowres_74: -80476316
+      magic_orbs_lowres_6: 972044141
+      magic_orbs_lowres_65: -1447422809
+      magic_orbs_lowres_39: -1617509848
+      magic_orbs_lowres_36: 1644396832
+      magic_orbs_lowres_122: 2044024500
+      magic_orbs_lowres_135: 156704497
+      magic_orbs_lowres_12: 450196622
+      magic_orbs_lowres_124: 856013949
+      magic_orbs_lowres_8: 678519150
+      magic_orbs_lowres_27: 1254653747
+      magic_orbs_lowres_99: -1384915451
+      magic_orbs_lowres_118: -1909794807
+      magic_orbs_lowres_88: -449244809
+      magic_orbs_lowres_136: 532116013
+      magic_orbs_lowres_73: 1954657227
+      magic_orbs_lowres_132: -187821416
+      magic_orbs_lowres_18: 1141298225
+      magic_orbs_lowres_41: 1387410884
+      magic_orbs_lowres_40: 403991553
+      magic_orbs_lowres_92: 1911585425
+      magic_orbs_lowres_4: 649105672
+      magic_orbs_lowres_71: 1135499974
+      magic_orbs_lowres_106: -1364198383
+      magic_orbs_lowres_52: 337568083
+      magic_orbs_lowres_14: 1353605462
+      magic_orbs_lowres_16: -1181907337
+      magic_orbs_lowres_114: 1024085601
+      magic_orbs_lowres_119: -1961577220
+      magic_orbs_lowres_112: -2061779656
+      magic_orbs_lowres_139: -1523907744
+      magic_orbs_lowres_79: -1079915029
+      magic_orbs_lowres_117: -1544871066
+      magic_orbs_lowres_62: -1879020776
+      magic_orbs_lowres_89: -1208370396
+      magic_orbs_lowres_123: -1226631997
+      magic_orbs_lowres_131: 776842176
+      magic_orbs_lowres_140: -1397241024
+      magic_orbs_lowres_68: -486867734
+      magic_orbs_lowres_125: -899284665
+      magic_orbs_lowres_120: 1297867033
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
