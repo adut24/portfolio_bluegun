@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,46 +14,44 @@ public class WeaponAnimation : MonoBehaviour
     private float _angle = 0.0f;
     private Vector2 mousePos;
     private Vector2 mouseScreenPos;
-    private Vector2 playerPos;
+    private Vector2 camVec;
     private float targetAngle;
     private float rotValue;
-    private void Start()
+    private Vector3 v3Pos;
+
+
+    private int shortest_direction(float angleA, float angleB)
     {
+        float alpha, beta, gamma;
+
+        alpha = angleA - angleB;
+        beta = angleA - angleB + 2 * MathF.PI;
+        gamma = angleA - angleB - 2 * MathF.PI;
+        if (MathF.Abs(alpha) < MathF.Abs(beta) && MathF.Abs(alpha) < MathF.Abs(gamma))
+            return alpha < 0 ? -1 : 1;
+        else if (MathF.Abs(beta) < MathF.Abs(gamma))
+            return beta < 0 ? -1 : 1;
+        return gamma < 0 ? -1 : 1;
     }
-
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        mousePos = cam.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
-        mouseScreenPos = cam.ScreenToViewportPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
-        playerPos = new Vector2(player.GetComponent<Transform>().position.x, player.GetComponent<Transform>().position.y);
-        Debug.LogFormat("Player pos: {0} | Mouse pos: {1}", playerPos, mousePos);
-        //Vector2 direction = playerPos - mousePos;
-
-        _centre = player.GetComponent<Transform>().position;
-        targetAngle = Vector2.Angle(mousePos, _centre);
-        if (mouseScreenPos.x < 0.5)
-            targetAngle = 360 - targetAngle;
-        targetAngle *= Mathf.Deg2Rad;
+        v3Pos = cam.WorldToScreenPoint(player.transform.position);
+        v3Pos = Input.mousePosition - v3Pos;
+        _centre = player.transform.position;
+        targetAngle = (2.5f * MathF.PI) - Mathf.Atan2 (v3Pos.y, v3Pos.x);
+        targetAngle %= 2 * MathF.PI;
+        if (targetAngle > (2 * MathF.PI)) targetAngle -= 2 * MathF.PI;
         rotValue = RotateSpeed * Time.deltaTime;
-
         Debug.LogFormat("Target angle: {0} || Cur Angle: {1}", targetAngle, _angle);
-        if (Mathf.Abs(_angle - targetAngle) < Mathf.PI && targetAngle - _angle > rotValue)
-        {
-            Debug.Log("A");
-            _angle += rotValue;
-        }
-        else if (Mathf.Abs(targetAngle - _angle) < Mathf.PI && _angle - targetAngle > rotValue)
-        {
-            Debug.Log("B");
-            _angle -= rotValue;
-        }
-        else
-        {
-            Debug.Log("C");
+        if (MathF.Abs (targetAngle - _angle) < rotValue)
             _angle = targetAngle;
-        }
+        else
+            _angle += shortest_direction(targetAngle, _angle) * rotValue;
+        if (_angle < 0) _angle += 2 * MathF.PI;
+        _angle %= 2 * MathF.PI;
         var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * Radius;
-        gameObject.GetComponent<Transform>().position = _centre + offset;
+        gameObject.transform.position = _centre + offset;
+        gameObject.transform.eulerAngles = Vector3.forward * (405 - (Mathf.Rad2Deg * targetAngle));
     }
 }
