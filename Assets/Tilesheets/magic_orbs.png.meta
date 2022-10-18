@@ -1,0 +1,3298 @@
+fileFormatVersion: 2
+guid: f065536cca004824b96accdd72faaa31
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: magic_orbs_0
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 1800
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22522ccbefe7724881f4dfab49a059e
+      internalID: -2105910378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_1
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 1866
+        width: 112
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e909749422c7ab40a70a4291db158bb
+      internalID: -716957931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_2
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 1800
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e3c87343e0ce5b4da0d79ef64d55a65
+      internalID: -301836708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_10
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 1669
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c292d156d92eea44b357b5eae715e4e
+      internalID: -302353313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_11
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1734
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe10bfd1e8875b43a2f271e938b05ba
+      internalID: -1073074036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_12
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 1669
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d34b63383583d47a0eae0de229d724
+      internalID: 248609327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_13
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 1734
+        width: 112
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81fd1deaa11682c40953a15fd7fadb44
+      internalID: -1439255969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_14
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 1669
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 130ce84914acb7044a8aee68abb5a28d
+      internalID: 1918528946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_15
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 1734
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395388c5a2445d3439646c6f49d61078
+      internalID: -1811706698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_16
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 1669
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2711812ab8a4ed345824b8a2cb8b093f
+      internalID: 148615188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_17
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1538
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf0ed35722b5ee345a218ffbbe72fe96
+      internalID: 1802266951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_18
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 1603
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc7c822fc3d00a94c986554d5af41184
+      internalID: -1711217686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_19
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 1538
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c9e89eb1cd7654fa6b1b9962648fca
+      internalID: -1326592925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_20
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1603
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 998027c29c52ed04f8e8da725fb06525
+      internalID: -862472958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_21
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 1538
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70be8c17e191024292d1a850860ec15
+      internalID: -1900478445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_22
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 1603
+        width: 112
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c0db0dc3b3f104ca37884ed183c3dd
+      internalID: 1181465802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_23
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 1538
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e47326ac85476d4fbddc1332476b26b
+      internalID: 482533507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_24
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 1603
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b2da96a950ed04ba7aa6fca8234a78
+      internalID: 2085172271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_25
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 1538
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b01cdc5f15ac546a8c35158e98e73b
+      internalID: 70259540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_26
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 1603
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725e71026fbd2dc43aedc1ff6ed81de9
+      internalID: 331776100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_27
+      rect:
+        serializedVersion: 2
+        x: 2203
+        y: 1538
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996cbde234dcac442ac9970ee7535a53
+      internalID: 595442050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_28
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1406
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 005bb6419580e2b47a4ea327bdfaf229
+      internalID: 354493921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_29
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 1472
+        width: 113
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca0a5696c7a9134487c782162b55338
+      internalID: 67266660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_30
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1406
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95512142d06ecfc409b93d2ee9eaf2da
+      internalID: -672872442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_31
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 1472
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb3a261ab011e054dbf8eef15f8e8762
+      internalID: 2127612016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_32
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 1406
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e82130234b6ad4ea517e567f8e8093
+      internalID: -1446965887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_33
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1472
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86f703d1965bc14f950d8f96a7efa95
+      internalID: -1517347406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_34
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 1406
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e16d52511417d4b8642771745cc7fc
+      internalID: -684768279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_35
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 1472
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27fdc2ae0c1573e47b8e760bd0bd78b2
+      internalID: -251055044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_36
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 1406
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ed85c382d4bb649a4647ed9fcc909d
+      internalID: -1228778302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_37
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 1472
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395ce4dc27a84854fa45a4221ea5cac4
+      internalID: -731825161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_38
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 1406
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00059c0b644c1241bb3c9926e5c1782
+      internalID: -587911417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_39
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 1472
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6112f3c576c66b44690a16b4bec87520
+      internalID: -272759300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_40
+      rect:
+        serializedVersion: 2
+        x: 2203
+        y: 1406
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb22affb8697e034996e9867353d1495
+      internalID: 1080311129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_41
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 1472
+        width: 113
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 978f9fcb14cc0db4aa8ef5128a277180
+      internalID: -2116370802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_42
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 1406
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438757fa95f2cb6438bffbb5fd31a59a
+      internalID: -827270707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_43
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 1275
+        width: 112
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d58506cca1106e44924855775c49763
+      internalID: 1317784721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_44
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1341
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f13675b61d58ea438c5bcf8e2770834
+      internalID: 1153683483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_45
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1275
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59e7cf7c185a354ab4065b3fbb4a09f
+      internalID: 859767459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_46
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 1341
+        width: 113
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d244b7e110039404caa9451a010cfaf2
+      internalID: 1757743524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_47
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1275
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5bb8c6508682247aeb2d3cd38bd456
+      internalID: 1007376510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_48
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 1341
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d88d1801ff99143bae225a3e2fdf6f
+      internalID: -625726656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_49
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 1275
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa8b80bff78ed64984c4b82a3c2fa32
+      internalID: 339367459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_50
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1341
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f7088d83a6ed64997bf5ed50f104af
+      internalID: -743306522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_51
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 1275
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a56b1f8b87cee4ba4036c3a54e81a5
+      internalID: 539038024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_52
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 1341
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac40e4ccbc8a009489ec7b1b8012f397
+      internalID: -1916604543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_53
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 1275
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8497091757c8b54e9f7658179cd3251
+      internalID: 1796240778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_54
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 1341
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993c62029d8d74b448873640aeb1b557
+      internalID: -610137694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_55
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 1275
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac42cd7b1091884468a3eb54db361843
+      internalID: 69030096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_56
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 1341
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26225b72c5f025145ac3d2fd547fc5ee
+      internalID: -1715892598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_57
+      rect:
+        serializedVersion: 2
+        x: 2203
+        y: 1275
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80c32753e4685042b6b949a3c2548a1
+      internalID: -1009371723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_58
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 1341
+        width: 113
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25960d16d64a5d4c9d6f3e4d278d6df
+      internalID: 1592062820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_59
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 1275
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5fd4e15585a48b4c9dfdbc1c631c31c
+      internalID: 481622823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_60
+      rect:
+        serializedVersion: 2
+        x: 2597
+        y: 1341
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 876ab2237a21b76408d514c78fc84228
+      internalID: -71320465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_61
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1275
+        width: 112
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 225093e2547eb2d4f8fb224934fe8aaa
+      internalID: -1138481265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_62
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1144
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9437ea8411b19024da5b042f6666b8b8
+      internalID: 2027109571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_63
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1209
+        width: 114
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b46e273568542e419e45c4af666c620
+      internalID: -903159430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_64
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 1144
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b21f2161249d44e91762db68226f12
+      internalID: -1687451882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_65
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1209
+        width: 114
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ebd3860b0fc0744190f17ff014b66a2
+      internalID: -854391045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_66
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1144
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ad3f749747d5f40989756f49ee7b3c
+      internalID: 178561327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_67
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 1209
+        width: 113
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780de1134de8daa439d8f776f4a13e99
+      internalID: 1347403615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_68
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1144
+        width: 113
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7d3de9b3e148a4d8080a053c6d54e1
+      internalID: 748441081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_69
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 1209
+        width: 114
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30f3396f0fb7ece4e99bbda8a12f6fec
+      internalID: -1410587029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_70
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 1144
+        width: 113
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0011bd2f196fca74284ad8c9b13a6f4a
+      internalID: 584147272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_71
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1209
+        width: 114
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298442e10bcb6f04d9f9259d2ed2edbc
+      internalID: -1747350239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_72
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 1144
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea66ed77a2a291d46907a9542c10c2ef
+      internalID: 2039579472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_73
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 1209
+        width: 112
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94cc8d790103db24cb85b8fff04329cd
+      internalID: -441799498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_74
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 1144
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82543380627ab1249998681b90bce482
+      internalID: -1732709366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_75
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 1209
+        width: 114
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf51f0dbfa23574fb1eaa58602b43b0
+      internalID: 588055580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_76
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 1144
+        width: 113
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f81f72178b85c954d8a844c5dd30069d
+      internalID: -460966825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_77
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 1209
+        width: 114
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518a5692f6445af478ac7487856d2a36
+      internalID: 455200565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_78
+      rect:
+        serializedVersion: 2
+        x: 2203
+        y: 1144
+        width: 113
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b854f3476adafb43b6f1763763380b6
+      internalID: 1498929511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_79
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 1209
+        width: 113
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4706a42c778a846984daa297c9f492
+      internalID: -1626765242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_80
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 1144
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4680fd6752cb8234bba6d755ab241d93
+      internalID: -499568076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_81
+      rect:
+        serializedVersion: 2
+        x: 2597
+        y: 1209
+        width: 114
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dddbe51f779c6845935d503c70e4535
+      internalID: -2143375865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_82
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1144
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef6140e09c99cf48892b1ffdfda8896
+      internalID: -1382966579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_83
+      rect:
+        serializedVersion: 2
+        x: 2861
+        y: 1209
+        width: 114
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a960bb41e272fc49a93caf4b42c7247
+      internalID: 1211414946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_84
+      rect:
+        serializedVersion: 2
+        x: 2992
+        y: 1144
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be9a5ac9c104f8a448ffa25679c47172
+      internalID: 206179232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_85
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1078
+        width: 114
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0871e5099b0447443a611f48ffdd58fb
+      internalID: -1732917263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_86
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 1011
+        width: 112
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c625670a63f19df47a5ac37fc9c72ca4
+      internalID: 85555517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_87
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1078
+        width: 114
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a0361f0bd6b814ea02b66f9cb292f6
+      internalID: 28806502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_88
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1011
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1bb0e44ee9741c4484a4ed4603e56d2
+      internalID: -985666982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_89
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 1078
+        width: 113
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f4ac41b8163b442a61f723ea42ce43
+      internalID: -2038438925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_90
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1011
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74a1ad968c018a478f9e8326e3e0072
+      internalID: 377707553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_91
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 1078
+        width: 114
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2722d99f7f21db44b5c73bd45fd38fc
+      internalID: 581710166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_92
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 1011
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4e1656606ca58438362d44858dc0ea
+      internalID: 1231404521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_93
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1078
+        width: 114
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2957428d7457de1438b22f744a04ce2a
+      internalID: -944379290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_94
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 1013
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fff3ac709f0e824fa190e1db62ecb8a
+      internalID: 544708776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_95
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 1078
+        width: 112
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f0e3984199a4bc4788731604f39b91d
+      internalID: 135672126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_96
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 1013
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2174be0071564b94eb6f53cf637c9afe
+      internalID: -560276467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_97
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 1078
+        width: 114
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6de5d0691633684d99518d0baad895b
+      internalID: -1799059796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_98
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 1011
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5414afebeccb384488039d959cb2bf6
+      internalID: 394282425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_99
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 1078
+        width: 114
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba567b05d77cc6459443acf97ef1e5c
+      internalID: 845003759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_100
+      rect:
+        serializedVersion: 2
+        x: 2203
+        y: 1011
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 657aa2c75443da34f9ffaf3388215f1e
+      internalID: 706772936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_101
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 1078
+        width: 113
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d27ff0f43890e24bb22aad7df5899cb
+      internalID: 1818967979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_102
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 1013
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b44023369740c4e9132333ee096280
+      internalID: -2110128702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_103
+      rect:
+        serializedVersion: 2
+        x: 2597
+        y: 1078
+        width: 114
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc35d12ce6b6894bbea0e82ec0a6a79
+      internalID: -1989838202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_104
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1013
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 768abcd7cd1f5934087f0085494d6e76
+      internalID: 2071824875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_105
+      rect:
+        serializedVersion: 2
+        x: 2861
+        y: 1078
+        width: 114
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f0ab83d94bf754da38290043e18f48
+      internalID: -708500215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_106
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 947
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3195bcfc65e43504fa76adb195aa6e78
+      internalID: 82533315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_107
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 880
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ad7adcf391be4439c53c4a2f46b484
+      internalID: -454016030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_108
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 947
+        width: 113
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5847b1280d97dd489505ef659c84c92
+      internalID: -370431614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_109
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 880
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a059cec22a2ba12438a5abf1a586987a
+      internalID: -842142947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_110
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 947
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae7998afc8141b4090056a741ed7d37
+      internalID: 1650217170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_111
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 880
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3609b08f8ee7819458d60b372412c640
+      internalID: -1653255636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_112
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 947
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118128a32cd5a244ba20bf2632fbaced
+      internalID: -1060148485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_113
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 880
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d249380901bcf040986adfa783ff2e4
+      internalID: 1819238841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_114
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 947
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc1ebc3380dc044dafd25b1a407e2a4
+      internalID: -845753365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_115
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 880
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb02bc6d35b2ba4896bdb222673166a
+      internalID: 429711563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_116
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 947
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f4379ba9b15a24192d5d23fafea14f
+      internalID: 2017865510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_117
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 880
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7558a3b6b66816747ac4ceec106930d7
+      internalID: -1941726854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_118
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 947
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef02880f95681044b5c3d7de60761ba
+      internalID: -695886322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_119
+      rect:
+        serializedVersion: 2
+        x: 2203
+        y: 880
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a18ad1112c1359046aa1f4a23c7c53fb
+      internalID: -1243333443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_120
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 947
+        width: 113
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7a749365497424fba4ecaffd13be13
+      internalID: -1375788445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_121
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 880
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88118a2672543c34f986d7639222263b
+      internalID: -1968053563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_122
+      rect:
+        serializedVersion: 2
+        x: 2597
+        y: 947
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8040c4c7dffa91d4a9c010b555e0369a
+      internalID: -1845187622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_123
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 816
+        width: 113
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c3f073d052b92468f6354d781792d5
+      internalID: 784368419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_124
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 748
+        width: 113
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5227d5518249e4794e4ea292d9688a
+      internalID: 791627832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_125
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 816
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a2eace6c0ce9a458af6be0d51cb564
+      internalID: 1247709140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_126
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 748
+        width: 113
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4869502b8f90043b048d2c2ce6132d
+      internalID: -1595067333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_127
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 816
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ada67e51dc82f43b73d402f0450d7d
+      internalID: 1509501761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_128
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 748
+        width: 114
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5115f83ec2f7b3342a282316db721c39
+      internalID: -1496720062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_129
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 816
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165a55c87a056c24f92cd5636bb21a25
+      internalID: 449347343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_130
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 748
+        width: 114
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1beaabaff71bfea4785b1478bfd698a3
+      internalID: 1470849410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_131
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 816
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c6d8e18e3b7f340a48dfd8f5589521
+      internalID: -894826690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_132
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 748
+        width: 113
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdbd03ac0aaa52d4290cba62e84c649c
+      internalID: 506084515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_133
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 816
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acaf6b045fa6b8a468c37a308bc0cb5c
+      internalID: -1231521839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_134
+      rect:
+        serializedVersion: 2
+        x: 2203
+        y: 748
+        width: 113
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c59e756d2b579488c53747e13f3752
+      internalID: -1039246821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_135
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 816
+        width: 113
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5de5497d81b3eb409d2142356bb3716
+      internalID: 135541942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_136
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 683
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3149f6186be4cf646ad78c79e2bf0d0c
+      internalID: 33224769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_137
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 617
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baddee83bbf6a8c429e72629bb9a3424
+      internalID: -19031131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_138
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 683
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef0741c519fa85a4281eee0499551443
+      internalID: 957910380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_139
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 617
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c5b1e9093259945a0a653480b56a99
+      internalID: 74598636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_140
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 683
+        width: 112
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13327998cd739154385493eceab955f7
+      internalID: -436326024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_141
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 617
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db8a4046e853fd4f87fe9e82b946a65
+      internalID: 1851889244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_142
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 683
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcfc91426246f644d8a02fe74b829189
+      internalID: 382749260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_143
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 617
+        width: 113
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81919abd5154d1047a879d17c5b1b51f
+      internalID: -213114422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_144
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 683
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2c0845d5e41314686a612b0f2d3c5b
+      internalID: 897006637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_145
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 552
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed29fe47f85c0844a381a4d3ba229d6
+      internalID: 911383775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_146
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 486
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a8e13cdbb82ddf489f9e4ff719e3210
+      internalID: -1054038559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_147
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 552
+        width: 112
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: affc8f4e3890abf4fa9a162a1cc0e50b
+      internalID: 730363627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_148
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 486
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a171ae7b0a600d542a8a73317ffe2bc9
+      internalID: 444049471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_149
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 552
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d505158aa4ef95d49a00073a1ca0b738
+      internalID: -611407065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magic_orbs_150
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 420
+        width: 112
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b9462e56f0ba944b13336eff21e942
+      internalID: -70775545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      magic_orbs_19: -1326592925
+      magic_orbs_71: -1747350239
+      magic_orbs_77: 455200565
+      magic_orbs_147: 730363627
+      magic_orbs_149: -611407065
+      magic_orbs_107: -454016030
+      magic_orbs_29: 67266660
+      magic_orbs_12: 248609327
+      magic_orbs_37: -731825161
+      magic_orbs_53: 1796240778
+      magic_orbs_78: 1498929511
+      magic_orbs_115: 429711563
+      magic_orbs_133: -1231521839
+      magic_orbs_106: 82533315
+      magic_orbs_87: 28806502
+      magic_orbs_125: 1247709140
+      magic_orbs_150: -70775545
+      magic_orbs_75: 588055580
+      magic_orbs_138: 957910380
+      magic_orbs_122: -1845187622
+      magic_orbs_17: 1802266951
+      magic_orbs_111: -1653255636
+      magic_orbs_10: -302353313
+      magic_orbs_32: -1446965887
+      magic_orbs_120: -1375788445
+      magic_orbs_38: -587911417
+      magic_orbs_127: 1509501761
+      magic_orbs_129: 449347343
+      magic_orbs_67: 1347403615
+      magic_orbs_98: 394282425
+      magic_orbs_97: -1799059796
+      magic_orbs_26: 331776100
+      magic_orbs_39: -272759300
+      magic_orbs_70: 584147272
+      magic_orbs_46: 1757743524
+      magic_orbs_105: -708500215
+      magic_orbs_118: -695886322
+      magic_orbs_130: 1470849410
+      magic_orbs_36: -1228778302
+      magic_orbs_139: 74598636
+      magic_orbs_114: -845753365
+      magic_orbs_3: -1942426148
+      magic_orbs_60: -71320465
+      magic_orbs_104: 2071824875
+      magic_orbs_88: -985666982
+      magic_orbs_40: 1080311129
+      magic_orbs_131: -894826690
+      magic_orbs_86: 85555517
+      magic_orbs_25: 70259540
+      magic_orbs_93: -944379290
+      magic_orbs_80: -499568076
+      magic_orbs_28: 354493921
+      magic_orbs_33: -1517347406
+      magic_orbs_102: -2110128702
+      magic_orbs_48: -625726656
+      magic_orbs_123: 784368419
+      magic_orbs_144: 897006637
+      magic_orbs_128: -1496720062
+      magic_orbs_96: -560276467
+      magic_orbs_119: -1243333443
+      magic_orbs_92: 1231404521
+      magic_orbs_140: -436326024
+      magic_orbs_24: 2085172271
+      magic_orbs_99: 845003759
+      magic_orbs_103: -1989838202
+      magic_orbs_126: -1595067333
+      magic_orbs_11: -1073074036
+      magic_orbs_94: 544708776
+      magic_orbs_108: -370431614
+      magic_orbs_72: 2039579472
+      magic_orbs_145: 911383775
+      magic_orbs_134: -1039246821
+      magic_orbs_30: -672872442
+      magic_orbs_56: -1715892598
+      magic_orbs_52: -1916604543
+      magic_orbs_55: 69030096
+      magic_orbs_1: -716957931
+      magic_orbs_85: -1732917263
+      magic_orbs_66: 178561327
+      magic_orbs_57: -1009371723
+      magic_orbs_90: 377707553
+      magic_orbs_6: 1188063666
+      magic_orbs_45: 859767459
+      magic_orbs_91: 581710166
+      magic_orbs_14: 1918528946
+      magic_orbs_83: 1211414946
+      magic_orbs_44: 1153683483
+      magic_orbs_63: -903159430
+      magic_orbs_121: -1968053563
+      magic_orbs_95: 135672126
+      magic_orbs_5: -1635418144
+      magic_orbs_15: -1811706698
+      magic_orbs_89: -2038438925
+      magic_orbs_8: -332999987
+      magic_orbs_21: -1900478445
+      magic_orbs_31: 2127612016
+      magic_orbs_137: -19031131
+      magic_orbs_58: 1592062820
+      magic_orbs_64: -1687451882
+      magic_orbs_141: 1851889244
+      magic_orbs_73: -441799498
+      magic_orbs_62: 2027109571
+      magic_orbs_41: -2116370802
+      magic_orbs_100: 706772936
+      magic_orbs_112: -1060148485
+      magic_orbs_65: -854391045
+      magic_orbs_79: -1626765242
+      magic_orbs_135: 135541942
+      magic_orbs_82: -1382966579
+      magic_orbs_27: 595442050
+      magic_orbs_18: -1711217686
+      magic_orbs_0: -2105910378
+      magic_orbs_43: 1317784721
+      magic_orbs_101: 1818967979
+      magic_orbs_35: -251055044
+      magic_orbs_109: -842142947
+      magic_orbs_2: -301836708
+      magic_orbs_68: 748441081
+      magic_orbs_136: 33224769
+      magic_orbs_13: -1439255969
+      magic_orbs_22: 1181465802
+      magic_orbs_34: -684768279
+      magic_orbs_110: 1650217170
+      magic_orbs_59: 481622823
+      magic_orbs_142: 382749260
+      magic_orbs_49: 339367459
+      magic_orbs_7: 1661984867
+      magic_orbs_84: 206179232
+      magic_orbs_74: -1732709366
+      magic_orbs_76: -460966825
+      magic_orbs_51: 539038024
+      magic_orbs_9: -1706040996
+      magic_orbs_23: 482533507
+      magic_orbs_54: -610137694
+      magic_orbs_61: -1138481265
+      magic_orbs_42: -827270707
+      magic_orbs_20: -862472958
+      magic_orbs_69: -1410587029
+      magic_orbs_81: -2143375865
+      magic_orbs_4: -171937725
+      magic_orbs_116: 2017865510
+      magic_orbs_47: 1007376510
+      magic_orbs_132: 506084515
+      magic_orbs_146: -1054038559
+      magic_orbs_124: 791627832
+      magic_orbs_16: 148615188
+      magic_orbs_50: -743306522
+      magic_orbs_143: -213114422
+      magic_orbs_113: 1819238841
+      magic_orbs_117: -1941726854
+      magic_orbs_148: 444049471
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
