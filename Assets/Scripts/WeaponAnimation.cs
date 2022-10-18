@@ -12,15 +12,20 @@ public class WeaponAnimation : MonoBehaviour
 
     private Vector2 _centre;
     private float _angle = 0.0f;
-    private Vector2 mousePos;
-    private Vector2 mouseScreenPos;
-    private Vector2 camVec;
     private float targetAngle;
     private float rotValue;
     private Vector3 v3Pos;
 
+    public float shootDelay = 1.0f;
+    public float shootSpeed = 5.0f;
+    public float size = 3.0f;
+    public int projectileNumber = 1;
+    public Projectile projectilePrefab;
+    public float projectileOffset = 0.5f;
+    private bool shootPause = false;
+    private Coroutine shootCoroutine;
 
-    private int shortest_direction(float angleA, float angleB)
+    private int ShortestDirection(float angleA, float angleB)
     {
         float alpha, beta, gamma;
 
@@ -33,6 +38,30 @@ public class WeaponAnimation : MonoBehaviour
             return beta < 0 ? -1 : 1;
         return gamma < 0 ? -1 : 1;
     }
+
+    private IEnumerator resumeShoot()
+    {
+        shootPause = true;
+        yield return new WaitForSeconds(shootDelay);
+        shootPause = false;
+    }
+    private void ShootWeapon()
+    {
+        if (shootPause == false)
+        {
+            Debug.Log("hello");
+            Vector3 startPosition;
+            Vector3 direction;
+
+            direction = Vector3.Normalize(v3Pos);
+            startPosition = transform.position + direction * projectileOffset;
+            Projectile proj = Instantiate(projectilePrefab, startPosition, transform.rotation);
+            // Projectile proj = projectileObj.GetComponent<Projectile>();
+            proj.direction = direction;
+            proj.speed = shootSpeed;
+            shootCoroutine = StartCoroutine(resumeShoot());
+        }
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -43,15 +72,28 @@ public class WeaponAnimation : MonoBehaviour
         targetAngle %= 2 * MathF.PI;
         if (targetAngle > (2 * MathF.PI)) targetAngle -= 2 * MathF.PI;
         rotValue = RotateSpeed * Time.deltaTime;
-        Debug.LogFormat("Target angle: {0} || Cur Angle: {1}", targetAngle, _angle);
         if (MathF.Abs (targetAngle - _angle) < rotValue)
             _angle = targetAngle;
         else
-            _angle += shortest_direction(targetAngle, _angle) * rotValue;
+            _angle += ShortestDirection(targetAngle, _angle) * rotValue;
         if (_angle < 0) _angle += 2 * MathF.PI;
         _angle %= 2 * MathF.PI;
         var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * Radius;
         gameObject.transform.position = _centre + offset;
         gameObject.transform.eulerAngles = Vector3.forward * (405 - (Mathf.Rad2Deg * targetAngle));
+        if (Input.GetMouseButtonDown(0))
+            ShootWeapon();
     }
+
+
+    public Vector3 PlayerDirection()
+    {
+        return v3Pos;
+    }
+
+    public float PlayerLookAngle()
+    {
+        return targetAngle;
+    }
+
 }
