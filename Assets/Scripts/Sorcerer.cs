@@ -4,12 +4,16 @@ public class Sorcerer : Enemy
 {
     private Animator attackAnim;
     private GameObject firedProjectile, projectile;
+    public float projectileSpeed = 0.3f;
+    public int projectilePower = 30;
 
     protected override void Start()
     {
         base.Start();
         attackAnim = GetComponent<Animator>();
         projectile = Resources.Load<GameObject>("EnemyProjectile");
+        projectile.GetComponent<EnemyProjectile>().power = projectilePower;
+        projectile.GetComponent<EnemyProjectile>().speedForce = projectileSpeed;
     }
 
     protected override void Update()
