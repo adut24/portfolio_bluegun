@@ -3,8 +3,8 @@ using UnityEngine;
 public class EnemyProjectile : MonoBehaviour
 {
     private GameObject player;
-    public float speedForce = 0.005f;
-    public int power = 30;
+    public float speedForce;
+    public int power;
 
     private void Start()
     {
