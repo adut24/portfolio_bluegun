@@ -40,10 +40,10 @@ public class Enemy : MonoBehaviour
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Projectile"))
         {
             StartCoroutine(ShowDamage());
-            TakeDamage(10);
+            TakeDamage(collision.gameObject.GetComponent<Projectile>().damage);
         }
     }
 

@@ -7,6 +7,7 @@ public class FirstChest : MonoBehaviour
 {
     [SerializeField] private Inventory inv;
     [SerializeField] private Transform invPanel;
+    [SerializeField] private GameObject weapon;
     private WeaponData[] allWeapons;
 
     public void Awake()
@@ -22,6 +23,8 @@ public class FirstChest : MonoBehaviour
             inv.weapon = allWeapons[i];
             invPanel.GetChild(0).GetChild(0).GetComponent<Image>().sprite = allWeapons[i].visual;
             Destroy(gameObject);
+            weapon.SetActive(true);
+            weapon.GetComponent<SpriteRenderer>().sprite = allWeapons[i].visual;
         }
     }
 }
