@@ -12731,11 +12731,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420031}
   player: {fileID: 1929888719}
-  shootDelay: 0.1
-  shootSpeed: 5
-  size: 3
+  shootDelay: 0.3
+  shootSpeed: 50
+  size: 1
+  spread: 90
+  damage: 10
   projectileNumber: 1
-  projectilePrefab: {fileID: 1461620069298757374, guid: 59242cf71cddc51c5afcb39b0633ea6c, type: 3}
+  projectilePrefab: {fileID: 4271066878835351591, guid: 8ffa9786c6b3958f29ab85a7d9086fe3, type: 3}
   projectileOffset: 0.5
 --- !u!1 &2090101583
 GameObject:

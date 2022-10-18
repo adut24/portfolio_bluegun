@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponAnimation : MonoBehaviour
+public class Weapon : MonoBehaviour
 {
     [SerializeField] private Camera cam;
     [SerializeField] private GameObject player;
@@ -18,7 +18,10 @@ public class WeaponAnimation : MonoBehaviour
 
     public float shootDelay = 1.0f;
     public float shootSpeed = 5.0f;
-    public float size = 3.0f;
+    public float size = 2.0f;
+    public int spread = 15;
+    public int damage = 10;
+
     public int projectileNumber = 1;
     public Projectile projectilePrefab;
     public float projectileOffset = 0.5f;
@@ -49,16 +52,36 @@ public class WeaponAnimation : MonoBehaviour
     {
         if (shootPause == false)
         {
-            Debug.Log("hello");
             Vector3 startPosition;
             Vector3 direction;
 
             direction = Vector3.Normalize(v3Pos);
             startPosition = transform.position + direction * projectileOffset;
             Projectile proj = Instantiate(projectilePrefab, startPosition, transform.rotation);
+            // ---- Spread feature. WIP ----
             // Projectile proj = projectileObj.GetComponent<Projectile>();
+            // float angle = (2.5f * MathF.PI) - Mathf.Atan2 (direction.y, direction.x);
+            // float variance = UnityEngine.Random.Range(-spread / 2, spread / 2) * Mathf.Deg2Rad;
+            // Vector3 start;
+            // Vector3 end;
+            // start = Quaternion.AngleAxis(angle - spread / 2, Vector3.forward) * direction;
+            // end = Quaternion.AngleAxis(angle + spread / 2, Vector3.forward) * direction;
+            // Debug.DrawLine(transform.position, start, Color.red, 10, true);
+            // Debug.DrawLine(transform.position, end, Color.red, 10, true);
+            // angle += variance;
+            // angle %= 2 * MathF.PI;
+            // if (angle < 0)
+            //     angle += 2 * MathF.PI;
+            // Debug.Log("Angle after:" + angle);
+            // Debug.Log("Angle var:" + variance);
+            // Debug.Log("Direction:" + direction);
+
+            // proj.direction = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward) * direction;
+            // Debug.Log("proj direction:" + proj.direction);
             proj.direction = direction;
             proj.speed = shootSpeed;
+            proj.GetComponent<Transform>().localScale = new Vector3(size, size, 1);
+            proj.damage = damage;
             shootCoroutine = StartCoroutine(resumeShoot());
         }
     }
@@ -81,7 +104,7 @@ public class WeaponAnimation : MonoBehaviour
         var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * Radius;
         gameObject.transform.position = _centre + offset;
         gameObject.transform.eulerAngles = Vector3.forward * (405 - (Mathf.Rad2Deg * targetAngle));
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
             ShootWeapon();
     }
 

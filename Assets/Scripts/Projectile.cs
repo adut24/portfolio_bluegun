@@ -6,17 +6,18 @@ public class Projectile : MonoBehaviour
 {
     public float    speed = 4.5f;
     public Vector3  direction;
-
+    public int      damage = 5;
     // Update is called once per frame
     void FixedUpdate()
     {
-        gameObject.GetComponent<Rigidbody2D>().AddForce(direction * speed);
-        Debug.Log(gameObject.GetComponent<Rigidbody2D>().velocity);
+        // transform.position += direction * speed * Time.deltaTime; Linear move
+        gameObject.GetComponent<Rigidbody2D>().AddForce(direction * speed); // Incremental move
     }
 
-    private void onCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("me am here");
         Destroy(gameObject);
     }
+
+
 }
