@@ -228,13 +228,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17a5ece332db401cb6dc4b67648193d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iterations: 50
-  walkLength: 50
+  iterations: 70
+  walkLength: 70
   randomStart: 1
   bombNumber: 2
   bombPower: 50
   enemyNumber: 3
-  difficulty: Easy
+  difficulty: Normal
   tilemap: {fileID: 2118883393}
 --- !u!1 &1881968382
 GameObject:

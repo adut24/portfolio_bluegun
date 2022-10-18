@@ -106,8 +106,6 @@ public class RoomGenerator : MonoBehaviour
 
             foreach (Vector2Int direction in WallGenerator.allDirections)
             {
-                floorPositions.ElementAt(Random.Range(0, floorPositions.Count));
-
                 if (!floorPositions.Contains(spawn + direction))
                     break;
                 count++;
@@ -115,8 +113,8 @@ public class RoomGenerator : MonoBehaviour
 
             if (count == 8)
             {
-                Collider2D[] objectsFound = Physics2D.OverlapCircleAll(spawn, 7f);
-                if (objectsFound.Length == 0)
+                Collider2D[] result = Physics2D.OverlapCircleAll(spawn, 7f);
+                if (result.Length == 0)
                     goodSpawn = true;
             }
         }
