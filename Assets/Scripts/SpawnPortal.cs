@@ -48,9 +48,7 @@ public class SpawnPortal : MonoBehaviour
     private IEnumerator LoadNextScene()
     {
         fadeSystem.SetTrigger("FadeIn");
-
         yield return new WaitForSeconds(1f);
-
         SceneManager.LoadScene(sceneName);
     }
 }

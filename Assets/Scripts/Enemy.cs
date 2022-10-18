@@ -10,27 +10,27 @@ public class Enemy : MonoBehaviour
     public float minDistance;
     public float detectionZone;
     public float maxFollowDistance;
-    private GameObject player;
-    private SpriteRenderer sprite;
-    private Rigidbody2D rb;
-    private float execTime = 2f;
-    private Vector2 dir;
+    protected GameObject player;
+    protected SpriteRenderer sprite;
+    protected Rigidbody2D rb;
+    protected float execTime = 2f;
+    protected Vector2 dir;
 
-    private void Start()
+    protected virtual void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         execTime -= Time.deltaTime;
         if (!player && execTime <= 0)
             dir = new Vector2(Random.Range(-1000, 1000), Random.Range(-1000, 1000));
     }
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         if (SceneManager.GetActiveScene().name != "Introduction" && !player && execTime <= 0)
             MoveRandom();
@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
             Pathfinding();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -65,7 +65,7 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void Pathfinding()
+    protected virtual void Pathfinding()
     {
         if (!player)
         {
@@ -103,7 +103,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void MoveRandom()
+    protected virtual void MoveRandom()
     {
         rb.velocity = Vector3.zero;
         rb.AddForce(dir * 1.25f);
@@ -111,7 +111,7 @@ public class Enemy : MonoBehaviour
         execTime = 2f;
     }
 
-    private void Flip(Vector2 position, Vector2 target)
+    protected virtual void Flip(Vector2 position, Vector2 target)
     {
         if (position.x > target.x)
             sprite.flipX = true;
