@@ -33,6 +33,7 @@ public class Sorcerer : Enemy
 
     public void Attack()
     {
+        base.Flip(transform.position, player.transform.position);
         Vector2 firePosition = DetermineSide();
         firedProjectile = Instantiate(projectile, firePosition, transform.rotation);
         if (firedProjectile)

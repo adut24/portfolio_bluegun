@@ -3203,6 +3203,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sorcerer
       objectReference: {fileID: 0}
+    - target: {fileID: 6606305788302265418, guid: 560e90ce520ad412daaa9509ae14eaa9, type: 3}
+      propertyPath: projectileSpeed
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 6606305788302265423, guid: 560e90ce520ad412daaa9509ae14eaa9, type: 3}
       propertyPath: m_RootOrder
       value: 2
