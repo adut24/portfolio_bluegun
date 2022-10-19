@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public int health;
     public int power;
+    public float baseSpeed;
     public float moveSpeed;
     public float minDistance;
     public float detectionZone;
@@ -18,6 +19,7 @@ public class Enemy : MonoBehaviour
     protected float execTime = 2f;
     protected Vector2 dir;
     private bool _alive = true;
+    public Color nextColor;
 
     public bool alive
     {
@@ -30,6 +32,7 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
+        baseSpeed = moveSpeed;
     }
 
     protected virtual void Update()
@@ -53,18 +56,23 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Projectile"))
         {
             StartCoroutine(ShowDamage());
-            TakeDamage(collision.gameObject.GetComponent<Projectile>().damage);
+            TakeDamage(collision.gameObject.GetComponent<Projectile>().parent.damage);
         }
     }
 
     public IEnumerator ShowDamage()
     {
+        Color previousColor;
         if (_alive == true)
         {
+            previousColor = sprite.color;
             sprite.color = Color.red;
             yield return new WaitForSeconds(0.3f);
             if (this)
-                sprite.color = Color.white;
+            {
+                sprite.color = nextColor;
+                nextColor = Color.white;
+            }
         }
     }
 

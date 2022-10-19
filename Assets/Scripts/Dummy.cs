@@ -13,11 +13,10 @@ public class Dummy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("wut");
         if (collision.gameObject.CompareTag("Projectile"))
         {
             StartCoroutine(ShowDamage());
-            TakeDamage(collision.gameObject.GetComponent<Projectile>().damage);
+            TakeDamage(collision.gameObject.GetComponent<Projectile>().parent.damage);
         }
     }
 

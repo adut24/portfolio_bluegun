@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] private Camera cam;
-    [SerializeField] private GameObject player;
+    private Camera cam;
+    private GameObject player;
     private float RotateSpeed = 15f;
     private float Radius = 1.8f;
 
@@ -16,10 +17,20 @@ public class Weapon : MonoBehaviour
     private Vector3 v3Pos;
     private bool shootPause = false;
     private Coroutine shootCoroutine;
-
+    [System.Serializable]
+    public struct dotEffect
+    {
+        public bool enabled;
+        public int ticks;
+        public int damage;
+        public float delay;
+        public float slowValue;
+        public Color color;
+        public Debuff debuffPrefab;
+    }
     /* ----- WEAPON PARAMETERS ---- */
     public float shootDelay = 1.0f;
-    public float shootSpeed = 5.0f;
+    public float projectileSpeed = 5.0f;
     public float size = 2.0f;
     public int spread = 15;
     public int damage = 10;
@@ -28,7 +39,16 @@ public class Weapon : MonoBehaviour
     public float projectileOffset = 0.5f;
     public float projectileDuration = 0.2f;
     public int  pierce = 0;
+    public dotEffect dot;
 
+
+    void Start()
+    {
+        Debug.Log("WHY OH WHY");
+
+        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+        player = GameObject.Find("Player");
+    }
 
     private int ShortestDirection(float angleA, float angleB)
     {
@@ -56,44 +76,20 @@ public class Weapon : MonoBehaviour
         for (int i = 0; i < projectileNumber; i++)
         {
             Projectile proj = Instantiate(projectilePrefab, startPosition, transform.rotation);
+            proj.parent = this;
             proj.direction = direction;
-            proj.speed = shootSpeed;
             proj.GetComponent<Transform>().localScale = new Vector3(size, size, 1);
-            proj.damage = damage;
-            proj.duration = projectileDuration;
             proj.pierce = pierce;
 
             if (spread > 0)
             {
                 float variance = UnityEngine.Random.Range(-spread / 2, spread / 2);
                 variance *= Mathf.Deg2Rad;
-                Vector2 start;
                 float varAngle = 2.5f * Mathf.PI - Mathf.Atan2 (direction.y, direction.x) + variance;
                 proj.direction = new Vector3(Mathf.Sin(varAngle), Mathf.Cos(varAngle), 1);
             }
         }
-        /*
-        * ---- Spread feature. WIP ----
-            Projectile proj = projectileObj.GetComponent<Projectile>();
-            float angle = (2.5f * Mathf.PI) - Mathf.Atan2 (direction.y, direction.x);
-            float variance = UnityEngine.Random.Range(-spread / 2, spread / 2) * Mathf.Deg2Rad;
-            Vector3 start;
-            Vector3 end;
-            start = Quaternion.AngleAxis(angle - spread / 2, Vector3.forward) * direction;
-            end = Quaternion.AngleAxis(angle + spread / 2, Vector3.forward) * direction;
-            Debug.DrawLine(transform.position, start, Color.red, 10, true);
-            Debug.DrawLine(transform.position, end, Color.red, 10, true);
-            angle += variance;
-            angle %= 2 * Mathf.PI;
-            if (angle < 0)
-                angle += 2 * Mathf.PI;
-            Debug.Log("Angle after:" + angle);
-            Debug.Log("Angle var:" + variance);
-            Debug.Log("Direction:" + direction);
 
-            proj.direction = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward) * direction;
-            Debug.Log("proj direction:" + proj.direction);
-        */
     }
 
     private void ShootWeapon()
@@ -113,7 +109,7 @@ public class Weapon : MonoBehaviour
         }
     }
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         v3Pos = cam.WorldToScreenPoint(player.transform.position);
         v3Pos = Input.mousePosition - v3Pos;
@@ -132,7 +128,9 @@ public class Weapon : MonoBehaviour
         gameObject.transform.position = _centre + offset;
         gameObject.transform.eulerAngles = Vector3.forward * (405 - (Mathf.Rad2Deg * targetAngle));
         if (Input.GetMouseButton(0))
+        {
             ShootWeapon();
+        }
     }
 
 
