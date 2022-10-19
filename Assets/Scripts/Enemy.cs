@@ -10,9 +10,11 @@ public class Enemy : MonoBehaviour
     public float minDistance;
     public float detectionZone;
     public float maxFollowDistance;
+    public string walkAnim;
     protected GameObject player;
     protected SpriteRenderer sprite;
     protected Rigidbody2D rb;
+    protected Animator anim;
     protected float execTime = 2f;
     protected Vector2 dir;
     private bool _alive = true;
@@ -25,6 +27,7 @@ public class Enemy : MonoBehaviour
     protected virtual void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
     }
@@ -59,9 +62,7 @@ public class Enemy : MonoBehaviour
         if (_alive == true)
         {
             sprite.color = Color.red;
-
             yield return new WaitForSeconds(0.3f);
-
             if (this)
                 sprite.color = Color.white;
         }
@@ -84,6 +85,7 @@ public class Enemy : MonoBehaviour
     protected virtual void Pathfinding()
     {
         if (_alive == true)
+        {
             if (!player)
             {
                 Collider2D[] detectZone = Physics2D.OverlapCircleAll(transform.position, detectionZone);
@@ -114,10 +116,14 @@ public class Enemy : MonoBehaviour
             {
                 rb.velocity = Vector3.zero;
                 transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed);
+                if (anim != null && walkAnim != null)
+                    anim.Play(walkAnim);
                 Flip(transform.position, player.transform.position);
+                Debug.Log(rb.velocity.x);
                 if (Vector2.Distance(transform.position, player.transform.position) > maxFollowDistance)
                     player = null;
             }
+        }
     }
 
     protected virtual void MoveRandom()

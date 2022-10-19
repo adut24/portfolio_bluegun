@@ -5,6 +5,7 @@ public class Sorcerer : Enemy
     private Animator attackAnim;
     private GameObject firedProjectile, projectile;
     public float projectileSpeed = 0.3f;
+    public float projectileLifeTime = 1.5f;
     public int projectilePower = 30;
 
     protected override void Start()
@@ -36,8 +37,7 @@ public class Sorcerer : Enemy
         base.Flip(transform.position, player.transform.position);
         Vector2 firePosition = DetermineSide();
         firedProjectile = Instantiate(projectile, firePosition, transform.rotation);
-        if (firedProjectile)
-            Destroy(firedProjectile, 1.5f);
+        Destroy(firedProjectile, projectileLifeTime);
     }
 
     private Vector2 DetermineSide()
