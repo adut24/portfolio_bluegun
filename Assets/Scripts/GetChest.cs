@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FirstChest : MonoBehaviour
+public class GetChest : MonoBehaviour
 {
     [SerializeField] private Inventory inv;
 
@@ -8,7 +8,7 @@ public class FirstChest : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            inv.OpenFirstChest();
+            inv.OpenChest();
             Destroy(gameObject);
         }
     }
