@@ -138,3 +138,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4.5
   direction: {x: 0, y: 0, z: 0}
+  damage: 5
