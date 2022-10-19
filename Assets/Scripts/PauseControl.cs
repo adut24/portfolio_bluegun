@@ -6,20 +6,20 @@ using UnityEngine.UI;
 public class PauseControl : MonoBehaviour
 {
 	public bool isPaused = false;
-	public GameObject pauseMenuUI;
+	public GameObject menu;
     // Update is called once per frame
     public void SetPause(bool pause)
     {
         	if (pause is true)
         	{
             	Time.timeScale = 0f;
-				pauseMenuUI.SetActive(true);
+				menu.SetActive(true);
 				isPaused = true;
         	}
         	else
         	{
         		Time.timeScale = 1;
-				pauseMenuUI.SetActive(false);
+				menu.SetActive(false);
 				isPaused = false;
         	}
     }

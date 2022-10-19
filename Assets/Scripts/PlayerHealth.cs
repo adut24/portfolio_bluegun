@@ -8,7 +8,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private HealthBar hb;
     [SerializeField] private bool isInvicible = false;
     [SerializeField] private SpriteRenderer graphics;
-
+    [SerializeField] private GameObject gameOverMenu;
+    [SerializeField] private PauseControl pauseController;
     private void Start()
     {
         currenthealth = maxHealth;
@@ -19,12 +20,20 @@ public class PlayerHealth : MonoBehaviour
     {
         if (!isInvicible)
         {
+            AudioSource source = GetComponent<AudioSource>();
+            source.PlayOneShot(source.clip, 1f);
             currenthealth -= damage;
             hb.SetHealth(currenthealth);
             isInvicible = true;
             StartCoroutine(InvincibilityFlash());
             StartCoroutine(InvincibilityDelay());
-        }    
+            if (currenthealth <= 0)
+            {
+                Time.timeScale = 0f;
+                gameOverMenu.SetActive(true);
+                pauseController.isPaused = true;
+            }
+        }
     }
 
     public IEnumerator InvincibilityFlash()
