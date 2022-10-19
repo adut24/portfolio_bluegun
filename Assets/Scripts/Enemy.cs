@@ -10,15 +10,18 @@ public class Enemy : MonoBehaviour
     public float minDistance;
     public float detectionZone;
     public float maxFollowDistance;
+    public string walkAnim;
     protected GameObject player;
     protected SpriteRenderer sprite;
     protected Rigidbody2D rb;
+    protected Animator anim;
     protected float execTime = 2f;
     protected Vector2 dir;
 
     protected virtual void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
     }
@@ -50,9 +53,7 @@ public class Enemy : MonoBehaviour
     public IEnumerator ShowDamage()
     {
         sprite.color = Color.red;
-
         yield return new WaitForSeconds(0.3f);
-
         if (this)
             sprite.color = Color.white;
     }
@@ -97,7 +98,10 @@ public class Enemy : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed);
+            if (anim != null && walkAnim != null)
+                anim.Play(walkAnim);
             Flip(transform.position, player.transform.position);
+            Debug.Log(rb.velocity.x);
             if (Vector2.Distance(transform.position, player.transform.position) > maxFollowDistance)
                 player = null;
         }
@@ -108,6 +112,8 @@ public class Enemy : MonoBehaviour
         rb.velocity = Vector3.zero;
         rb.AddForce(dir * 1.25f);
         Flip(transform.position, dir);
+        if (anim != null && walkAnim != null)
+            anim.Play(walkAnim);
         execTime = 2f;
     }
 

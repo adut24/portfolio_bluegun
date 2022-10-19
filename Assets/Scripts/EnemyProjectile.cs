@@ -10,8 +10,7 @@ public class EnemyProjectile : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Player");
-        direction = transform.position;
-        direction = player.transform.position - direction;
+        direction = player.transform.position - transform.position;
     }
 
     private void FixedUpdate()
