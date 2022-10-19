@@ -7,6 +7,12 @@ public class Projectile : MonoBehaviour
     public float    speed = 4.5f;
     public Vector3  direction;
     public int      damage = 5;
+    public float    duration = 1.0f;
+
+    void Start()
+    {
+        Destroy(gameObject, duration);
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
