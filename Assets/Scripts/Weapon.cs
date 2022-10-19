@@ -82,6 +82,7 @@ public class Weapon : MonoBehaviour
             proj.speed = shootSpeed;
             proj.GetComponent<Transform>().localScale = new Vector3(size, size, 1);
             proj.damage = damage;
+            //GetComponent<AudioSource>().Play();
             shootCoroutine = StartCoroutine(resumeShoot());
         }
     }
