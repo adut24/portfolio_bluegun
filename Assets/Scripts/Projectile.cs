@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     public Vector3  direction;
     public int      damage = 5;
     public float    duration = 1.0f;
+    public int      pierce = 0;
 
     void Start()
     {
@@ -20,9 +21,21 @@ public class Projectile : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>().AddForce(direction * speed); // Incremental move
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        if (collision.gameObject.name == "Walls")
+        {
+            Destroy(gameObject);
+            return ;
+        }
+        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+        if (enemy != null && enemy.alive == true)
+        {
+            if (pierce > 0)
+                pierce--;
+            else
+                Destroy(gameObject);
+        }
     }
 
 

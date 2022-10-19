@@ -28,7 +28,7 @@ public class Weapon : MonoBehaviour
     public Projectile projectilePrefab;
     public float projectileOffset = 0.5f;
     public float projectileDuration = 0.2f;
-
+    public int  pierce = 0;
 
 
     private int ShortestDirection(float angleA, float angleB)
@@ -36,11 +36,11 @@ public class Weapon : MonoBehaviour
         float alpha, beta, gamma;
 
         alpha = angleA - angleB;
-        beta = angleA - angleB + 2 * MathF.PI;
-        gamma = angleA - angleB - 2 * MathF.PI;
-        if (MathF.Abs(alpha) < MathF.Abs(beta) && MathF.Abs(alpha) < MathF.Abs(gamma))
+        beta = angleA - angleB + 2 * Mathf.PI;
+        gamma = angleA - angleB - 2 * Mathf.PI;
+        if (Mathf.Abs(alpha) < Mathf.Abs(beta) && Mathf.Abs(alpha) < Mathf.Abs(gamma))
             return alpha < 0 ? -1 : 1;
-        else if (MathF.Abs(beta) < MathF.Abs(gamma))
+        else if (Mathf.Abs(beta) < Mathf.Abs(gamma))
             return beta < 0 ? -1 : 1;
         return gamma < 0 ? -1 : 1;
     }
@@ -51,6 +51,58 @@ public class Weapon : MonoBehaviour
         yield return new WaitForSeconds(shootDelay);
         shootPause = false;
     }
+
+    private void launchProjectile(Vector3 startPosition, Vector3 direction)
+    {
+        Projectile proj = Instantiate(projectilePrefab, startPosition, transform.rotation);
+        proj.direction = direction;
+        proj.speed = shootSpeed;
+        proj.GetComponent<Transform>().localScale = new Vector3(size, size, 1);
+        proj.damage = damage;
+        proj.duration = projectileDuration;
+        proj.pierce = pierce;
+
+
+        float angle = 2 * Mathf.PI - Mathf.Atan2 (direction.y, direction.x);
+
+        // float variance = UnityEngine.Random.Range(-spread / 2, spread / 2) * Mathf.Deg2Rad;
+        float variance = spread * Mathf.Deg2Rad;
+        Vector2 start;
+        Vector2 end;
+        float startAngle;
+        float endAngle;
+
+        startAngle = Mathf.Atan2 (direction.y, direction.x) - variance / 2;
+        endAngle = startAngle + variance;
+        Debug.Log("start: " + startAngle + " | end: " + endAngle);
+        start = new Vector2(Mathf.Sin(startAngle), Mathf.Cos(startAngle)) + (Vector2) startPosition;
+        end = new Vector2(Mathf.Sin(endAngle), Mathf.Cos(endAngle)) + (Vector2) startPosition;
+        Debug.DrawLine(transform.position, start, Color.red, 10, true);
+        Debug.DrawLine(transform.position, end, Color.red, 10, true);
+        /*
+        * ---- Spread feature. WIP ----
+            Projectile proj = projectileObj.GetComponent<Projectile>();
+            float angle = (2.5f * Mathf.PI) - Mathf.Atan2 (direction.y, direction.x);
+            float variance = UnityEngine.Random.Range(-spread / 2, spread / 2) * Mathf.Deg2Rad;
+            Vector3 start;
+            Vector3 end;
+            start = Quaternion.AngleAxis(angle - spread / 2, Vector3.forward) * direction;
+            end = Quaternion.AngleAxis(angle + spread / 2, Vector3.forward) * direction;
+            Debug.DrawLine(transform.position, start, Color.red, 10, true);
+            Debug.DrawLine(transform.position, end, Color.red, 10, true);
+            angle += variance;
+            angle %= 2 * Mathf.PI;
+            if (angle < 0)
+                angle += 2 * Mathf.PI;
+            Debug.Log("Angle after:" + angle);
+            Debug.Log("Angle var:" + variance);
+            Debug.Log("Direction:" + direction);
+
+            proj.direction = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward) * direction;
+            Debug.Log("proj direction:" + proj.direction);
+        */
+    }
+
     private void ShootWeapon()
     {
         if (shootPause == false)
@@ -60,36 +112,10 @@ public class Weapon : MonoBehaviour
 
             direction = Vector3.Normalize(v3Pos);
             startPosition = transform.position + direction * projectileOffset;
-            Projectile proj = Instantiate(projectilePrefab, startPosition, transform.rotation);
-            /*
-            * ---- Spread feature. WIP ----
-             Projectile proj = projectileObj.GetComponent<Projectile>();
-             float angle = (2.5f * MathF.PI) - Mathf.Atan2 (direction.y, direction.x);
-             float variance = UnityEngine.Random.Range(-spread / 2, spread / 2) * Mathf.Deg2Rad;
-             Vector3 start;
-             Vector3 end;
-             start = Quaternion.AngleAxis(angle - spread / 2, Vector3.forward) * direction;
-             end = Quaternion.AngleAxis(angle + spread / 2, Vector3.forward) * direction;
-             Debug.DrawLine(transform.position, start, Color.red, 10, true);
-             Debug.DrawLine(transform.position, end, Color.red, 10, true);
-             angle += variance;
-             angle %= 2 * MathF.PI;
-             if (angle < 0)
-                 angle += 2 * MathF.PI;
-             Debug.Log("Angle after:" + angle);
-             Debug.Log("Angle var:" + variance);
-             Debug.Log("Direction:" + direction);
-
-             proj.direction = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward) * direction;
-             Debug.Log("proj direction:" + proj.direction);
-            */
-            proj.direction = direction;
-            proj.speed = shootSpeed;
-            proj.GetComponent<Transform>().localScale = new Vector3(size, size, 1);
-            proj.damage = damage;
-            proj.duration = projectileDuration;
-            //GetComponent<AudioSource>().Play();
+            launchProjectile(startPosition, direction);
             shootCoroutine = StartCoroutine(resumeShoot());
+
+            //GetComponent<AudioSource>().Play();
         }
     }
     // Update is called once per frame
@@ -98,16 +124,16 @@ public class Weapon : MonoBehaviour
         v3Pos = cam.WorldToScreenPoint(player.transform.position);
         v3Pos = Input.mousePosition - v3Pos;
         _centre = player.transform.position;
-        targetAngle = (2.5f * MathF.PI) - Mathf.Atan2 (v3Pos.y, v3Pos.x);
-        targetAngle %= 2 * MathF.PI;
-        if (targetAngle > (2 * MathF.PI)) targetAngle -= 2 * MathF.PI;
+        targetAngle = (2.5f * Mathf.PI) - Mathf.Atan2 (v3Pos.y, v3Pos.x);
+        targetAngle %= 2 * Mathf.PI;
+        if (targetAngle > (2 * Mathf.PI)) targetAngle -= 2 * Mathf.PI;
         rotValue = RotateSpeed * Time.deltaTime;
-        if (MathF.Abs (targetAngle - _angle) < rotValue)
+        if (Mathf.Abs (targetAngle - _angle) < rotValue)
             _angle = targetAngle;
         else
             _angle += ShortestDirection(targetAngle, _angle) * rotValue;
-        if (_angle < 0) _angle += 2 * MathF.PI;
-        _angle %= 2 * MathF.PI;
+        if (_angle < 0) _angle += 2 * Mathf.PI;
+        _angle %= 2 * Mathf.PI;
         var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * Radius;
         gameObject.transform.position = _centre + offset;
         gameObject.transform.eulerAngles = Vector3.forward * (405 - (Mathf.Rad2Deg * targetAngle));

@@ -15,7 +15,12 @@ public class Enemy : MonoBehaviour
     protected Rigidbody2D rb;
     protected float execTime = 2f;
     protected Vector2 dir;
-    private bool alive = true;
+    private bool _alive = true;
+
+    public bool alive
+    {
+        get {return _alive;}
+    }
 
     protected virtual void Start()
     {
@@ -40,7 +45,7 @@ public class Enemy : MonoBehaviour
             Pathfinding();
     }
 
-    protected virtual void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Projectile"))
         {
@@ -51,7 +56,7 @@ public class Enemy : MonoBehaviour
 
     public IEnumerator ShowDamage()
     {
-        if (alive == true)
+        if (_alive == true)
         {
             sprite.color = Color.red;
 
@@ -66,9 +71,9 @@ public class Enemy : MonoBehaviour
     {
         health -= damage;
 
-        if (alive == true && health <= 0)
+        if (_alive == true && health <= 0)
         {
-            alive = false;
+            _alive = false;
             AudioSource source = GetComponent<AudioSource>();
             if (source != null)
                 source.PlayOneShot(source.clip, 1f);
@@ -78,7 +83,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Pathfinding()
     {
-        if (alive == true)
+        if (_alive == true)
             if (!player)
             {
                 Collider2D[] detectZone = Physics2D.OverlapCircleAll(transform.position, detectionZone);
@@ -117,7 +122,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual void MoveRandom()
     {
-        if (alive == true)
+        if (_alive == true)
         {
             rb.velocity = Vector3.zero;
             rb.AddForce(dir * 1.25f);

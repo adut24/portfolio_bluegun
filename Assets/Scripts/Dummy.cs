@@ -11,7 +11,7 @@ public class Dummy : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Projectile"))
         {
