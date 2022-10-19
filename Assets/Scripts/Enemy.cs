@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     protected Rigidbody2D rb;
     protected float execTime = 2f;
     protected Vector2 dir;
+    private bool alive = true;
 
     protected virtual void Start()
     {
@@ -25,6 +26,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Update()
     {
+
         execTime -= Time.deltaTime;
         if (!player && execTime <= 0)
             dir = new Vector2(Random.Range(-1000, 1000), Random.Range(-1000, 1000));
@@ -49,66 +51,79 @@ public class Enemy : MonoBehaviour
 
     public IEnumerator ShowDamage()
     {
-        sprite.color = Color.red;
+        if (alive == true)
+        {
+            sprite.color = Color.red;
 
-        yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.3f);
 
-        if (this)
-            sprite.color = Color.white;
+            if (this)
+                sprite.color = Color.white;
+        }
     }
 
     public void TakeDamage(int damage)
     {
         health -= damage;
 
-        if (health <= 0)
-            Destroy(gameObject);
+        if (alive == true && health <= 0)
+        {
+            alive = false;
+            AudioSource source = GetComponent<AudioSource>();
+            if (source != null)
+                source.PlayOneShot(source.clip, 1f);
+            Destroy(gameObject, 1.0f);
+        }
     }
 
     protected virtual void Pathfinding()
     {
-        if (!player)
-        {
-            Collider2D[] detectZone = Physics2D.OverlapCircleAll(transform.position, detectionZone);
-
-            foreach (Collider2D obj in detectZone)
+        if (alive == true)
+            if (!player)
             {
-                if (obj.gameObject.CompareTag("Player"))
-                {
-                    player = obj.gameObject;
-                    break;
-                }
-            }
+                Collider2D[] detectZone = Physics2D.OverlapCircleAll(transform.position, detectionZone);
 
-            if (player)
-            {
-                Collider2D[] detectCollider = Physics2D.OverlapAreaAll(transform.position, player.transform.position);
-                foreach (Collider2D obj in detectCollider)
+                foreach (Collider2D obj in detectZone)
                 {
-                    if (obj.gameObject.name == "Walls")
+                    if (obj.gameObject.CompareTag("Player"))
                     {
-                        player = null;
+                        player = obj.gameObject;
                         break;
                     }
                 }
+
+                if (player)
+                {
+                    Collider2D[] detectCollider = Physics2D.OverlapAreaAll(transform.position, player.transform.position);
+                    foreach (Collider2D obj in detectCollider)
+                    {
+                        if (obj.gameObject.name == "Walls")
+                        {
+                            player = null;
+                            break;
+                        }
+                    }
+                }
             }
-        }
-        else
-        {
-            rb.velocity = Vector3.zero;
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed);
-            Flip(transform.position, player.transform.position);
-            if (Vector2.Distance(transform.position, player.transform.position) > maxFollowDistance)
-                player = null;
-        }
+            else
+            {
+                rb.velocity = Vector3.zero;
+                transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed);
+                Flip(transform.position, player.transform.position);
+                if (Vector2.Distance(transform.position, player.transform.position) > maxFollowDistance)
+                    player = null;
+            }
     }
 
     protected virtual void MoveRandom()
     {
-        rb.velocity = Vector3.zero;
-        rb.AddForce(dir * 1.25f);
-        Flip(transform.position, dir);
-        execTime = 2f;
+        if (alive == true)
+        {
+            rb.velocity = Vector3.zero;
+            rb.AddForce(dir * 1.25f);
+            Flip(transform.position, dir);
+            execTime = 2f;
+        }
     }
 
     protected virtual void Flip(Vector2 position, Vector2 target)
