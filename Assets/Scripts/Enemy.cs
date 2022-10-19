@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public int health;
     public int power;
+    public float baseSpeed;
     public float moveSpeed;
     public float minDistance;
     public float detectionZone;
@@ -17,7 +18,13 @@ public class Enemy : MonoBehaviour
     protected Animator anim;
     protected float execTime = 2f;
     protected Vector2 dir;
-    private bool alive = true;
+    private bool _alive = true;
+    public Color nextColor;
+
+    public bool alive
+    {
+        get {return _alive;}
+    }
 
     protected virtual void Start()
     {
@@ -25,6 +32,7 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
+        baseSpeed = moveSpeed;
     }
 
     protected virtual void Update()
@@ -43,23 +51,28 @@ public class Enemy : MonoBehaviour
             Pathfinding();
     }
 
-    protected virtual void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Projectile"))
         {
             StartCoroutine(ShowDamage());
-            TakeDamage(collision.gameObject.GetComponent<Projectile>().damage);
+            TakeDamage(collision.gameObject.GetComponent<Projectile>().parent.damage);
         }
     }
 
     public IEnumerator ShowDamage()
     {
-        if (alive == true)
+        Color previousColor;
+        if (_alive == true)
         {
+            previousColor = sprite.color;
             sprite.color = Color.red;
             yield return new WaitForSeconds(0.3f);
             if (this)
-                sprite.color = Color.white;
+            {
+                sprite.color = nextColor;
+                nextColor = Color.white;
+            }
         }
     }
 
@@ -67,9 +80,9 @@ public class Enemy : MonoBehaviour
     {
         health -= damage;
 
-        if (alive == true && health <= 0)
+        if (_alive == true && health <= 0)
         {
-            alive = false;
+            _alive = false;
             AudioSource source = GetComponent<AudioSource>();
             if (source != null)
                 source.PlayOneShot(source.clip, 1f);
@@ -79,7 +92,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Pathfinding()
     {
-        if (alive)
+        if (_alive == true)
         {
             if (!player)
             {
@@ -114,7 +127,6 @@ public class Enemy : MonoBehaviour
                 if (anim != null && walkAnim != null)
                     anim.Play(walkAnim);
                 Flip(transform.position, player.transform.position);
-                Debug.Log(rb.velocity.x);
                 if (Vector2.Distance(transform.position, player.transform.position) > maxFollowDistance)
                     player = null;
             }
@@ -123,7 +135,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual void MoveRandom()
     {
-        if (alive == true)
+        if (_alive == true)
         {
             rb.velocity = Vector3.zero;
             rb.AddForce(dir * 1.25f);

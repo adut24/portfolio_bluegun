@@ -53,6 +53,11 @@ public class Inventory : MonoBehaviour
         invPanel.GetChild(0).GetChild(0).GetComponent<Image>().sprite = allWeapons[i].visual;
         movingWeapon.SetActive(true);
         movingWeapon.GetComponent<SpriteRenderer>().sprite = allWeapons[i].visual;
+        GameObject player = GameObject.Find("Player");
+        Destroy(player.transform.GetChild(0).gameObject);
+        GameObject weaponObj = Instantiate(weapon.weaponPrefab, player.transform);
+        weaponObj.GetComponent<SpriteRenderer>().sprite = weapon.visual;
+        weaponObj.SetActive(true);
         Time.timeScale = 1f;
         firstChestPopUp.SetActive(false);
         chestPopUp.SetActive(false);

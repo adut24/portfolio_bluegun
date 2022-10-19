@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: FireWand
   visual: {fileID: 21300000, guid: 450456ae475ede3499a2f2ec2a9168b5, type: 3}
+  weaponPrefab: {fileID: 7635061445139293558, guid: 2069325797427c64c954a6d6bae5d65c, type: 3}

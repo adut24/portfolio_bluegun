@@ -11,12 +11,12 @@ public class Dummy : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Projectile"))
         {
             StartCoroutine(ShowDamage());
-            TakeDamage(collision.gameObject.GetComponent<Projectile>().damage);
+            TakeDamage(collision.gameObject.GetComponent<Projectile>().parent.damage);
         }
     }
 
