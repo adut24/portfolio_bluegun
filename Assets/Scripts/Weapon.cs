@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -54,31 +53,25 @@ public class Weapon : MonoBehaviour
 
     private void launchProjectile(Vector3 startPosition, Vector3 direction)
     {
-        Projectile proj = Instantiate(projectilePrefab, startPosition, transform.rotation);
-        proj.direction = direction;
-        proj.speed = shootSpeed;
-        proj.GetComponent<Transform>().localScale = new Vector3(size, size, 1);
-        proj.damage = damage;
-        proj.duration = projectileDuration;
-        proj.pierce = pierce;
+        for (int i = 0; i < projectileNumber; i++)
+        {
+            Projectile proj = Instantiate(projectilePrefab, startPosition, transform.rotation);
+            proj.direction = direction;
+            proj.speed = shootSpeed;
+            proj.GetComponent<Transform>().localScale = new Vector3(size, size, 1);
+            proj.damage = damage;
+            proj.duration = projectileDuration;
+            proj.pierce = pierce;
 
-
-        float angle = 2 * Mathf.PI - Mathf.Atan2 (direction.y, direction.x);
-
-        // float variance = UnityEngine.Random.Range(-spread / 2, spread / 2) * Mathf.Deg2Rad;
-        float variance = spread * Mathf.Deg2Rad;
-        Vector2 start;
-        Vector2 end;
-        float startAngle;
-        float endAngle;
-
-        startAngle = Mathf.Atan2 (direction.y, direction.x) - variance / 2;
-        endAngle = startAngle + variance;
-        Debug.Log("start: " + startAngle + " | end: " + endAngle);
-        start = new Vector2(Mathf.Sin(startAngle), Mathf.Cos(startAngle)) + (Vector2) startPosition;
-        end = new Vector2(Mathf.Sin(endAngle), Mathf.Cos(endAngle)) + (Vector2) startPosition;
-        Debug.DrawLine(transform.position, start, Color.red, 10, true);
-        Debug.DrawLine(transform.position, end, Color.red, 10, true);
+            if (spread > 0)
+            {
+                float variance = UnityEngine.Random.Range(-spread / 2, spread / 2);
+                variance *= Mathf.Deg2Rad;
+                Vector2 start;
+                float varAngle = 2.5f * Mathf.PI - Mathf.Atan2 (direction.y, direction.x) + variance;
+                proj.direction = new Vector3(Mathf.Sin(varAngle), Mathf.Cos(varAngle), 1);
+            }
+        }
         /*
         * ---- Spread feature. WIP ----
             Projectile proj = projectileObj.GetComponent<Projectile>();
@@ -114,8 +107,9 @@ public class Weapon : MonoBehaviour
             startPosition = transform.position + direction * projectileOffset;
             launchProjectile(startPosition, direction);
             shootCoroutine = StartCoroutine(resumeShoot());
-
-            //GetComponent<AudioSource>().Play();
+            AudioSource source = GetComponent<AudioSource>();
+            if (source != null)
+                source.PlayOneShot(source.clip, 1f);
         }
     }
     // Update is called once per frame

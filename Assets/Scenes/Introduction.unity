@@ -9879,6 +9879,7 @@ MonoBehaviour:
   minDistance: 0
   detectionZone: 10
   maxFollowDistance: 10
+  walkAnim: 
 --- !u!95 &1101493619
 Animator:
   serializedVersion: 4
@@ -15614,7 +15615,7 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 1826734981560078867, guid: 3a7513b2a67f8248db3f51177d069a1b, type: 3}
       propertyPath: size
-      value: 20
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1826734981560078867, guid: 3a7513b2a67f8248db3f51177d069a1b, type: 3}
       propertyPath: pierce
@@ -15625,12 +15626,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1929888719}
     - target: {fileID: 1826734981560078867, guid: 3a7513b2a67f8248db3f51177d069a1b, type: 3}
-      propertyPath: shootSpeed
+      propertyPath: spread
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826734981560078867, guid: 3a7513b2a67f8248db3f51177d069a1b, type: 3}
+      propertyPath: shootSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1826734981560078867, guid: 3a7513b2a67f8248db3f51177d069a1b, type: 3}
       propertyPath: projectileNumber
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826734981560078867, guid: 3a7513b2a67f8248db3f51177d069a1b, type: 3}
+      propertyPath: projectileOffset
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1826734981560078867, guid: 3a7513b2a67f8248db3f51177d069a1b, type: 3}
       propertyPath: projectileDuration
@@ -15653,7 +15662,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 9443ccb758d52f26c940112d8212d9ce, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 8e7389a71ead526408144b80198df546, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 36533389f45400662bfa119b5b2869f4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

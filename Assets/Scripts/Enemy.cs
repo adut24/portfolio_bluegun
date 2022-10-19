@@ -119,7 +119,6 @@ public class Enemy : MonoBehaviour
                 if (anim != null && walkAnim != null)
                     anim.Play(walkAnim);
                 Flip(transform.position, player.transform.position);
-                Debug.Log(rb.velocity.x);
                 if (Vector2.Distance(transform.position, player.transform.position) > maxFollowDistance)
                     player = null;
             }

@@ -11,8 +11,9 @@ public class Dummy : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
     }
 
-    private void OnTEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("wut");
         if (collision.gameObject.CompareTag("Projectile"))
         {
             StartCoroutine(ShowDamage());
