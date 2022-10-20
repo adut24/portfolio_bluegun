@@ -13,7 +13,7 @@ public class Projectile : MonoBehaviour
     {
         Destroy(gameObject, parent.projectileDuration);
         if (parent.projectileMovement == Weapon.moveType.Decremental)
-            gameObject.GetComponent<Rigidbody2D>().AddForce(direction * speed);// Incremental move
+            gameObject.GetComponent<Rigidbody2D>().AddForce(direction * speed);// Decremental move
         slowCount = 100;
     }
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class Projectile : MonoBehaviour
                 if (slowCount > 0)
                 {
                     slowCount--;
-                    gameObject.GetComponent<Rigidbody2D>().AddForce((direction * speed) * -0.01f);// Incremental move
+                    gameObject.GetComponent<Rigidbody2D>().AddForce((direction * speed) * -0.01f);// Decremental move
                 }
                 break;
         }

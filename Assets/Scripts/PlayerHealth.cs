@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private SpriteRenderer graphics;
     [SerializeField] private GameObject gameOverMenu;
     [SerializeField] private PauseControl pauseController;
+
     private void Start()
     {
         currenthealth = maxHealth;
@@ -42,7 +43,7 @@ public class PlayerHealth : MonoBehaviour
         {
             graphics.color = new Color(1f, 1f, 1f, 0f);
             yield return new WaitForSeconds(0.15f);
-            graphics.color = new Color(1f, 1f, 1f, 1f); 
+            graphics.color = new Color(1f, 1f, 1f, 1f);
             yield return new WaitForSeconds(0.2f);
         }
     }
