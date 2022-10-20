@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 66479714}
   - component: {fileID: 66479713}
   m_Layer: 5
-  m_Name: Slot (1)
+  m_Name: Second
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -285,7 +285,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1215358971}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
-        m_MethodName: ClickWeapon
+        m_MethodName: ClickFirstWeapon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -786,7 +786,7 @@ GameObject:
   - component: {fileID: 173427341}
   - component: {fileID: 173427340}
   m_Layer: 5
-  m_Name: Slot
+  m_Name: First
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -856,7 +856,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 173427341}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1215358971}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: ClickFirstWeapon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &173427341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10442,7 +10454,7 @@ GameObject:
   - component: {fileID: 1403400667}
   - component: {fileID: 1403400666}
   m_Layer: 5
-  m_Name: Slot (2)
+  m_Name: Third
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10512,7 +10524,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1403400667}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1215358971}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: ClickFirstWeapon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1403400667
 MonoBehaviour:
   m_ObjectHideFlags: 0

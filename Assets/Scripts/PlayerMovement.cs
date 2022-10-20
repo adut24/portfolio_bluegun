@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
         ProcessInputs();
 
-        if (Input.GetKeyDown(KeyCode.Space) && canDash)
+        if (Input.GetKeyDown(KeyCode.Space) && moveDirection != Vector2.zero && canDash)
         {
             slider.value = 0;
             StartCoroutine(Dash());

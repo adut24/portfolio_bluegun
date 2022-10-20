@@ -8,6 +8,7 @@ public class ArtifactData : ScriptableObject
     public string description;
     public int damage;
     public int health;
+    public int maxHealth;
     public float speed;
     public float dashCooldown;
     public float artifactActivation;
