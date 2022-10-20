@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Artifact", menuName = "Artifacts/New artifact")]
@@ -7,5 +5,11 @@ using UnityEngine;
 public class ArtifactData : ScriptableObject
 {
     public new string name;
+    public string description;
+    public int damage;
+    public int health;
+    public float speed;
+    public float dashCooldown;
+    public float artifactActivation;
     public Sprite visual;
 }
