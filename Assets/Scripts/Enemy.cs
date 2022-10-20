@@ -37,7 +37,6 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Update()
     {
-
         execTime -= Time.deltaTime;
         if (!player && execTime <= 0)
             dir = new Vector2(Random.Range(-1000, 1000), Random.Range(-1000, 1000));
@@ -86,7 +85,9 @@ public class Enemy : MonoBehaviour
             AudioSource source = GetComponent<AudioSource>();
             if (source != null)
                 source.PlayOneShot(source.clip, 1f);
+            Vector2 position = gameObject.transform.position;
             Destroy(gameObject, 1.0f);
+            DropItem(position);
         }
     }
 
@@ -150,5 +151,16 @@ public class Enemy : MonoBehaviour
             sprite.flipX = true;
         else
             sprite.flipX = false;
+    }
+
+    protected virtual void DropItem(Vector2 position)
+    {
+        int nb = Random.Range(0, 100);
+
+        if (nb <= 3)
+        {
+            GameObject potion = Resources.Load<GameObject>("Potion");
+            Instantiate(potion, position, Quaternion.identity);
+        }
     }
 }
