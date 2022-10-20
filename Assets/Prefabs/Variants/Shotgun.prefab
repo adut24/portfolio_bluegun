@@ -20,6 +20,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6925224111890904651, guid: 28184a5ccf4821e40aa5718eeb6ab352, type: 3}
+      propertyPath: shootDelay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6925224111890904651, guid: 28184a5ccf4821e40aa5718eeb6ab352, type: 3}
       propertyPath: dot.color.a
       value: 0.6862745
       objectReference: {fileID: 0}
@@ -41,15 +45,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6925224111890904651, guid: 28184a5ccf4821e40aa5718eeb6ab352, type: 3}
       propertyPath: projectileSpeed
-      value: 80
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6925224111890904651, guid: 28184a5ccf4821e40aa5718eeb6ab352, type: 3}
       propertyPath: projectileNumber
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6925224111890904651, guid: 28184a5ccf4821e40aa5718eeb6ab352, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 2388196409595819966, guid: 27623ac88e5f67e40a215de98755f76f, type: 3}
+    - target: {fileID: 6925224111890904651, guid: 28184a5ccf4821e40aa5718eeb6ab352, type: 3}
       propertyPath: projectileDuration
-      value: 1
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6925224111890904651, guid: 28184a5ccf4821e40aa5718eeb6ab352, type: 3}
+      propertyPath: projectileMovement
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6925224111890904651, guid: 28184a5ccf4821e40aa5718eeb6ab352, type: 3}
+      propertyPath: projectileSpeedRange
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6925224111890904655, guid: 28184a5ccf4821e40aa5718eeb6ab352, type: 3}
       propertyPath: m_Name
