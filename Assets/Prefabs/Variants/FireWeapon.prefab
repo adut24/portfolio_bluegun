@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1710881360146080689, guid: 42c7b3c420614d94e9ea77a7a53305b1, type: 3}
       propertyPath: m_Name
-      value: Weapon
+      value: FireWeapon
       objectReference: {fileID: 0}
     - target: {fileID: 1710881360146080693, guid: 42c7b3c420614d94e9ea77a7a53305b1, type: 3}
       propertyPath: size
@@ -105,7 +105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1710881360146080693, guid: 42c7b3c420614d94e9ea77a7a53305b1, type: 3}
       propertyPath: projectileSpeed
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1710881360146080693, guid: 42c7b3c420614d94e9ea77a7a53305b1, type: 3}
       propertyPath: projectileNumber
@@ -118,6 +118,10 @@ PrefabInstance:
     - target: {fileID: 1710881360146080693, guid: 42c7b3c420614d94e9ea77a7a53305b1, type: 3}
       propertyPath: projectileDuration
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710881360146080693, guid: 42c7b3c420614d94e9ea77a7a53305b1, type: 3}
+      propertyPath: projectileMovement
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42c7b3c420614d94e9ea77a7a53305b1, type: 3}

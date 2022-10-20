@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class Weapon : MonoBehaviour
 {
@@ -28,9 +27,17 @@ public class Weapon : MonoBehaviour
         public Color color;
         public Debuff debuffPrefab;
     }
+    [System.Serializable]
+    public enum moveType
+    {
+        Linear,
+        Incremental,
+        Decremental
+    }
     /* ----- WEAPON PARAMETERS ---- */
     public float shootDelay = 1.0f;
     public float projectileSpeed = 5.0f;
+    public float projectileSpeedRange = 1.0f;
     public float size = 2.0f;
     public int spread = 15;
     public int damage = 10;
@@ -40,12 +47,10 @@ public class Weapon : MonoBehaviour
     public float projectileDuration = 0.2f;
     public int  pierce = 0;
     public dotEffect dot;
-
+    public moveType projectileMovement = moveType.Linear;
 
     void Start()
     {
-        Debug.Log("WHY OH WHY");
-
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
         player = GameObject.Find("Player");
     }
@@ -76,6 +81,7 @@ public class Weapon : MonoBehaviour
         for (int i = 0; i < projectileNumber; i++)
         {
             Projectile proj = Instantiate(projectilePrefab, startPosition, transform.rotation);
+            proj.speed = Random.Range(projectileSpeed - projectileSpeedRange, projectileSpeed + projectileSpeedRange);
             proj.parent = this;
             proj.direction = direction;
             proj.GetComponent<Transform>().localScale = new Vector3(size, size, 1);
