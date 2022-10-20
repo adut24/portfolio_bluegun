@@ -16,7 +16,7 @@ public class RoomGenerator : MonoBehaviour
     public bool mergeDifficulty = false;
     private GameObject[] enemies;
     public TilemapVisualiser tilemap;
-    public HashSet<Vector2Int> floorPositions;
+    public static HashSet<Vector2Int> floorPositions;
 
     private void Awake()
     {
@@ -105,7 +105,7 @@ public class RoomGenerator : MonoBehaviour
         }
     }
 
-    private Vector2 VerifySpawn(HashSet<Vector2Int> floorPositions)
+    public static Vector2 VerifySpawn(HashSet<Vector2Int> floorPositions)
     {
         bool goodSpawn = false;
         Vector2Int spawn = new(0, 0);

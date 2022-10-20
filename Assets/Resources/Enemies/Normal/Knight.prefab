@@ -136,7 +136,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -990123791, guid: 9b31f458dc52e41d4bec42837141ca27, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -229,11 +229,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 70
   power: 15
+  baseSpeed: 0
   moveSpeed: 0.1
   minDistance: 2.3
   detectionZone: 10
   maxFollowDistance: 6
   walkAnim: KnightWalk
+  nextColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &5446377001973250523
 GameObject:
   m_ObjectHideFlags: 0
