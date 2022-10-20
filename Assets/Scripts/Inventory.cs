@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
@@ -30,8 +31,9 @@ public class Inventory : MonoBehaviour
     public void OpenFirstChest()
     {
         firstChestPopUp.SetActive(true);
-        i = Random.Range(0, allWeapons.Length);
-        firstChestChoices.GetChild(1).GetChild(0).GetComponent<Image>().sprite = allWeapons[i].visual;
+        firstChestChoices.GetChild(0).GetChild(0).GetComponent<Image>().sprite = allWeapons[0].visual;
+        firstChestChoices.GetChild(1).GetChild(0).GetComponent<Image>().sprite = allWeapons[1].visual;
+        firstChestChoices.GetChild(2).GetChild(0).GetComponent<Image>().sprite = allWeapons[2].visual;
         Time.timeScale = 0f;
     }
 
@@ -45,6 +47,17 @@ public class Inventory : MonoBehaviour
         k = Random.Range(0, allArtifacts.Length);
         chestChoices.GetChild(2).GetChild(0).GetComponent<Image>().sprite = allArtifacts[k].visual;
         Time.timeScale = 0f;
+    }
+
+    public void ClickFirstWeapon()
+    {
+        if (EventSystem.current.currentSelectedGameObject.name == "First")
+            i = 0;
+        else if (EventSystem.current.currentSelectedGameObject.name == "Second")
+            i = 1;
+        else
+            i = 2;
+        ClickWeapon();
     }
 
     public void ClickWeapon()
