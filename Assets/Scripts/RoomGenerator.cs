@@ -13,6 +13,8 @@ public class RoomGenerator : MonoBehaviour
     public int bombPower;
     public int enemyNumber;
     public string difficulty;
+    public bool mergeDifficulty = false;
+    private GameObject[] enemies;
     public TilemapVisualiser tilemap;
     public HashSet<Vector2Int> floorPositions;
 
@@ -85,7 +87,16 @@ public class RoomGenerator : MonoBehaviour
 
     private void SpawnEnemies(int enemyNumber)
     {
-        GameObject[] enemies = Resources.LoadAll<GameObject>("Enemies/" + difficulty);
+        if (!mergeDifficulty)
+            enemies = Resources.LoadAll<GameObject>("Enemies/" + difficulty);
+        else
+        {
+            GameObject[] easy = Resources.LoadAll<GameObject>("Enemies/Easy");
+            GameObject[] normal = Resources.LoadAll<GameObject>("Enemies/Normal");
+            GameObject[] hard = Resources.LoadAll<GameObject>("Enemies/Hard");
+            GameObject[] middle = easy.Union(normal).ToArray();
+            enemies = middle.Union(hard).ToArray();
+        }
 
         for (int i = 0; i < enemyNumber; i++)
         {
