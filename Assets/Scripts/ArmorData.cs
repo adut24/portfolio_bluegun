@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Armor", menuName = "Armors/New armor")]
@@ -7,5 +5,8 @@ using UnityEngine;
 public class ArmorData : ScriptableObject
 {
     public new string name;
+    public string description;
+    public int defense;
+    public float speed;
     public Sprite visual;
 }
