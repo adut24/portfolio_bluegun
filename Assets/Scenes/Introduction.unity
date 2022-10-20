@@ -7644,7 +7644,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 453802613}
         m_TargetAssemblyTypeName: PauseControl, Assembly-CSharp
         m_MethodName: SetPause
         m_Mode: 6
@@ -9083,7 +9083,7 @@ MonoBehaviour:
   - {fileID: 1699098844}
   - {fileID: 450237801}
   - {fileID: 842730559}
-  - {fileID: 0}
+  - {fileID: 1215358970}
   - {fileID: 453802612}
   - {fileID: 571412742}
 --- !u!4 &842730562

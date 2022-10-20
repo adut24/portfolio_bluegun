@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class GetChest : MonoBehaviour
 {
-    [SerializeField] private Inventory inv;
+    private Inventory inv;
+
+    private void Start()
+    {
+        inv = GameObject.Find("Inventory").GetComponent<Inventory>();
+    }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
