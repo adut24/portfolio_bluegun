@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private SpriteRenderer graphics;
     [SerializeField] private GameObject gameOverMenu;
     [SerializeField] private PauseControl pauseController;
+    private GameObject armor;
 
     private void Start()
     {
@@ -22,6 +23,16 @@ public class PlayerHealth : MonoBehaviour
     {
         if (!isInvicible)
         {
+            armor = GameObject.FindWithTag("Armor");
+            if (armor != null)
+            {
+                ArmorData armorData = armor.GetComponent<Armor>().armor;
+                if (armorData.name == "EnergyShield");
+                {
+                    StopCoroutine(armorData.armorCoroutine);
+                    armorData.armorCoroutine = StartCoroutine(armor.GetComponent<EnergyArmor>().EnergyShieldDown());
+                }
+            }
             AudioSource source = GetComponent<AudioSource>();
             source.PlayOneShot(source.clip, 1f);
             currenthealth -= damage;

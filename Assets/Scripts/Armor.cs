@@ -4,24 +4,15 @@ using UnityEngine;
 
 public class Armor : MonoBehaviour
 {
-    [System.Serializable]
-    public enum armorType_e
-    {
-        none,
-        energyShield,
-        fixedArmor,
-        lightArmor
-    }
-
-    public armorType_e armorType  = armorType_e.energyShield;
+    public ArmorData armor;
     // Start is called before the first frame update
-    void Start()
+    public virtual void Add()
     {
-
+        Debug.Log("WHY DIS HERE");
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Remove()
     {
         
     }

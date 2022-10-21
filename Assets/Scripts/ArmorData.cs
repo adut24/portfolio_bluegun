@@ -8,5 +8,10 @@ public class ArmorData : ScriptableObject
     public string description;
     public int defense;
     public float speed;
+    public bool energyShield;
+    public float energyShieldCooldown;
+    public Coroutine armorCoroutine;
     public Sprite visual;
+    public Sprite gameVisual;
+    public GameObject armorPrefab;
 }

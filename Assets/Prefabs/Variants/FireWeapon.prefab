@@ -60,6 +60,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1710881360146080693, guid: 42c7b3c420614d94e9ea77a7a53305b1, type: 3}
+      propertyPath: damage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710881360146080693, guid: 42c7b3c420614d94e9ea77a7a53305b1, type: 3}
       propertyPath: pierce
       value: 1
       objectReference: {fileID: 0}
@@ -77,7 +81,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1710881360146080693, guid: 42c7b3c420614d94e9ea77a7a53305b1, type: 3}
       propertyPath: dot.damage
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1710881360146080693, guid: 42c7b3c420614d94e9ea77a7a53305b1, type: 3}
       propertyPath: shootDelay

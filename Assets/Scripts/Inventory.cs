@@ -21,6 +21,7 @@ public class Inventory : MonoBehaviour
 
     [SerializeField] private GameObject movingWeapon;
     [SerializeField] private GameObject heldArtifact;
+    [SerializeField] private GameObject heldArmor;
 
     private GameObject player;
 
@@ -43,9 +44,10 @@ public class Inventory : MonoBehaviour
         slot.weapon = allWeapons[1];
         slot.weaponVisual.sprite = allWeapons[1].visual;
 
-        slot = firstChestChoices.GetChild(2).GetComponent<Slot>();
-        slot.weapon = allWeapons[2];
-        slot.weaponVisual.sprite = allWeapons[2].visual;
+        firstChestChoices.GetChild(2).GetChild(0).GetComponent<Image>().sprite = allArmors[0].visual;
+        // slot = firstChestChoices.GetChild(2).GetComponent<Slot>();
+        // slot.weapon = allWeapons[2];
+        // slot.weaponVisual.sprite = allWeapons[2].visual;
         Time.timeScale = 0f;
     }
 
@@ -101,8 +103,18 @@ public class Inventory : MonoBehaviour
     {
         if (armor != allArmors[j])
         {
+            Debug.Log("Oh hi mark");
             armor = allArmors[j];
             invPanel.GetChild(1).GetChild(0).GetComponent<Image>().sprite = allArmors[j].visual;
+            heldArmor.GetComponent<Armor>().Remove();
+            Destroy(heldArmor);
+            Debug.Log("Oh hi mark 2");
+            heldArmor = Instantiate(armor.armorPrefab, player.transform);
+            heldArmor.GetComponent<Armor>().armor = armor;
+            Debug.Log(heldArmor.GetComponent<Armor>());
+            heldArmor.GetComponent<Armor>().Add();
+            heldArmor.SetActive(true);
+            Debug.Log("Oh hi mark 3");
             Time.timeScale = 1f;
             chestPopUp.SetActive(false);
         }
