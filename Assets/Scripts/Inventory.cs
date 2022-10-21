@@ -78,40 +78,50 @@ public class Inventory : MonoBehaviour
 
     public void ClickWeapon()
     {
-        weapon = allWeapons[i];
-        Slot weaponSlot = invPanel.GetChild(0).GetComponent<Slot>();
-        weaponSlot.weapon = allWeapons[i];
-        weaponSlot.weaponVisual.sprite = allWeapons[i].visual;
-        movingWeapon.SetActive(true);
-        movingWeapon.GetComponent<SpriteRenderer>().sprite = allWeapons[i].visual;
-        Destroy(player.transform.GetChild(0).gameObject);
-        movingWeapon = Instantiate(weapon.weaponPrefab, player.transform);
-        movingWeapon.GetComponent<SpriteRenderer>().sprite = weapon.visual;
-        movingWeapon.SetActive(true);
-        firstChestPopUp.SetActive(false);
-        chestPopUp.SetActive(false);
-        TooltipSystem.instance.Hide();
-        Time.timeScale = 1f;
+        if (weapon != allWeapons[i])
+        {
+            weapon = allWeapons[i];
+            Slot weaponSlot = invPanel.GetChild(0).GetComponent<Slot>();
+            weaponSlot.weapon = allWeapons[i];
+            weaponSlot.weaponVisual.sprite = allWeapons[i].visual;
+            movingWeapon.SetActive(true);
+            movingWeapon.GetComponent<SpriteRenderer>().sprite = allWeapons[i].visual;
+            Destroy(player.transform.GetChild(0).gameObject);
+            movingWeapon = Instantiate(weapon.weaponPrefab, player.transform);
+            movingWeapon.GetComponent<SpriteRenderer>().sprite = weapon.visual;
+            movingWeapon.SetActive(true);
+            firstChestPopUp.SetActive(false);
+            chestPopUp.SetActive(false);
+            TooltipSystem.instance.Hide();
+            Time.timeScale = 1f;
+        }
+
     }
 
     public void ClickArmor()
     {
-        armor = allArmors[j];
-        invPanel.GetChild(1).GetChild(0).GetComponent<Image>().sprite = allArmors[j].visual;
-        Time.timeScale = 1f;
-        chestPopUp.SetActive(false);
+        if (armor != allArmors[j])
+        {
+            armor = allArmors[j];
+            invPanel.GetChild(1).GetChild(0).GetComponent<Image>().sprite = allArmors[j].visual;
+            Time.timeScale = 1f;
+            chestPopUp.SetActive(false);
+        }
     }
 
     public void ClickArtifact()
     {
-        artifact = allArtifacts[k];
-        invPanel.GetChild(2).GetChild(0).GetComponent<Image>().sprite = allArtifacts[k].visual;
-        heldArtifact.SetActive(true);
-        heldArtifact.GetComponent<Artifact>().Remove();
-        heldArtifact = Instantiate(artifact.artifactPrefab, player.transform);
-        heldArtifact.GetComponent<Artifact>().Add();
-        Time.timeScale = 1f;
-        chestPopUp.SetActive(false);
+        if (artifact != allArtifacts[k])
+        {
+            artifact = allArtifacts[k];
+            invPanel.GetChild(2).GetChild(0).GetComponent<Image>().sprite = allArtifacts[k].visual;
+            heldArtifact.SetActive(true);
+            heldArtifact.GetComponent<Artifact>().Remove();
+            heldArtifact = Instantiate(artifact.artifactPrefab, player.transform);
+            heldArtifact.GetComponent<Artifact>().Add();
+            Time.timeScale = 1f;
+            chestPopUp.SetActive(false);
+        }
     }
 
     public void ClosePopUp()
