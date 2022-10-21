@@ -14,11 +14,11 @@ public class PlayerMovement : MonoBehaviour
     private bool isDashing = false;
     private float dashingPower = 24f;
     private float dashingTime = 0.2f;
-    private float dashingCooldown = 2f;
+    public float dashingCooldown = 2f;
     [SerializeField] private TrailRenderer tr;
     [SerializeField] private Slider slider;
     private float fillTime = 0f;
-
+    public float fillValue = 0.45f;
     void Update() //Player Inputs
     {
         if (!canDash)
@@ -83,6 +83,6 @@ public class PlayerMovement : MonoBehaviour
     void UpdateDashBar()//Update DashBar with time
     {
         slider.value = Mathf.Lerp(slider.minValue, slider.maxValue, fillTime);
-        fillTime += 0.45f * Time.deltaTime;
+        fillTime += fillValue * Time.deltaTime;
     }
 }
