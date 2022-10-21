@@ -10003,7 +10003,6 @@ MonoBehaviour:
   walkAnim: 
   dropRate: 0
   healPower: 0
-  nextColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!95 &1101493619
 Animator:
   serializedVersion: 4
@@ -15098,8 +15097,10 @@ MonoBehaviour:
   moveSpeed: 8
   rb: {fileID: 1929888721}
   sr: {fileID: 1929888722}
+  dashingCooldown: 2
   tr: {fileID: 1929888725}
   slider: {fileID: 2104296662}
+  fillValue: 0.45
 --- !u!50 &1929888721
 Rigidbody2D:
   serializedVersion: 4
