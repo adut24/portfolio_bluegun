@@ -86,7 +86,7 @@ public class Inventory : MonoBehaviour
             weaponSlot.weaponVisual.sprite = allWeapons[i].visual;
             movingWeapon.SetActive(true);
             movingWeapon.GetComponent<SpriteRenderer>().sprite = allWeapons[i].visual;
-            Destroy(player.transform.GetChild(0).gameObject);
+            Destroy(GameObject.FindWithTag("Weapon"));
             movingWeapon = Instantiate(weapon.weaponPrefab, player.transform);
             movingWeapon.GetComponent<SpriteRenderer>().sprite = weapon.visual;
             movingWeapon.SetActive(true);
@@ -95,7 +95,6 @@ public class Inventory : MonoBehaviour
             TooltipSystem.instance.Hide();
             Time.timeScale = 1f;
         }
-
     }
 
     public void ClickArmor()
