@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff9bed355584fc49b3b6da3f3d557ba, type: 3}
+  m_Name: Honey
+  m_EditorClassIdentifier: 
+  name: Honey pot
+  description: 'Heal you 20hp, 30s cooldown (R Key) '
+  damage: 0
+  health: 20
+  maxHealth: 0
+  speed: 0
+  dashCooldown: 0
+  artifactActivation: 30
+  visual: {fileID: 21300000, guid: c6f33a68ab6073049b341d8c690fb574, type: 3}
+  artifactPrefab: {fileID: 8590004945332168801, guid: ce80c6016321f4c40b4f9c41dcf6ced1, type: 3}
