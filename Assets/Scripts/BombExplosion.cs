@@ -17,6 +17,12 @@ public class BombExplosion : MonoBehaviour
             gameObject.GetComponent<Animator>().enabled = true;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Projectile"))
+            gameObject.GetComponent<Animator>().enabled = true;
+    }
+
     private void Explode()
     {
         gameObject.GetComponent<AudioSource>().enabled = true;

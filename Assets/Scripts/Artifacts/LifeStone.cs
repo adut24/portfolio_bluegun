@@ -21,7 +21,17 @@ public class LifeStone : Artifact
 
     public override void Remove()
     {
-        ph.maxHealth -= stoneData.maxHealth;
-        hb.SetMaxHealth(ph.maxHealth);
+        if (ph.currenthealth > ph.maxHealth - stoneData.maxHealth)
+        {
+            ph.maxHealth -= stoneData.maxHealth;
+            hb.SetMaxHealth(ph.maxHealth);
+            ph.currenthealth = ph.maxHealth;
+            hb.SetHealth(ph.currenthealth);
+        }
+        else
+        {
+            ph.maxHealth -= stoneData.maxHealth;
+            hb.SetMaxHealth(ph.maxHealth);
+        }
     }
 }
