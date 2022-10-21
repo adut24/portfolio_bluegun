@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ff9bed355584fc49b3b6da3f3d557ba, type: 3}
-  m_Name: DashLeef
+  m_Name: Honey
   m_EditorClassIdentifier: 
-  name: DashLeef
-  description: A leef decreasing the cooldown of the dash.
+  name: Honey pot
+  description: 'Heal you 20hp, 30s cooldown (R Key) '
   damage: 0
-  health: 0
+  health: 20
   maxHealth: 0
   speed: 0
-  dashCooldown: 1
-  artifactActivation: 0
-  visual: {fileID: 21300000, guid: bd9e86ecf37cefe4e9660128652a4573, type: 3}
-  artifactPrefab: {fileID: 3997955382115968077, guid: e03d8de4e4a303f45a012fbc9f32e564, type: 3}
+  dashCooldown: 0
+  artifactActivation: 30
+  visual: {fileID: 21300000, guid: c6f33a68ab6073049b341d8c690fb574, type: 3}
+  artifactPrefab: {fileID: 8590004945332168801, guid: ce80c6016321f4c40b4f9c41dcf6ced1, type: 3}
