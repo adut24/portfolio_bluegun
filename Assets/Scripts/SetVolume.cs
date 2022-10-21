@@ -14,7 +14,6 @@ public class SetVolume : MonoBehaviour
 
     void   Start()
     {
-    	UnityEngine.Debug.Log("Hello");
         volumeText = GameObject.Find("VolumeValue").GetComponent<TextMeshProUGUI>();
         int volValue = (int) MathF.Floor(this.GetComponent<Slider>().value * 100);
         volumeText.text = volValue.ToString();

@@ -36,7 +36,6 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Start()
     {
-        Debug.Log(nextColor);
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -78,7 +77,6 @@ public class Enemy : MonoBehaviour
             yield return new WaitForSeconds(0.3f);
             if (this)
             {
-                Debug.Log(nextColor);
                 sprite.color = nextColor;
                 nextColor = Color.white;
             }
