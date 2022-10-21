@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using static Armor;
+using static Armor.armorType_e;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private SpriteRenderer graphics;
     [SerializeField] private GameObject gameOverMenu;
     [SerializeField] private PauseControl pauseController;
+    public armorType_e armor = none;
 
     private void Start()
     {
