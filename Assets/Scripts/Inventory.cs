@@ -20,12 +20,16 @@ public class Inventory : MonoBehaviour
     private int i = 0, j = 0, k = 0;
 
     [SerializeField] private GameObject movingWeapon;
+    [SerializeField] private GameObject heldArtifact;
+
+    private GameObject player;
 
     public void Awake()
     {
         allWeapons = Resources.LoadAll<WeaponData>("Weapons/");
         allArmors = Resources.LoadAll<ArmorData>("Armors/");
         allArtifacts = Resources.LoadAll<ArtifactData>("Artifacts/");
+        player = GameObject.Find("Player");
     }
 
     public void OpenFirstChest()
@@ -80,7 +84,6 @@ public class Inventory : MonoBehaviour
         weaponSlot.weaponVisual.sprite = allWeapons[i].visual;
         movingWeapon.SetActive(true);
         movingWeapon.GetComponent<SpriteRenderer>().sprite = allWeapons[i].visual;
-        GameObject player = GameObject.Find("Player");
         Destroy(player.transform.GetChild(0).gameObject);
         movingWeapon = Instantiate(weapon.weaponPrefab, player.transform);
         movingWeapon.GetComponent<SpriteRenderer>().sprite = weapon.visual;
@@ -103,6 +106,10 @@ public class Inventory : MonoBehaviour
     {
         artifact = allArtifacts[k];
         invPanel.GetChild(2).GetChild(0).GetComponent<Image>().sprite = allArtifacts[k].visual;
+        heldArtifact.SetActive(true);
+        heldArtifact.GetComponent<Artifact>().Remove();
+        heldArtifact = Instantiate(artifact.artifactPrefab, player.transform);
+        heldArtifact.GetComponent<Artifact>().Add();
         Time.timeScale = 1f;
         chestPopUp.SetActive(false);
     }

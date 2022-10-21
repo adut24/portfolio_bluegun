@@ -13,4 +13,5 @@ public class ArtifactData : ScriptableObject
     public float dashCooldown;
     public float artifactActivation;
     public Sprite visual;
+    public GameObject artifactPrefab;
 }

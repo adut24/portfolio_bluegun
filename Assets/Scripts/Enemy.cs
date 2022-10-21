@@ -150,6 +150,8 @@ public class Enemy : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
             rb.AddForce(dir * 1.25f);
+            if (anim != null && walkAnim != null)
+                anim.Play(walkAnim);
             Flip(transform.position, dir);
             execTime = 2f;
         }
