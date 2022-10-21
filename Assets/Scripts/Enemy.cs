@@ -21,15 +21,22 @@ public class Enemy : MonoBehaviour
     protected float execTime = 2f;
     protected Vector2 dir;
     private bool _alive = true;
-    public Color nextColor;
+    private Color _nextColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 
     public bool alive
     {
         get {return _alive;}
     }
 
+    public Color nextColor
+    {
+        get {return _nextColor;}
+        set {_nextColor = value;}
+    }
+
     protected virtual void Start()
     {
+        Debug.Log(nextColor);
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -71,6 +78,7 @@ public class Enemy : MonoBehaviour
             yield return new WaitForSeconds(0.3f);
             if (this)
             {
+                Debug.Log(nextColor);
                 sprite.color = nextColor;
                 nextColor = Color.white;
             }
