@@ -3,8 +3,8 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private int maxHealth = 100;
-    [SerializeField] private int currenthealth;
+    public int maxHealth = 100;
+    public int currenthealth;
     [SerializeField] private HealthBar hb;
     [SerializeField] private bool isInvicible = false;
     [SerializeField] private SpriteRenderer graphics;
@@ -15,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currenthealth = maxHealth;
         hb.SetMaxHealth(maxHealth);
+        hb.SetHealth(maxHealth);
     }
 
     public void TakeDamage(int damage)

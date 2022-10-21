@@ -1,27 +1,27 @@
 using UnityEngine;
 
-public class LifeStone : MonoBehaviour
+public class LifeStone : Artifact
 {
     [SerializeField]
     private ArtifactData stoneData;
+    private HealthBar hb;
+    private PlayerHealth ph;
 
-    private void Start()
+    private void Awake()
     {
-        var fields = stoneData.GetType().GetFields();
-        Debug.Log(fields.Length);
-        foreach (var field in fields)
-        {
-            Debug.Log(field.Name);
-        }
+        hb = GameObject.Find("HealthBar").GetComponent<HealthBar>();
+        ph = GameObject.Find("Player").GetComponent<PlayerHealth>();
     }
 
-    private void AddToPlayer()
+    public override void Add()
     {
-
+        ph.maxHealth += stoneData.maxHealth;
+        hb.SetMaxHealth(ph.maxHealth);
     }
 
-    private void RemoveFromPlayer()
+    public override void Remove()
     {
-        
+        ph.maxHealth -= stoneData.maxHealth;
+        hb.SetMaxHealth(ph.maxHealth);
     }
 }

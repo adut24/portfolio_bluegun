@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff9bed355584fc49b3b6da3f3d557ba, type: 3}
   m_Name: LifeStone
   m_EditorClassIdentifier: 
-  name: LifeStone
-  description: A stone increasing the player's life.
+  name: Life Stone
+  description: A stone increasing the player's max life by 50 points.
   damage: 0
   health: 0
   maxHealth: 50
@@ -21,3 +21,4 @@ MonoBehaviour:
   dashCooldown: 0
   artifactActivation: 0
   visual: {fileID: 21300000, guid: 76b5bd11baf994ed29a2e5ed0fd5d91c, type: 3}
+  artifactPrefab: {fileID: 5796238660362351039, guid: ade65f1da4e044f84901afeba94985f9, type: 3}
