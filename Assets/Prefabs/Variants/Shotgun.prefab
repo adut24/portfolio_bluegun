@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6925224111890904651, guid: 28184a5ccf4821e40aa5718eeb6ab352, type: 3}
       propertyPath: shootDelay
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6925224111890904651, guid: 28184a5ccf4821e40aa5718eeb6ab352, type: 3}
       propertyPath: dot.color.a
