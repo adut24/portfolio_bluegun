@@ -160,10 +160,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 30
   power: 5
+  baseSpeed: 0
   moveSpeed: 0.05
   minDistance: 1
   detectionZone: 10
   maxFollowDistance: 20
+  walkAnim: 
+  dropRate: 10
+  healPower: 10
+  nextColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!82 &-8317274527883916734
 AudioSource:
   m_ObjectHideFlags: 0

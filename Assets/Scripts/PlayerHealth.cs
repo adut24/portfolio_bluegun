@@ -61,4 +61,13 @@ public class PlayerHealth : MonoBehaviour
             TakeDamage(collision.gameObject.GetComponent<Enemy>().power);
         }
     }
+
+    public void RegenerateLife(int heal)
+    {
+        if (currenthealth + heal > maxHealth)
+            currenthealth = maxHealth;
+        else
+            currenthealth += heal;
+        hb.SetHealth(currenthealth);
+    }
 }

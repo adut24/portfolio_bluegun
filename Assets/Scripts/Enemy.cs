@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
     public float detectionZone;
     public float maxFollowDistance;
     public string walkAnim;
+    public int dropRate;
+    public int healPower;
     protected GameObject player;
     protected SpriteRenderer sprite;
     protected Rigidbody2D rb;
@@ -83,11 +85,13 @@ public class Enemy : MonoBehaviour
         {
             _alive = false;
             AudioSource source = GetComponent<AudioSource>();
+            rb.bodyType = RigidbodyType2D.Static;
             if (source != null)
                 source.PlayOneShot(source.clip, 1f);
             Vector2 position = gameObject.transform.position;
             Destroy(gameObject, 1.0f);
-            DropItem(position);
+            if (SceneManager.GetActiveScene().name != "Introduction")
+                DropItem(position);
         }
     }
 
@@ -155,12 +159,13 @@ public class Enemy : MonoBehaviour
 
     protected virtual void DropItem(Vector2 position)
     {
-        int nb = Random.Range(0, 100);
+        int nb = Random.Range(1, 100);
 
-        if (nb <= 3)
+        if (nb <= dropRate)
         {
             GameObject potion = Resources.Load<GameObject>("Potion");
-            Instantiate(potion, position, Quaternion.identity);
+            GameObject spawnedPotion = Instantiate(potion, position, Quaternion.identity);
+            spawnedPotion.GetComponent<Potion>().healPower = healPower;
         }
     }
 }
