@@ -31,9 +31,17 @@ public class Inventory : MonoBehaviour
     public void OpenFirstChest()
     {
         firstChestPopUp.SetActive(true);
-        firstChestChoices.GetChild(0).GetChild(0).GetComponent<Image>().sprite = allWeapons[0].visual;
-        firstChestChoices.GetChild(1).GetChild(0).GetComponent<Image>().sprite = allWeapons[1].visual;
-        firstChestChoices.GetChild(2).GetChild(0).GetComponent<Image>().sprite = allWeapons[2].visual;
+        Slot slot = firstChestChoices.GetChild(0).GetComponent<Slot>();
+        slot.weapon = allWeapons[0];
+        slot.weaponVisual.sprite = allWeapons[0].visual;
+
+        slot = firstChestChoices.GetChild(1).GetComponent<Slot>();
+        slot.weapon = allWeapons[1];
+        slot.weaponVisual.sprite = allWeapons[1].visual;
+
+        slot = firstChestChoices.GetChild(2).GetComponent<Slot>();
+        slot.weapon = allWeapons[2];
+        slot.weaponVisual.sprite = allWeapons[2].visual;
         Time.timeScale = 0f;
     }
 
@@ -41,9 +49,13 @@ public class Inventory : MonoBehaviour
     {
         chestPopUp.SetActive(true);
         i = Random.Range(0, allWeapons.Length);
-        chestChoices.GetChild(0).GetChild(0).GetComponent<Image>().sprite = allWeapons[i].visual;
+        Slot slot = chestChoices.GetChild(0).GetComponent<Slot>();
+        slot.weapon = allWeapons[i];
+        slot.weaponVisual.sprite = allWeapons[i].visual;
+
         j = Random.Range(0, allArmors.Length);
         chestChoices.GetChild(1).GetChild(0).GetComponent<Image>().sprite = allArmors[j].visual;
+
         k = Random.Range(0, allArtifacts.Length);
         chestChoices.GetChild(2).GetChild(0).GetComponent<Image>().sprite = allArtifacts[k].visual;
         Time.timeScale = 0f;
@@ -63,7 +75,9 @@ public class Inventory : MonoBehaviour
     public void ClickWeapon()
     {
         weapon = allWeapons[i];
-        invPanel.GetChild(0).GetChild(0).GetComponent<Image>().sprite = allWeapons[i].visual;
+        Slot weaponSlot = invPanel.GetChild(0).GetComponent<Slot>();
+        weaponSlot.weapon = allWeapons[i];
+        weaponSlot.weaponVisual.sprite = allWeapons[i].visual;
         movingWeapon.SetActive(true);
         movingWeapon.GetComponent<SpriteRenderer>().sprite = allWeapons[i].visual;
         GameObject player = GameObject.Find("Player");
@@ -71,9 +85,10 @@ public class Inventory : MonoBehaviour
         movingWeapon = Instantiate(weapon.weaponPrefab, player.transform);
         movingWeapon.GetComponent<SpriteRenderer>().sprite = weapon.visual;
         movingWeapon.SetActive(true);
-        Time.timeScale = 1f;
         firstChestPopUp.SetActive(false);
         chestPopUp.SetActive(false);
+        TooltipSystem.instance.Hide();
+        Time.timeScale = 1f;
     }
 
     public void ClickArmor()

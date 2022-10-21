@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d620be5d0740c45b0ac93f13f33218, type: 3}
   m_Name: WaterWand
   m_EditorClassIdentifier: 
-  name: WaterWand
+  name: Water Wand
   visual: {fileID: 21300000, guid: 768e20c6f97329a4089e1813c565b909, type: 3}
   weaponPrefab: {fileID: 6925224111890904655, guid: 28184a5ccf4821e40aa5718eeb6ab352, type: 3}
