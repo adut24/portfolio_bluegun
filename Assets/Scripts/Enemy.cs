@@ -92,6 +92,7 @@ public class Enemy : MonoBehaviour
             _alive = false;
             AudioSource source = GetComponent<AudioSource>();
             rb.bodyType = RigidbodyType2D.Static;
+            GetComponent<Collider2D>().enabled = false;
             if (source != null)
                 source.PlayOneShot(source.clip, 1f);
             Vector2 position = gameObject.transform.position;
