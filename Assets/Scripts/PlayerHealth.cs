@@ -63,6 +63,12 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy") && GameObject.Find("Slash").activeSelf)
+            TakeDamage(collision.gameObject.GetComponent<Knight>().slashPower);
+    }
+
     public void RegenerateLife(int heal)
     {
         if (currenthealth + heal > maxHealth)

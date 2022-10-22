@@ -116,6 +116,7 @@ public class Inventory : MonoBehaviour
             invPanel.GetChild(2).GetChild(0).GetComponent<Image>().sprite = allArtifacts[k].visual;
             heldArtifact.SetActive(true);
             heldArtifact.GetComponent<Artifact>().Remove();
+            Destroy(GameObject.FindWithTag("Artifact"));
             heldArtifact = Instantiate(artifact.artifactPrefab, player.transform);
             heldArtifact.GetComponent<Artifact>().Add();
             Time.timeScale = 1f;
