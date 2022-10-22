@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5ffbe68ba734e0486d3004112aa1a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cloverData: {fileID: 11400000, guid: 6c495def69b6644dd985485bba49b598, type: 2}

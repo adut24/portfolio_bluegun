@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Clover : Artifact
 {
+    [SerializeField]
+    private ArtifactData cloverData;
     private GameObject[] enemies = {};
 
     private void Update()
@@ -11,16 +13,8 @@ public class Clover : Artifact
             enemies = GameObject.FindGameObjectsWithTag("Enemy");
             foreach (GameObject enemy in enemies)
             {
-                enemy.GetComponent<Enemy>().dropRate *= 4;
+                enemy.GetComponent<Enemy>().dropRate *= cloverData.value;
             }
-        }
-    }
-
-    public override void Remove()
-    {
-        foreach (GameObject enemy in enemies)
-        {
-            enemy.GetComponent<Enemy>().dropRate /= 4;
         }
     }
 }
