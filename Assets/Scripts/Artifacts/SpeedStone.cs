@@ -7,6 +7,7 @@ public class SpeedStone : Artifact
     private PlayerMovement pm;
     private PlayerHealth ph;
     private bool effectApplied = false;
+    private int percentHealth;
 
     private void Awake()
     {
@@ -16,35 +17,35 @@ public class SpeedStone : Artifact
 
     private void Update()
     {
-        int percentHealth = ph.currenthealth * 100 / ph.maxHealth;
+        percentHealth = ph.currenthealth * 100 / ph.maxHealth;
 
         if (!effectApplied && percentHealth <= 30)
         {
             effectApplied = true;
-            pm.moveSpeed *= stoneData.speed;
+            pm.moveSpeed *= (1 + stoneData.speed);
         }
         else if (effectApplied && percentHealth > 30)
         {
             effectApplied = false;
-            pm.moveSpeed /= stoneData.speed;
+            pm.moveSpeed /= (1 + stoneData.speed);
         }
     }
 
     public override void Remove()
     {
         if (effectApplied)
-            pm.moveSpeed /= stoneData.speed;
+            pm.moveSpeed /= (1 + stoneData.speed);
     }
 
     /*
     public override void Add()
     {
-        pm.moveSpeed *= stoneData.speed;
+        pm.moveSpeed *= (1 + stoneData.speed);
     }
 
     public override void Remove()
     {
-        pm.moveSpeed /= stoneData.speed;
+        pm.moveSpeed /= (1 + stoneData.speed);
     }
     */
 }
