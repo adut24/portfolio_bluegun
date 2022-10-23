@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: SpeedStone
   m_EditorClassIdentifier: 
   name: Speed Stone
-  description: A stone increasing the player's speed by 1.5 times
+  description: Increase the player's speed by half the current speed when there's
+    30 % or less life remaining
   damage: 0
   health: 0
   maxHealth: 0
-  speed: 1.5
+  speed: 0.5
   dashCooldown: 0
   artifactActivation: 0
   value: 0
