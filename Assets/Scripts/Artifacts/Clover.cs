@@ -4,17 +4,21 @@ public class Clover : Artifact
 {
     [SerializeField]
     private ArtifactData cloverData;
-    private GameObject[] enemies = {};
+    private GameObject[] enemies;
+    private bool effectApplied = false;
 
     private void Update()
     {
-        if (Time.timeSinceLevelLoad == 0 && enemies.Length == 0)
+        if (Time.timeSinceLevelLoad == 0 && effectApplied)
+            effectApplied = false;
+
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        if (!effectApplied)
         {
-            enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            effectApplied = true;
             foreach (GameObject enemy in enemies)
-            {
                 enemy.GetComponent<Enemy>().dropRate *= cloverData.value;
-            }
         }
     }
 }
