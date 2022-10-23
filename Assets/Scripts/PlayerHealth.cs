@@ -65,7 +65,8 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") && GameObject.Find("Slash").activeSelf)
+        if (collision.gameObject.name.Contains("Knight") &&
+            collision.gameObject.transform.Find("Slash").gameObject.activeSelf)
             TakeDamage(collision.gameObject.GetComponent<Knight>().slashPower);
     }
 
