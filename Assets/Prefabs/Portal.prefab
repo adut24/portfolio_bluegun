@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8382720115628405065}
   - component: {fileID: 2218463970458097304}
   - component: {fileID: 8475243926534831537}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 3516245351820802550}
   - component: {fileID: 571942299389943729}
   - component: {fileID: 7061968873586989305}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
