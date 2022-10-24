@@ -180,7 +180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7061968873586989305, guid: 52ab35e286d9347eb9c6dd68b03fd27b, type: 3}
       propertyPath: sceneName
-      value: Room02
+      value: Room03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52ab35e286d9347eb9c6dd68b03fd27b, type: 3}
@@ -228,12 +228,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17a5ece332db401cb6dc4b67648193d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iterations: 70
+  iterations: 90
   walkLength: 70
   randomStart: 0
   bombNumber: 2
   bombPower: 10
-  enemyNumber: 4
+  enemyNumber: 6
   difficulty: Easy
   mergeDifficulty: 0
   tilemap: {fileID: 2118883393}
