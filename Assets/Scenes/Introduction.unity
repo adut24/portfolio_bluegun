@@ -9966,7 +9966,7 @@ MonoBehaviour:
   detectionZone: 10
   maxFollowDistance: 10
   walkAnim: 
-  dropRate: 0
+  dropRate: 10
   healPower: 0
 --- !u!95 &1101493619
 Animator:

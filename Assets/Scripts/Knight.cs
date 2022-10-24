@@ -5,7 +5,8 @@ using UnityEngine;
 public class Knight : Enemy
 {
     private List<GameObject> children;
-    private bool isAttacking = false;
+    public bool isAttacking = false;
+    public int slashPower = 25;
 
 
     protected override void Start()

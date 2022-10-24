@@ -49,6 +49,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+
     public IEnumerator InvincibilityFlash()
     {
         while (isInvicible)
@@ -72,6 +73,13 @@ public class PlayerHealth : MonoBehaviour
         {
             TakeDamage(collision.gameObject.GetComponent<Enemy>().power);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name.Contains("Knight") &&
+            collision.gameObject.transform.Find("Slash").gameObject.activeSelf)
+            TakeDamage(collision.gameObject.GetComponent<Knight>().slashPower);
     }
 
     public void RegenerateLife(int heal)

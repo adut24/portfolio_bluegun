@@ -45,6 +45,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Update()
     {
+        Debug.Log(dropRate);
         execTime -= Time.deltaTime;
         if (!player && execTime <= 0)
             dir = new Vector2(Random.Range(-1000, 1000), Random.Range(-1000, 1000));
@@ -92,6 +93,7 @@ public class Enemy : MonoBehaviour
             _alive = false;
             AudioSource source = GetComponent<AudioSource>();
             rb.bodyType = RigidbodyType2D.Static;
+            GetComponent<Collider2D>().enabled = false;
             if (source != null)
                 source.PlayOneShot(source.clip, 1f);
             Vector2 position = gameObject.transform.position;
