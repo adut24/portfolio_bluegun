@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using static Armor;
+using static Armor.armorType_e;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -18,6 +20,7 @@ public class PlayerHealth : MonoBehaviour
         hb.SetMaxHealth(maxHealth);
         hb.SetHealth(maxHealth);
     }
+
 
     public void TakeDamage(int damage)
     {

@@ -11,6 +11,7 @@ public class Armor : MonoBehaviour
         Debug.Log("WHY DIS HERE");
     }
 
+
     // Update is called once per frame
     public virtual void Remove()
     {
