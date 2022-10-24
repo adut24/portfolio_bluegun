@@ -13,7 +13,6 @@ public class Clover : Artifact
             effectApplied = false;
 
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        Debug.Log("length enemies = " + enemies.Length);
 
         if (!effectApplied && enemies.Length != 0)
         {
