@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
+	[HideInInspector]public float speedModifier = 1.0f;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer sr;
     private Vector2 moveDirection;
@@ -54,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);//Movement apply
+        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * (moveSpeed * speedModifier));//Movement apply
     }
 
     void Flip(float _velocity)

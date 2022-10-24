@@ -22,19 +22,19 @@ public class SpeedStone : Artifact
         if (!effectApplied && percentHealth <= 30)
         {
             effectApplied = true;
-            pm.moveSpeed *= (1 + stoneData.speed);
+            pm.speedModifier *= (1 + stoneData.speed);
         }
         else if (effectApplied && percentHealth > 30)
         {
             effectApplied = false;
-            pm.moveSpeed /= (1 + stoneData.speed);
+            pm.speedModifier /= (1 + stoneData.speed);
         }
     }
 
     public override void Remove()
     {
         if (effectApplied)
-            pm.moveSpeed /= (1 + stoneData.speed);
+            pm.speedModifier /= (1 + stoneData.speed);
     }
 
     /*

@@ -104,18 +104,15 @@ public class Inventory : MonoBehaviour
     {
         if (armor != allArmors[j])
         {
-            Debug.Log("Oh hi mark");
             armor = allArmors[j];
             invPanel.GetChild(1).GetChild(0).GetComponent<Image>().sprite = allArmors[j].visual;
             heldArmor.GetComponent<Armor>().Remove();
             Destroy(heldArmor);
-            Debug.Log("Oh hi mark 2");
             heldArmor = Instantiate(armor.armorPrefab, player.transform);
             heldArmor.GetComponent<Armor>().armor = armor;
             Debug.Log(heldArmor.GetComponent<Armor>());
-            heldArmor.GetComponent<Armor>().Add();
             heldArmor.SetActive(true);
-            Debug.Log("Oh hi mark 3");
+            heldArmor.GetComponent<Armor>().Add();
             Time.timeScale = 1f;
             chestPopUp.SetActive(false);
         }

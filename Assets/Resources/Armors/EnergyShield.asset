@@ -16,8 +16,8 @@ MonoBehaviour:
   description: Blocks an attack. Recharges after 5 seconds without taking damage.
   defense: 0
   speed: 0
-  energyShield: 1
-  energyShieldCooldown: 5
+  energyShield: 0
+  energyShieldCooldown: 30
   visual: {fileID: 21300000, guid: 4fe40e89041d8a248b33d6dc0b62b459, type: 3}
   gameVisual: {fileID: 21300000, guid: 440f1af3c5f79e54ebd49018e3e5735d, type: 3}
-  armorPrefab: {fileID: 7582633784030086564, guid: 9c6ca85dfef02b89caba17fcf9ebbf16, type: 3}
+  armorPrefab: {fileID: 2805436008520853632, guid: 631ae1f09bab0024eadf3e484cb0c50e, type: 3}

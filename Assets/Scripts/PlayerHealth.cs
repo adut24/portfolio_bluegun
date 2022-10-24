@@ -1,12 +1,11 @@
 using UnityEngine;
 using System.Collections;
-using static Armor;
-using static Armor.armorType_e;
 
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currenthealth;
+	public float armorValue = 0.0f;
     [SerializeField] private HealthBar hb;
     [SerializeField] private bool isInvicible = false;
     [SerializeField] private SpriteRenderer graphics;
@@ -30,15 +29,19 @@ public class PlayerHealth : MonoBehaviour
             if (armor != null)
             {
                 ArmorData armorData = armor.GetComponent<Armor>().armor;
-                if (armorData.name == "EnergyShield");
+                if (armorData.energyShield == true)
                 {
-                    StopCoroutine(armorData.armorCoroutine);
+                    if (armorData.armorCoroutine != null)
+                        StopCoroutine(armorData.armorCoroutine);
                     armorData.armorCoroutine = StartCoroutine(armor.GetComponent<EnergyArmor>().EnergyShieldDown());
+                    isInvicible = true;
+                    StartCoroutine(InvincibilityDelay());
+                    return;
                 }
             }
             AudioSource source = GetComponent<AudioSource>();
             source.PlayOneShot(source.clip, 1f);
-            currenthealth -= damage;
+            currenthealth -= Mathf.RoundToInt ((float) damage * (1.0f - armorValue));
             hb.SetHealth(currenthealth);
             isInvicible = true;
             StartCoroutine(InvincibilityFlash());
