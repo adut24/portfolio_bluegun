@@ -5,12 +5,16 @@ using UnityEngine.EventSystems;
 public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public WeaponData weapon;
-    public Image weaponVisual;
+    public ArmorData armor;
+    public ArtifactData artifact;
+    public Image visual;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (weapon)
-            TooltipSystem.instance.Show(weapon.weaponPrefab.GetComponent<Weapon>(), weapon.name);
+            TooltipSystem.instance.ShowWeapon(weapon.weaponPrefab.GetComponent<Weapon>(), weapon.name);
+        else if (artifact)
+            TooltipSystem.instance.ShowArtifact(artifact.description, artifact.name);
     }
 
     public void OnPointerExit(PointerEventData eventData)
