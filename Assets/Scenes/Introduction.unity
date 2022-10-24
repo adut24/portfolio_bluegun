@@ -574,7 +574,7 @@ GameObject:
   - component: {fileID: 161345154}
   - component: {fileID: 161345153}
   - component: {fileID: 161345152}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: onTorch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1029,7 +1029,7 @@ GameObject:
   - component: {fileID: 227508266}
   - component: {fileID: 227508265}
   - component: {fileID: 227508268}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: offTorch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11017,7 +11017,7 @@ GameObject:
   - component: {fileID: 1437276361}
   - component: {fileID: 1437276360}
   - component: {fileID: 1437276359}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: onTorch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11468,7 +11468,7 @@ GameObject:
   - component: {fileID: 1543158943}
   - component: {fileID: 1543158942}
   - component: {fileID: 1543158941}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: onTorch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11900,7 +11900,7 @@ GameObject:
   - component: {fileID: 1639780921}
   - component: {fileID: 1639780920}
   - component: {fileID: 1639780919}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: onTorch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12128,7 +12128,7 @@ GameObject:
   - component: {fileID: 1694777617}
   - component: {fileID: 1694777616}
   - component: {fileID: 1694777619}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: offTorch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14377,7 +14377,7 @@ GameObject:
   - component: {fileID: 1792308742}
   - component: {fileID: 1792308744}
   - component: {fileID: 1792308745}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14730,7 +14730,7 @@ GameObject:
   - component: {fileID: 1880005380}
   - component: {fileID: 1880005379}
   - component: {fileID: 1880005382}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: offTorch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15808,7 +15808,7 @@ GameObject:
   - component: {fileID: 2090101585}
   - component: {fileID: 2090101584}
   - component: {fileID: 2090101587}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: offTorch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
