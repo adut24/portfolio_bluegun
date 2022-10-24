@@ -37,15 +37,15 @@ public class Inventory : MonoBehaviour
         firstChestPopUp.SetActive(true);
         Slot slot = firstChestChoices.GetChild(0).GetComponent<Slot>();
         slot.weapon = allWeapons[0];
-        slot.weaponVisual.sprite = allWeapons[0].visual;
+        slot.visual.sprite = allWeapons[0].visual;
 
         slot = firstChestChoices.GetChild(1).GetComponent<Slot>();
         slot.weapon = allWeapons[1];
-        slot.weaponVisual.sprite = allWeapons[1].visual;
+        slot.visual.sprite = allWeapons[1].visual;
 
         slot = firstChestChoices.GetChild(2).GetComponent<Slot>();
         slot.weapon = allWeapons[2];
-        slot.weaponVisual.sprite = allWeapons[2].visual;
+        slot.visual.sprite = allWeapons[2].visual;
         Time.timeScale = 0f;
     }
 
@@ -53,15 +53,17 @@ public class Inventory : MonoBehaviour
     {
         chestPopUp.SetActive(true);
         i = Random.Range(0, allWeapons.Length);
-        Slot slot = chestChoices.GetChild(0).GetComponent<Slot>();
-        slot.weapon = allWeapons[i];
-        slot.weaponVisual.sprite = allWeapons[i].visual;
+        Slot weaponSlot = chestChoices.GetChild(0).GetComponent<Slot>();
+        weaponSlot.weapon = allWeapons[i];
+        weaponSlot.visual.sprite = allWeapons[i].visual;
 
         j = Random.Range(0, allArmors.Length);
         chestChoices.GetChild(1).GetChild(0).GetComponent<Image>().sprite = allArmors[j].visual;
 
         k = Random.Range(0, allArtifacts.Length);
-        chestChoices.GetChild(2).GetChild(0).GetComponent<Image>().sprite = allArtifacts[k].visual;
+        Slot artifactSlot = chestChoices.GetChild(2).GetComponent<Slot>();
+        artifactSlot.artifact = allArtifacts[k];
+        artifactSlot.visual.sprite = allArtifacts[k].visual;
         Time.timeScale = 0f;
     }
 
@@ -83,7 +85,7 @@ public class Inventory : MonoBehaviour
             weapon = allWeapons[i];
             Slot weaponSlot = invPanel.GetChild(0).GetComponent<Slot>();
             weaponSlot.weapon = allWeapons[i];
-            weaponSlot.weaponVisual.sprite = allWeapons[i].visual;
+            weaponSlot.visual.sprite = allWeapons[i].visual;
             movingWeapon.SetActive(true);
             movingWeapon.GetComponent<SpriteRenderer>().sprite = allWeapons[i].visual;
             Destroy(GameObject.FindWithTag("Weapon"));
@@ -113,14 +115,17 @@ public class Inventory : MonoBehaviour
         if (artifact != allArtifacts[k])
         {
             artifact = allArtifacts[k];
-            invPanel.GetChild(2).GetChild(0).GetComponent<Image>().sprite = allArtifacts[k].visual;
+            Slot artifactSlot = invPanel.GetChild(2).GetComponent<Slot>();
+            artifactSlot.artifact = allArtifacts[k];
+            artifactSlot.visual.sprite = allArtifacts[k].visual;
             heldArtifact.SetActive(true);
             heldArtifact.GetComponent<Artifact>().Remove();
             Destroy(GameObject.FindWithTag("Artifact"));
             heldArtifact = Instantiate(artifact.artifactPrefab, player.transform);
             heldArtifact.GetComponent<Artifact>().Add();
-            Time.timeScale = 1f;
+            TooltipSystem.instance.Hide();
             chestPopUp.SetActive(false);
+            Time.timeScale = 1f;
         }
     }
 

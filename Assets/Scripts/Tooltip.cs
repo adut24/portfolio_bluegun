@@ -7,24 +7,24 @@ public class Tooltip : MonoBehaviour
 {
     [SerializeField] private Text headerField;
     [SerializeField] private Text contentField;
+    [SerializeField] private LayoutElement layout;
    
-    public void SetText(Weapon content, string header = "")
+    public void SetTextWeapon(Weapon content, string header)
     {
-        if (header == "")
-        {
-            headerField.gameObject.SetActive(false);
-        }
-        else
-        {
-            headerField.gameObject.SetActive(true);
-            headerField.text = header;
-        }
-
+        layout.enabled = false;
+        headerField.text = header;
         contentField.text = "Damage: " + content.damage + "\n"
                           + "Attack Speed: " + 1 / content.shootDelay + "\n"
                           + "Number: " + content.projectileNumber + "\n"
                           + "Size: " + content.size + "\n"
                           + "Duration: " + content.projectileDuration;
+    }
+
+    public void SetTextArtifact(string content, string header)
+    {
+        layout.enabled = true;
+        headerField.text = header;
+        contentField.text = content;
     }
 
     private void Update()
