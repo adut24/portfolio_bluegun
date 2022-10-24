@@ -52,10 +52,13 @@ public class Enemy : MonoBehaviour
 
     protected virtual void FixedUpdate()
     {
-        if (SceneManager.GetActiveScene().name != "Introduction" && !player && execTime <= 0)
-            MoveRandom();
-        if (!player || Vector2.Distance(transform.position, player.transform.position) > minDistance)
-            Pathfinding();
+        if (Time.timeSinceLevelLoad > 1f)
+        {
+            if (SceneManager.GetActiveScene().name != "Introduction" && !player && execTime <= 0)
+                MoveRandom();
+            if (!player || Vector2.Distance(transform.position, player.transform.position) > minDistance)
+                Pathfinding();
+        }
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
@@ -93,10 +96,12 @@ public class Enemy : MonoBehaviour
             AudioSource source = GetComponent<AudioSource>();
             rb.bodyType = RigidbodyType2D.Static;
             GetComponent<Collider2D>().enabled = false;
+            this.enabled = false;
+            anim.enabled = false;
             if (source != null)
                 source.PlayOneShot(source.clip, 1f);
             Vector2 position = gameObject.transform.position;
-            Destroy(gameObject, 1.0f);
+            Destroy(gameObject, 0.5f);
             if (SceneManager.GetActiveScene().name != "Introduction")
                 DropItem(position);
         }
