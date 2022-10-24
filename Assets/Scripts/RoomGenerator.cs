@@ -17,9 +17,12 @@ public class RoomGenerator : MonoBehaviour
     private GameObject[] enemies;
     public TilemapVisualiser tilemap;
     public static HashSet<Vector2Int> floorPositions;
+    public float radius = 7f;
+    private static float checkRadius;
 
     private void Awake()
     {
+        checkRadius = radius;
         RunProceduralGeneration();
     }
 
@@ -124,7 +127,7 @@ public class RoomGenerator : MonoBehaviour
 
             if (count == 8)
             {
-                Collider2D[] result = Physics2D.OverlapCircleAll(spawn, 7f);
+                Collider2D[] result = Physics2D.OverlapCircleAll(spawn, checkRadius);
                 if (result.Length == 0)
                     goodSpawn = true;
             }
