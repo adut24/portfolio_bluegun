@@ -230,13 +230,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iterations: 70
   walkLength: 70
-  randomStart: 1
+  randomStart: 0
   bombNumber: 2
   bombPower: 50
-  enemyNumber: 2
-  difficulty: Easy
-  mergeDifficulty: 0
+  enemyNumber: 5
+  difficulty: Normal
+  mergeDifficulty: 1
   tilemap: {fileID: 2118883393}
+  radius: 3
 --- !u!1 &1881968382
 GameObject:
   m_ObjectHideFlags: 0
