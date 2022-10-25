@@ -34,4 +34,12 @@ public class LifeStone : Artifact
             hb.SetMaxHealth(ph.maxHealth);
         }
     }
+
+    public override void Upgrade()
+    {
+        ph.maxHealth -= stoneData.maxHealth;
+        stoneData.maxHealth = (int)(stoneData.maxHealth * 1.2);
+        ph.maxHealth += stoneData.maxHealth;
+        hb.SetMaxHealth(ph.maxHealth);
+    }
 }

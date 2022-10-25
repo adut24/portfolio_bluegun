@@ -8891,6 +8891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 23471672426542509, guid: f119396855a574d6f90617e2c502502e, type: 3}
+      propertyPath: detectionZone
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 23471672426542510, guid: f119396855a574d6f90617e2c502502e, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -10157,7 +10161,7 @@ MonoBehaviour:
   moveSpeed: 0.05
   minDistance: 0
   detectionZone: 10
-  maxFollowDistance: 10
+  maxFollowDistance: 20
   walkAnim: 
   dropRate: 10
   healPower: 0

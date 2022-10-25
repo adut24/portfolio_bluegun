@@ -62,7 +62,6 @@ public class Inventory : MonoBehaviour
         chestChoices.GetChild(1).GetChild(0).GetComponent<Image>().sprite = allArmors[j].visual;
 
         k = Random.Range(0, allArtifacts.Length);
-        k = 3;
         Slot artifactSlot = chestChoices.GetChild(2).GetComponent<Slot>();
         artifactSlot.artifact = allArtifacts[k];
         artifactSlot.visual.sprite = allArtifacts[k].visual;
@@ -132,10 +131,13 @@ public class Inventory : MonoBehaviour
             Destroy(GameObject.FindWithTag("Artifact"));
             heldArtifact = Instantiate(artifact.artifactPrefab, player.transform);
             heldArtifact.GetComponent<Artifact>().Add();
-            TooltipSystem.instance.Hide();
-            chestPopUp.SetActive(false);
-            Time.timeScale = 1f;
         }
+        else
+            heldArtifact.GetComponent<Artifact>().Upgrade();
+        TooltipSystem.instance.Hide();
+        chestPopUp.SetActive(false);
+        Time.timeScale = 1f;
+
     }
 
     public void ClosePopUp()

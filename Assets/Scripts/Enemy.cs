@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual void FixedUpdate()
     {
-        if (Time.timeSinceLevelLoad > 1f)
+        if (Time.timeSinceLevelLoad > 1.5f)
         {
             if (SceneManager.GetActiveScene().name != "Introduction" && !player && execTime <= 0)
                 MoveRandom();
