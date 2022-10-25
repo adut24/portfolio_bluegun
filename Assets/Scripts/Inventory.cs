@@ -21,6 +21,7 @@ public class Inventory : MonoBehaviour
 
     [SerializeField] private GameObject movingWeapon;
     [SerializeField] private GameObject heldArtifact;
+    [SerializeField] private GameObject heldArmor;
 
     private GameObject player;
 
@@ -106,6 +107,13 @@ public class Inventory : MonoBehaviour
         {
             armor = allArmors[j];
             invPanel.GetChild(1).GetChild(0).GetComponent<Image>().sprite = allArmors[j].visual;
+            heldArmor.GetComponent<Armor>().Remove();
+            Destroy(heldArmor);
+            heldArmor = Instantiate(armor.armorPrefab, player.transform);
+            heldArmor.GetComponent<Armor>().armor = armor;
+            Debug.Log(heldArmor.GetComponent<Armor>());
+            heldArmor.SetActive(true);
+            heldArmor.GetComponent<Armor>().Add();
             Time.timeScale = 1f;
             chestPopUp.SetActive(false);
         }

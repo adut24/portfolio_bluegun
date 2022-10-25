@@ -6,9 +6,13 @@ public class Debuff : MonoBehaviour
 {
     public Weapon.dotEffect dot;
     public Enemy enemy;
+	[HideInInspector]public bool isDestroyed = true;
     // Start is called before the first frame update
     void Start()
     {
+		isDestroyed = false;
+        if (dot.name != null)
+            gameObject.name = dot.name;
          Coroutine dotRoutine = StartCoroutine(DamageOverTime(enemy));
     }
 
@@ -17,7 +21,7 @@ public class Debuff : MonoBehaviour
         int ticks = dot.ticks;
 
         enemy.nextColor = dot.color;
-       
+
         while (ticks > 0 && enemy.alive == true)
         {
             enemy.moveSpeed = enemy.baseSpeed * (1 - dot.slowValue);
@@ -25,8 +29,24 @@ public class Debuff : MonoBehaviour
             enemy.TakeDamage(dot.damage);
             --ticks;
         }
-        enemy.GetComponent<SpriteRenderer>().color = enemy.nextColor;
+        Component[] debuffList = enemy.gameObject.GetComponentsInChildren(typeof(Debuff));
+        bool debuffedStill = false;
+        foreach (Debuff d in debuffList)
+        {
+            if (d != this)
+            {
+                debuffedStill = true;
+                break;
+            }
+        }
+        if (debuffedStill == false)
+        {
+            enemy.GetComponent<SpriteRenderer>().color = Color.white;
+            enemy.nextColor = Color.white;
+        }
+
         enemy.moveSpeed = enemy.baseSpeed;
+		isDestroyed = true;
         Destroy(gameObject);
     }
 }

@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b177c588ef7a614789afeb17ba49123, type: 3}
-  m_Name: GoldChestplate
+  m_Name: FrostArmor
   m_EditorClassIdentifier: 
-  name: Gold Chestplate
-  description: Heavy armor. Reduces damage by 30%, but slows you by 20%
-  defense: 0.3
-  speed: 0.8
+  name: Frost Armor
+  description: Slows Nearby enemies
+  defense: 0.2
+  speed: 1
   energyShield: 0
   energyShieldCooldown: 0
-  visual: {fileID: 21300000, guid: 12be94c4d6cc4e84592ceb68c94d8cb8, type: 3}
-  gameVisual: {fileID: 0}
-  armorPrefab: {fileID: 7582633784030086564, guid: 9c6ca85dfef02b89caba17fcf9ebbf16, type: 3}
+  visual: {fileID: 21300000, guid: aad1bc8b0aa1ba948945001ac9a5dd6d, type: 3}
+  armorPrefab: {fileID: 2805436008520853632, guid: 631ae1f09bab0024eadf3e484cb0c50e, type: 3}

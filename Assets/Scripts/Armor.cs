@@ -4,25 +4,36 @@ using UnityEngine;
 
 public class Armor : MonoBehaviour
 {
-    [System.Serializable]
-    public enum armorType_e
+    public ArmorData armor;
+    private PlayerHealth ph;
+    private PlayerMovement pm;
+
+    private void Start()
     {
-        none,
-        energyShield,
-        fixedArmor,
-        lightArmor
+        pm = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        ph = GameObject.Find("Player").GetComponent<PlayerHealth>();
     }
 
-    public armorType_e armorType  = armorType_e.energyShield;
+    private void Awake()
+    {
+        pm = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        ph = GameObject.Find("Player").GetComponent<PlayerHealth>();
+    }
+
     // Start is called before the first frame update
-    void Start()
+    public virtual void Add()
     {
-
+        pm.speedModifier *= this.armor.speed;
+        ph.armorValue += this.armor.defense;
     }
+
 
     // Update is called once per frame
-    void Update()
+    public virtual void Remove()
     {
-        
+        if (pm != null)
+            pm.speedModifier /= this.armor.speed;
+        if (ph != null)
+            ph.armorValue -= this.armor.defense;
     }
 }

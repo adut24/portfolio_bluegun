@@ -5,11 +5,13 @@ public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currenthealth;
+	public float armorValue = 0.0f;
     [SerializeField] private HealthBar hb;
     [SerializeField] private bool isInvicible = false;
     [SerializeField] private SpriteRenderer graphics;
     [SerializeField] private GameObject gameOverMenu;
     [SerializeField] private PauseControl pauseController;
+    private GameObject armor;
 
     private void Start()
     {
@@ -18,13 +20,28 @@ public class PlayerHealth : MonoBehaviour
         hb.SetHealth(maxHealth);
     }
 
+
     public void TakeDamage(int damage)
     {
         if (!isInvicible)
         {
+            armor = GameObject.FindWithTag("Armor");
+            if (armor != null)
+            {
+                ArmorData armorData = armor.GetComponent<Armor>().armor;
+                if (armorData.energyShield == true)
+                {
+                    if (armorData.armorCoroutine != null)
+                        StopCoroutine(armorData.armorCoroutine);
+                    armorData.armorCoroutine = StartCoroutine(armor.GetComponent<EnergyArmor>().EnergyShieldDown());
+                    isInvicible = true;
+                    StartCoroutine(InvincibilityDelay());
+                    return;
+                }
+            }
             AudioSource source = GetComponent<AudioSource>();
             source.PlayOneShot(source.clip, 1f);
-            currenthealth -= damage;
+            currenthealth -= Mathf.RoundToInt ((float) damage * (1.0f - armorValue));
             hb.SetHealth(currenthealth);
             isInvicible = true;
             StartCoroutine(InvincibilityFlash());
@@ -37,6 +54,7 @@ public class PlayerHealth : MonoBehaviour
             }
         }
     }
+
 
     public IEnumerator InvincibilityFlash()
     {

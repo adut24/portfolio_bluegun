@@ -19,6 +19,7 @@ public class Weapon : MonoBehaviour
     [System.Serializable]
     public struct dotEffect
     {
+		public string name;
         public bool enabled;
         public int ticks;
         public int damage;
@@ -69,7 +70,7 @@ public class Weapon : MonoBehaviour
         return gamma < 0 ? -1 : 1;
     }
 
-    private IEnumerator resumeShoot()
+    private IEnumerator ResumeShoot()
     {
         shootPause = true;
         yield return new WaitForSeconds(shootDelay);
@@ -108,7 +109,7 @@ public class Weapon : MonoBehaviour
             direction = Vector3.Normalize(v3Pos);
             startPosition = transform.position + direction * projectileOffset;
             launchProjectile(startPosition, direction);
-            shootCoroutine = StartCoroutine(resumeShoot());
+            shootCoroutine = StartCoroutine(ResumeShoot());
             AudioSource source = GetComponent<AudioSource>();
             if (source != null)
                 source.PlayOneShot(source.clip, 1f);

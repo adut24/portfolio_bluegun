@@ -10,7 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b177c588ef7a614789afeb17ba49123, type: 3}
-  m_Name: EnergyShield
+  m_Name: GarlicArmor
   m_EditorClassIdentifier: 
-  name: Energy Shield
-  visual: {fileID: 21300000, guid: 4fe40e89041d8a248b33d6dc0b62b459, type: 3}
+  name: Garlic Armor
+  description: You can't hit me if you can't come closer!
+  defense: 0
+  speed: 1
+  energyShield: 0
+  energyShieldCooldown: 0
+  visual: {fileID: -440063682, guid: 904f6e2f1eb77ce47842d5c4b8f85794, type: 3}
+  armorPrefab: {fileID: 2805436008520853632, guid: d51455668c79ece479ebc971148a0eb1, type: 3}
