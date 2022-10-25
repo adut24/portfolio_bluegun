@@ -72,6 +72,10 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1710881360146080693, guid: 42c7b3c420614d94e9ea77a7a53305b1, type: 3}
+      propertyPath: dot.name
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710881360146080693, guid: 42c7b3c420614d94e9ea77a7a53305b1, type: 3}
       propertyPath: dot.delay
       value: 0.8
       objectReference: {fileID: 0}

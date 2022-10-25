@@ -72,17 +72,12 @@ public class Enemy : MonoBehaviour
 
     public IEnumerator ShowDamage()
     {
-        Color previousColor;
         if (_alive == true)
         {
-            previousColor = sprite.color;
             sprite.color = Color.red;
             yield return new WaitForSeconds(0.3f);
             if (this)
-            {
                 sprite.color = nextColor;
-                nextColor = Color.white;
-            }
         }
     }
 

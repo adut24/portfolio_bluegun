@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b177c588ef7a614789afeb17ba49123, type: 3}
-  m_Name: GoldChestplate
+  m_Name: GarlicArmor
   m_EditorClassIdentifier: 
-  name: Gold Chestplate
-  description: Heavy armor. Reduces damage by 30%, but slows you by 20%
-  defense: 0.3
-  speed: 0.8
+  name: Garlic Armor
+  description: You can't hit me if you can't come closer!
+  defense: 0
+  speed: 1
   energyShield: 0
   energyShieldCooldown: 0
-  visual: {fileID: 21300000, guid: 12be94c4d6cc4e84592ceb68c94d8cb8, type: 3}
-  gameVisual: {fileID: 0}
-  armorPrefab: {fileID: 7582633784030086564, guid: 9c6ca85dfef02b89caba17fcf9ebbf16, type: 3}
+  visual: {fileID: -440063682, guid: 904f6e2f1eb77ce47842d5c4b8f85794, type: 3}
+  armorPrefab: {fileID: 2805436008520853632, guid: d51455668c79ece479ebc971148a0eb1, type: 3}

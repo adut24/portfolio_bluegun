@@ -5,10 +5,7 @@ public class EnergyArmor : Armor
 {
 	public override void Add()
 	{
-        Debug.Log("this goes here");
-		gameObject.GetComponent<SpriteRenderer>().sprite = armor.gameVisual;
 		gameObject.GetComponent<SpriteRenderer>().enabled = true;
-		gameObject.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
 		armor.energyShield = true;
 		armor.name = "EnergyShield";
 		armor.description = "Blocks an attack. Recharges after "

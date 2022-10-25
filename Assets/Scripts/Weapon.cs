@@ -19,6 +19,7 @@ public class Weapon : MonoBehaviour
     [System.Serializable]
     public struct dotEffect
     {
+		public string name;
         public bool enabled;
         public int ticks;
         public int damage;

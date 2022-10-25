@@ -12,6 +12,5 @@ public class ArmorData : ScriptableObject
     public float energyShieldCooldown;
     public Coroutine armorCoroutine = null;
     public Sprite visual;
-    public Sprite gameVisual;
     public GameObject armorPrefab;
 }

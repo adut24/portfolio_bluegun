@@ -10675,7 +10675,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1215358971}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
-        m_MethodName: ClickArmor
+        m_MethodName: ClickFirstWeapon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

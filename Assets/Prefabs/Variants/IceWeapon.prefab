@@ -60,12 +60,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8760117094517242606, guid: d7440f4672103024dbe9ade82cd41aa9, type: 3}
+      propertyPath: dot.name
+      value: Slow
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760117094517242606, guid: d7440f4672103024dbe9ade82cd41aa9, type: 3}
       propertyPath: shootDelay
       value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8760117094517242606, guid: d7440f4672103024dbe9ade82cd41aa9, type: 3}
       propertyPath: dot.color.a
-      value: 0.69411767
+      value: 0.36862746
       objectReference: {fileID: 0}
     - target: {fileID: 8760117094517242606, guid: d7440f4672103024dbe9ade82cd41aa9, type: 3}
       propertyPath: projectileSpeed
