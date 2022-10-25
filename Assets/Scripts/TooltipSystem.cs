@@ -12,13 +12,19 @@ public class TooltipSystem : MonoBehaviour
         instance = this;
     }
 
-    public void ShowWeapon(Weapon content, string header = "")
+    public void ShowWeapon(Weapon content, string header)
     {
         tooltip.SetTextWeapon(content, header);
         tooltip.gameObject.SetActive(true);
     }
 
-    public void ShowArtifact(string content, string header = "")
+    public void ShowArmor(string name, string desc, float defense, float speed)
+    {
+        tooltip.SetTextArmor(name, desc, defense, speed);
+        tooltip.gameObject.SetActive(true);
+    }
+
+    public void ShowArtifact(string content, string header)
     {
         tooltip.SetTextArtifact(content, header);
         tooltip.gameObject.SetActive(true);

@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Honey
   m_EditorClassIdentifier: 
   name: Honey pot
-  description: 'Heal you 20hp, 30s cooldown (R Key) '
+  description: 'Heal you 30hp, 30s cooldown (R Key) '
   damage: 0
-  health: 20
+  health: 30
   maxHealth: 0
   speed: 0
   dashCooldown: 0
   artifactActivation: 30
+  value: 0
+  slow: 0
   visual: {fileID: 21300000, guid: c6f33a68ab6073049b341d8c690fb574, type: 3}
   artifactPrefab: {fileID: 8590004945332168801, guid: ce80c6016321f4c40b4f9c41dcf6ced1, type: 3}

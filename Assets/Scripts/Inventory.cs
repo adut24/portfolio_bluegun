@@ -59,7 +59,9 @@ public class Inventory : MonoBehaviour
         weaponSlot.visual.sprite = allWeapons[i].visual;
 
         j = Random.Range(0, allArmors.Length);
-        chestChoices.GetChild(1).GetChild(0).GetComponent<Image>().sprite = allArmors[j].visual;
+        Slot armorSlot = chestChoices.GetChild(1).GetComponent<Slot>();
+        armorSlot.armor = allArmors[j];
+        armorSlot.visual.sprite = allArmors[j].visual;
 
         k = Random.Range(0, allArtifacts.Length);
         Slot artifactSlot = chestChoices.GetChild(2).GetComponent<Slot>();
@@ -105,16 +107,18 @@ public class Inventory : MonoBehaviour
         if (armor != allArmors[j])
         {
             armor = allArmors[j];
-            invPanel.GetChild(1).GetChild(0).GetComponent<Image>().sprite = allArmors[j].visual;
+            Slot armorSlot = invPanel.GetChild(1).GetComponent<Slot>();
+            armorSlot.armor = allArmors[j];
+            armorSlot.visual.sprite = allArmors[j].visual;
             heldArmor.GetComponent<Armor>().Remove();
             Destroy(heldArmor);
             heldArmor = Instantiate(armor.armorPrefab, player.transform);
             heldArmor.GetComponent<Armor>().armor = armor;
-            Debug.Log(heldArmor.GetComponent<Armor>());
             heldArmor.SetActive(true);
             heldArmor.GetComponent<Armor>().Add();
-            Time.timeScale = 1f;
             chestPopUp.SetActive(false);
+            TooltipSystem.instance.Hide();
+            Time.timeScale = 1f;
         }
     }
 

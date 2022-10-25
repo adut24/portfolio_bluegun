@@ -13,6 +13,7 @@ public class ArtifactData : ScriptableObject
     public float dashCooldown;
     public float artifactActivation;
     public int value;
+    public int slow;
     public Sprite visual;
     public GameObject artifactPrefab;
 }

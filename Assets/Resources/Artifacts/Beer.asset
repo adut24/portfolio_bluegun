@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: Beer
   m_EditorClassIdentifier: 
   name: Beer
-  description: Heal 20 HP every minute.
-  damage: 0
-  health: 20
+  description: Heal 10HP and increase damage for 10s, then 10s of slowness.
+  damage: 5
+  health: 10
+  maxHealth: 0
   speed: 0
   dashCooldown: 0
-  artifactActivation: 60
+  artifactActivation: 30
+  value: 0
+  slow: 5
   visual: {fileID: 21300000, guid: cc989c791529635408473bf0cf3a3d96, type: 3}
+  artifactPrefab: {fileID: 6739165133965015108, guid: d170f78a2d9eec746acbd1d11b847473, type: 3}
