@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
-	[HideInInspector]public float speedModifier = 1.0f;
+	public float speedModifier = 1.0f;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer sr;
     private Vector2 moveDirection;

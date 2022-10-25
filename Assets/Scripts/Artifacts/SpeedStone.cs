@@ -37,15 +37,15 @@ public class SpeedStone : Artifact
             pm.speedModifier /= (1 + stoneData.speed);
     }
 
-    /*
-    public override void Add()
+    public override void Upgrade()
     {
-        pm.moveSpeed *= (1 + stoneData.speed);
+        if (effectApplied)
+        {
+            pm.speedModifier /= (1 + stoneData.speed);
+            stoneData.speed *= 1.3f;
+            pm.speedModifier *= (1 + stoneData.speed);
+        }
+        else
+            stoneData.speed *= 1.3f;
     }
-
-    public override void Remove()
-    {
-        pm.moveSpeed /= (1 + stoneData.speed);
-    }
-    */
 }
