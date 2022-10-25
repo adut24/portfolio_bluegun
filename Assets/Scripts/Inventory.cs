@@ -62,6 +62,7 @@ public class Inventory : MonoBehaviour
         chestChoices.GetChild(1).GetChild(0).GetComponent<Image>().sprite = allArmors[j].visual;
 
         k = Random.Range(0, allArtifacts.Length);
+        k = 3;
         Slot artifactSlot = chestChoices.GetChild(2).GetComponent<Slot>();
         artifactSlot.artifact = allArtifacts[k];
         artifactSlot.visual.sprite = allArtifacts[k].visual;
