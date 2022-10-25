@@ -206,12 +206,11 @@ MonoBehaviour:
   moveSpeed: 0.09
   minDistance: 12
   detectionZone: 30
-  maxFollowDistance: 15
+  maxFollowDistance: 20
   walkAnim: 
   dropRate: 5
   healPower: 25
-  nextColor: {r: 0, g: 0, b: 0, a: 0}
-  projectileSpeed: 1
+  projectileSpeed: 1.2
   projectileLifeTime: 1
   projectilePower: 30
 --- !u!1 &6606305788436840719

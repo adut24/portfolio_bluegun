@@ -163,7 +163,7 @@ MonoBehaviour:
   baseSpeed: 0
   moveSpeed: 0.05
   minDistance: 1
-  detectionZone: 10
+  detectionZone: 15
   maxFollowDistance: 20
   walkAnim: 
   dropRate: 10

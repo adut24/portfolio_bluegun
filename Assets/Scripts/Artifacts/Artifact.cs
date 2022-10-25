@@ -11,4 +11,9 @@ public class Artifact : MonoBehaviour
     {
 
     }
+
+    public virtual void Upgrade()
+    {
+
+    }
 }

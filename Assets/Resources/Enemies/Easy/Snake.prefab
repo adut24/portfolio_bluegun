@@ -173,12 +173,11 @@ MonoBehaviour:
   baseSpeed: 0
   moveSpeed: 0.05
   minDistance: 0
-  detectionZone: 10
-  maxFollowDistance: 10
+  detectionZone: 15
+  maxFollowDistance: 20
   walkAnim: Snake
   dropRate: 10
   healPower: 10
-  nextColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!82 &-1270891153082007236
 AudioSource:
   m_ObjectHideFlags: 0

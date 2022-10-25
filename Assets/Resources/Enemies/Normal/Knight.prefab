@@ -232,12 +232,13 @@ MonoBehaviour:
   baseSpeed: 0
   moveSpeed: 0.1
   minDistance: 2.3
-  detectionZone: 10
-  maxFollowDistance: 6
+  detectionZone: 15
+  maxFollowDistance: 20
   walkAnim: KnightWalk
   dropRate: 5
   healPower: 25
-  nextColor: {r: 0, g: 0, b: 0, a: 0}
+  isAttacking: 0
+  slashPower: 25
 --- !u!1 &5446377001973250523
 GameObject:
   m_ObjectHideFlags: 0

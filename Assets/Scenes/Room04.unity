@@ -229,15 +229,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iterations: 90
-  walkLength: 90
-  randomStart: 0
-  bombNumber: 2
-  bombPower: 20
+  walkLength: 50
+  randomStart: 1
+  bombNumber: 3
+  bombPower: 30
   enemyNumber: 6
-  difficulty: Easy
+  difficulty: Normal
   mergeDifficulty: 1
   tilemap: {fileID: 2118883393}
-  radius: 5
+  radius: 6
 --- !u!1 &1881968382
 GameObject:
   m_ObjectHideFlags: 0
