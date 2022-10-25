@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: GoldChestplate
   m_EditorClassIdentifier: 
   name: Gold Chestplate
-  description: Heavy armor. Reduces damage by 30%, but slows you by 20%
+  description: Heavy armor make you slower.
   defense: 0.3
   speed: 0.8
   energyShield: 0
   energyShieldCooldown: 0
   visual: {fileID: 21300000, guid: 12be94c4d6cc4e84592ceb68c94d8cb8, type: 3}
-  gameVisual: {fileID: 0}
   armorPrefab: {fileID: 7582633784030086564, guid: 9c6ca85dfef02b89caba17fcf9ebbf16, type: 3}

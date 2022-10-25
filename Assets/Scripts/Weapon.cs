@@ -47,6 +47,7 @@ public class Weapon : MonoBehaviour
     public float projectileOffset = 0.5f;
     public float projectileDuration = 0.2f;
     public int  pierce = 0;
+    public string effect;
     public dotEffect dot;
     public moveType projectileMovement = moveType.Linear;
 

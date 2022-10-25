@@ -64,6 +64,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1710881360146080693, guid: 42c7b3c420614d94e9ea77a7a53305b1, type: 3}
+      propertyPath: effect
+      value: Burn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710881360146080693, guid: 42c7b3c420614d94e9ea77a7a53305b1, type: 3}
       propertyPath: pierce
       value: 1
       objectReference: {fileID: 0}
