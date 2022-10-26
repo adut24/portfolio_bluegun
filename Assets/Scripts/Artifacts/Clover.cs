@@ -17,8 +17,13 @@ public class Clover : Artifact
         if (!effectApplied && enemies.Length != 0)
         {
             foreach (GameObject enemy in enemies)
-                enemy.GetComponent<Enemy>().dropRate *= cloverData.value;
+                enemy.GetComponent<Enemy>().dropRate = (int)(enemy.GetComponent<Enemy>().dropRate * cloverData.value);
             effectApplied = true;
         }
+    }
+
+    public override void Upgrade()
+    {
+        cloverData.value *= 1.15f;
     }
 }
