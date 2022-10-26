@@ -8,19 +8,24 @@ public class SpawnPortal : MonoBehaviour
     private Animator fadeSystem;
     private GameObject chest;
     private GameObject spawnedChest;
+    private CapsuleCollider2D portalCollider;
+    private BoxCollider2D chestCollider;
     private GameObject[] enemies;
     public string sceneName;
 
     private void Start()
     {
-        portalAnimation = gameObject.GetComponent<Animator>();
+        portalAnimation = GetComponent<Animator>();
         fadeSystem = GameObject.Find("FadeSystem").GetComponent<Animator>();
+        portalCollider = GetComponent<CapsuleCollider2D>();
         portalAnimation.enabled = false;
-        chest = Resources.Load<GameObject>("Chest");
+        portalCollider.enabled = false;
         if (SceneManager.GetActiveScene().name != "Introduction")
         {
+            chest = Resources.Load<GameObject>("Chest");
             spawnedChest = Instantiate(chest, RoomGenerator.VerifySpawn(RoomGenerator.floorPositions), Quaternion.identity);
-            spawnedChest.GetComponent<BoxCollider2D>().isTrigger = false;
+            chestCollider = spawnedChest.GetComponent<BoxCollider2D>();
+            chestCollider.enabled = false;
         }
     }
 
@@ -29,8 +34,9 @@ public class SpawnPortal : MonoBehaviour
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (enemies.Length == 0)
         {
-            if (spawnedChest && !spawnedChest.GetComponent<BoxCollider2D>().isTrigger)
-                spawnedChest.GetComponent<BoxCollider2D>().isTrigger = true;
+            if (spawnedChest)
+                chestCollider.enabled = true;
+            portalCollider.enabled = true;
             StartCoroutine(EnablePortal());
         }
     }
@@ -50,7 +56,6 @@ public class SpawnPortal : MonoBehaviour
         yield return new WaitForSeconds(1f);
         if (transform.childCount > 0)
             Destroy(transform.GetChild(0).gameObject);
-
         portalAnimation.enabled = true;
     }
 
