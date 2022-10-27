@@ -13,6 +13,11 @@ public class LifeStone : Artifact
         ph = GameObject.Find("Player").GetComponent<PlayerHealth>();
     }
 
+    ~LifeStone()
+    {
+        stoneData.maxHealth = 50;
+    }
+
     public override void Add()
     {
         ph.maxHealth += stoneData.maxHealth;
