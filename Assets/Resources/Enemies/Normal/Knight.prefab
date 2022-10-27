@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5446377001495947625}
   - component: {fileID: 5446377001495947622}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 5446377001891075790}
   - component: {fileID: 5446377001891075788}
   - component: {fileID: 5446377001891075789}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Knight
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5446377001973250520}
   - component: {fileID: 5446377001973250521}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
