@@ -22,6 +22,11 @@ public class Clover : Artifact
         }
     }
 
+    ~Clover()
+    {
+        cloverData.value = 4;
+    }
+
     public override void Upgrade()
     {
         cloverData.value *= 1.15f;

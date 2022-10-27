@@ -15,6 +15,11 @@ public class SpeedStone : Artifact
         ph = GameObject.Find("Player").GetComponent<PlayerHealth>();
     }
 
+    ~SpeedStone()
+    {
+        stoneData.speed = 0.5f;
+    }
+
     private void Update()
     {
         percentHealth = ph.currenthealth * 100 / ph.maxHealth;
