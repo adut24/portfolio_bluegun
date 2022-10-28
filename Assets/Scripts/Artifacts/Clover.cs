@@ -7,6 +7,11 @@ public class Clover : Artifact
     private GameObject[] enemies;
     private bool effectApplied = false;
 
+    ~Clover()
+    {
+        cloverData.value = 4f;
+    }
+
     private void Update()
     {
         if (Time.timeSinceLevelLoad == 0 && enemies.Length == 0)
@@ -20,11 +25,6 @@ public class Clover : Artifact
                 enemy.GetComponent<Enemy>().dropRate = (int)(enemy.GetComponent<Enemy>().dropRate * cloverData.value);
             effectApplied = true;
         }
-    }
-
-    ~Clover()
-    {
-        cloverData.value = 4;
     }
 
     public override void Upgrade()

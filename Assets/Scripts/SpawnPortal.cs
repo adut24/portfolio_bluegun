@@ -10,6 +10,7 @@ public class SpawnPortal : MonoBehaviour
     private GameObject spawnedChest;
     private CapsuleCollider2D portalCollider;
     private BoxCollider2D chestCollider;
+    private SpriteRenderer chestSprite;
     private GameObject[] enemies;
     public string sceneName;
 
@@ -25,7 +26,9 @@ public class SpawnPortal : MonoBehaviour
             chest = Resources.Load<GameObject>("Chest");
             spawnedChest = Instantiate(chest, RoomGenerator.VerifySpawn(RoomGenerator.floorPositions), Quaternion.identity);
             chestCollider = spawnedChest.GetComponent<BoxCollider2D>();
+            chestSprite = spawnedChest.GetComponent<SpriteRenderer>();
             chestCollider.enabled = false;
+            chestSprite.color = new Color(1f, 1f, 1f, 0.5f);
         }
     }
 
@@ -35,7 +38,10 @@ public class SpawnPortal : MonoBehaviour
         if (enemies.Length == 0)
         {
             if (spawnedChest)
+            {
                 chestCollider.enabled = true;
+                chestSprite.color = new Color(1f, 1f, 1f, 1f);
+            }
             portalCollider.enabled = true;
             StartCoroutine(EnablePortal());
         }

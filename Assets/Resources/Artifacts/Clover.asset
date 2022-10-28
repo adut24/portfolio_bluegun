@@ -21,5 +21,6 @@ MonoBehaviour:
   dashCooldown: 0
   artifactActivation: 0
   value: 4
+  slow: 0
   visual: {fileID: 21300000, guid: 73df232cf852844038769fcae433ff12, type: 3}
   artifactPrefab: {fileID: 5774900363346678168, guid: 2098d2df7b7644c96939e6ba4603f126, type: 3}
