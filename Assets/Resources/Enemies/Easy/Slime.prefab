@@ -165,7 +165,7 @@ MonoBehaviour:
   minDistance: 1
   detectionZone: 15
   maxFollowDistance: 20
-  walkAnim: 
+  walkAnim: Slime
   dropRate: 10
   healPower: 10
 --- !u!82 &-8317274527883916734

@@ -9,15 +9,15 @@ public class SpeedStone : Artifact
     private bool effectApplied = false;
     private int percentHealth;
 
+    ~SpeedStone()
+    {
+        stoneData.speed = 0.5f;
+    }
+
     private void Awake()
     {
         pm = GameObject.Find("Player").GetComponent<PlayerMovement>();
         ph = GameObject.Find("Player").GetComponent<PlayerHealth>();
-    }
-
-    ~SpeedStone()
-    {
-        stoneData.speed = 0.5f;
     }
 
     private void Update()

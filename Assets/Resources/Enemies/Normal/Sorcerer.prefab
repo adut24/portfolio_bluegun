@@ -210,7 +210,7 @@ MonoBehaviour:
   walkAnim: 
   dropRate: 5
   healPower: 25
-  projectileSpeed: 1.2
+  projectileSpeed: 1.33
   projectileLifeTime: 1
   projectilePower: 30
 --- !u!1 &6606305788436840719

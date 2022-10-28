@@ -230,7 +230,7 @@ MonoBehaviour:
   health: 70
   power: 15
   baseSpeed: 0
-  moveSpeed: 0.1
+  moveSpeed: 0.12
   minDistance: 2.3
   detectionZone: 15
   maxFollowDistance: 20

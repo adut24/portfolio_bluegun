@@ -7,15 +7,15 @@ public class LifeStone : Artifact
     private HealthBar hb;
     private PlayerHealth ph;
 
+    ~LifeStone()
+    {
+        stoneData.maxHealth = 50;
+    }
+
     private void Awake()
     {
         hb = GameObject.Find("HealthBar").GetComponent<HealthBar>();
         ph = GameObject.Find("Player").GetComponent<PlayerHealth>();
-    }
-
-    ~LifeStone()
-    {
-        stoneData.maxHealth = 50;
     }
 
     public override void Add()
