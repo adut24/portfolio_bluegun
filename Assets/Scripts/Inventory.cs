@@ -141,7 +141,6 @@ public class Inventory : MonoBehaviour
         TooltipSystem.instance.Hide();
         chestPopUp.SetActive(false);
         Time.timeScale = 1f;
-
     }
 
     public void ClosePopUp()

@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
+    public int level = 1;
     public int health;
     public int power;
     public float baseSpeed;
@@ -21,7 +22,7 @@ public class Enemy : MonoBehaviour
     protected float execTime = 2f;
     protected Vector2 dir;
     private bool _alive = true;
-    private Color _nextColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+    private Color _nextColor = new(1.0f, 1.0f, 1.0f, 1.0f);
 
     public bool alive
     {
@@ -49,7 +50,7 @@ public class Enemy : MonoBehaviour
         if (!player && execTime <= 0)
             dir = new Vector2(Random.Range(-1000, 1000), Random.Range(-1000, 1000));
     }
-
+    
     protected virtual void FixedUpdate()
     {
         if (Time.timeSinceLevelLoad > 1.5f)
@@ -91,7 +92,7 @@ public class Enemy : MonoBehaviour
             AudioSource source = GetComponent<AudioSource>();
             rb.bodyType = RigidbodyType2D.Static;
             GetComponent<Collider2D>().enabled = false;
-            this.enabled = false;
+            enabled = false;
             anim.enabled = false;
             if (source != null)
                 source.PlayOneShot(source.clip, 1f);
@@ -175,6 +176,17 @@ public class Enemy : MonoBehaviour
             GameObject potion = Resources.Load<GameObject>("Potion");
             GameObject spawnedPotion = Instantiate(potion, position, Quaternion.identity);
             spawnedPotion.GetComponent<Potion>().healPower = healPower;
+        }
+    }
+
+    public virtual void SetPower()
+    {
+        if (level != 1)
+        {
+            health = Mathf.RoundToInt(health * level * 0.56f);
+            power = Mathf.RoundToInt(power * level * 0.72f);
+            moveSpeed *= level * 0.56f;
+            dropRate += level;
         }
     }
 }

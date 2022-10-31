@@ -43,7 +43,7 @@ public class LifeStone : Artifact
     public override void Upgrade()
     {
         ph.maxHealth -= stoneData.maxHealth;
-        stoneData.maxHealth = (int)(stoneData.maxHealth * 1.2f);
+        stoneData.maxHealth = Mathf.RoundToInt(stoneData.maxHealth * 1.2f);
         ph.maxHealth += stoneData.maxHealth;
         hb.SetMaxHealth(ph.maxHealth);
     }

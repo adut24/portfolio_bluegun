@@ -12,7 +12,7 @@ public class WallGenerator
         new Vector2Int(-1, 1), /* UP LEFT direction */
         new Vector2Int(1, 1), /* UP RIGHT direction */
         new Vector2Int(-1, -1), /* DOWN LEFT direction */
-        new Vector2Int(1, -1), /* UP RIGHT direction */
+        new Vector2Int(1, -1), /* DOWN RIGHT direction */
     };
 
     public static void CreateWalls(HashSet<Vector2Int> floorPositions, TilemapVisualiser tilemap)

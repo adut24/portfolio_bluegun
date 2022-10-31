@@ -22,7 +22,7 @@ public class Clover : Artifact
         if (!effectApplied && enemies.Length != 0)
         {
             foreach (GameObject enemy in enemies)
-                enemy.GetComponent<Enemy>().dropRate = (int)(enemy.GetComponent<Enemy>().dropRate * cloverData.value);
+                enemy.GetComponent<Enemy>().dropRate = Mathf.RoundToInt(enemy.GetComponent<Enemy>().dropRate * cloverData.value);
             effectApplied = true;
         }
     }
