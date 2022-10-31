@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8601937dc3004a1ab6fcf6f955f6c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 1
   health: 30
   power: 5
   baseSpeed: 0
@@ -168,6 +169,8 @@ MonoBehaviour:
   walkAnim: Slime
   dropRate: 10
   healPower: 10
+  spriteLvl2: {fileID: 1905335682, guid: 50406886203e04310bc830344156889c, type: 3}
+  spriteLvl3: {fileID: 0}
 --- !u!82 &-8317274527883916734
 AudioSource:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class SpawnPortal : MonoBehaviour
 {
     private Animator portalAnimation;
     private Animator fadeSystem;
+    private AudioSource sound;
     private GameObject chest;
     private GameObject spawnedChest;
     private CapsuleCollider2D portalCollider;
@@ -30,6 +31,8 @@ public class SpawnPortal : MonoBehaviour
             chestCollider.enabled = false;
             chestSprite.color = new Color(1f, 1f, 1f, 0.5f);
         }
+        sound = transform.GetChild(0).GetComponent<AudioSource>();
+        sound.enabled = false;
     }
 
     private void Update()
@@ -37,13 +40,13 @@ public class SpawnPortal : MonoBehaviour
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (enemies.Length == 0)
         {
+            EnablePortal();
             if (spawnedChest)
             {
                 chestCollider.enabled = true;
                 chestSprite.color = new Color(1f, 1f, 1f, 1f);
             }
             portalCollider.enabled = true;
-            StartCoroutine(EnablePortal());
         }
     }
 
@@ -55,13 +58,15 @@ public class SpawnPortal : MonoBehaviour
         }
     }
 
-    private IEnumerator EnablePortal()
+    private void EnablePortal()
     {
         if (transform.childCount > 0)
-            transform.GetChild(0).GetComponent<AudioSource>().enabled = true;
-        yield return new WaitForSeconds(1f);
-        if (transform.childCount > 0)
-            Destroy(transform.GetChild(0).gameObject);
+        {
+            sound.enabled = true;
+
+            if (!sound.isPlaying)
+                Destroy(transform.GetChild(0).gameObject);
+        }
         portalAnimation.enabled = true;
     }
 
