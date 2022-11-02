@@ -2,6 +2,9 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Manage the portal and the reward chest
+/// </summary>
 public class SpawnPortal : MonoBehaviour
 {
     private Animator portalAnimation;
@@ -29,7 +32,7 @@ public class SpawnPortal : MonoBehaviour
             chestCollider = spawnedChest.GetComponent<BoxCollider2D>();
             chestSprite = spawnedChest.GetComponent<SpriteRenderer>();
             chestCollider.enabled = false;
-            chestSprite.color = new Color(1f, 1f, 1f, 0.5f);
+            chestSprite.color = new Color(1f, 1f, 1f, 0.5f); /* Make the chest half transparent to show it's not active */
         }
         sound = transform.GetChild(0).GetComponent<AudioSource>();
         sound.enabled = false;
@@ -37,16 +40,16 @@ public class SpawnPortal : MonoBehaviour
 
     private void Update()
     {
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        if (enemies.Length == 0)
+        enemies = GameObject.FindGameObjectsWithTag("Enemy"); /* Look at the enemies remaining */
+        if (enemies.Length == 0)  /* if there is no enemy remaining */
         {
             EnablePortal();
             if (spawnedChest)
             {
-                chestCollider.enabled = true;
-                chestSprite.color = new Color(1f, 1f, 1f, 1f);
+                chestCollider.enabled = true;                  /* "Activate" the chest */
+                chestSprite.color = new Color(1f, 1f, 1f, 1f); /* Make the chest fully visible */
             }
-            portalCollider.enabled = true;
+            portalCollider.enabled = true;                     /* "Activate" the portal */
         }
     }
 
@@ -60,20 +63,20 @@ public class SpawnPortal : MonoBehaviour
 
     private void EnablePortal()
     {
-        if (transform.childCount > 0)
+        if (transform.childCount > 0) /* If the lock is still present */
         {
             sound.enabled = true;
 
             if (!sound.isPlaying)
-                Destroy(transform.GetChild(0).gameObject);
+                Destroy(transform.GetChild(0).gameObject); /* Destroy the lock */
         }
         portalAnimation.enabled = true;
     }
 
     private IEnumerator LoadNextScene()
     {
-        fadeSystem.SetTrigger("FadeIn");
+        fadeSystem.SetTrigger("FadeIn");        /* Start the FadeIn animation */
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneName);      /* Load the next scene */
     }
 }

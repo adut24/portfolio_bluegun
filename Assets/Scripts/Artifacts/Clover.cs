@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Create an artifact increasing the potion drop rate on the enemies
+/// </summary>
 public class Clover : Artifact
 {
     [SerializeField]
@@ -7,6 +10,9 @@ public class Clover : Artifact
     private GameObject[] enemies;
     private bool effectApplied = false;
 
+    /// <summary>
+    /// Reset the value in the scriptable object
+    /// </summary>
     ~Clover()
     {
         cloverData.value = 4f;

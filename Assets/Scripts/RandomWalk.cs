@@ -1,6 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Algorithm used for the procedural generation
+/// </summary>
 public class RandomWalk
 {
     public static HashSet<Vector2Int> RunRandomWalk(Vector2Int startPosition, int walkLength)
@@ -21,7 +24,9 @@ public class RandomWalk
     }
 }
 
-
+/// <summary>
+/// Direction for the procedural generation
+/// </summary>
 public static class Distance2D
 {
     public static List<Vector2Int> direction = new()

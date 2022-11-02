@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Create an artifact increasing the speed of the player
+/// </summary>
 public class SpeedStone : Artifact
 {
     [SerializeField]
@@ -9,6 +12,9 @@ public class SpeedStone : Artifact
     private bool effectApplied = false;
     private int percentHealth;
 
+    /// <summary>
+    /// Reset the value in the scriptable object
+    /// </summary>
     ~SpeedStone()
     {
         stoneData.speed = 0.5f;
@@ -24,7 +30,7 @@ public class SpeedStone : Artifact
     {
         percentHealth = ph.currenthealth * 100 / ph.maxHealth;
 
-        if (!effectApplied && percentHealth <= 30)
+        if (!effectApplied && percentHealth <= 30) /* if the player has 30 % or less life remaining and the effect isn't applied */
         {
             effectApplied = true;
             pm.speedModifier *= (1 + stoneData.speed);
