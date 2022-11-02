@@ -13,8 +13,6 @@ public class FireTrap : MonoBehaviour
     // Start is called before the first frame update
     public IEnumerator FireLine(float j)
     {
-        Debug.Log("Min:" + mapBounds.yMin + " | Max:" + mapBounds.yMax);
-
             for (float i = mapBounds.xMin + 0.5f; i < mapBounds.xMax; i += 1.0f)
             {
                 GameObject trap = Instantiate(firePrefab);
