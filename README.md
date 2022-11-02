@@ -6,7 +6,7 @@
 This is our portfolio project to end our foundations year at [Holberton School](https://www.holbertonschool.com). We chose to develop a 2D top-down pixel art Rogue-like game on the [Unity](https://unity.com) engine.
 
 ### What's a Rogue-like game?
-Rogue-like games are a subgenre of video game characterized by **dungeon crawling** through **procedurally generated** levels with **permanent death** of the player. *Rogue* (1980), is the forerunner of the subgenre and gave it its name.
+Rogue-like games are a subgenre of video game characterized by **dungeon crawling** through **procedurally generated** levels with **permanent death** of the player. *[Rogue](https://en.wikipedia.org/wiki/Rogue_(video_game))* (1980), is the forerunner of the subgenre and gave it its name.
 
 More recent popular Rogue-like games are: *[The Binding of Isaac](https://en.wikipedia.org/wiki/The_Binding_of_Isaac_(video_game))* (2011), *[Spelunky](https://en.wikipedia.org/wiki/Spelunky)* (2008), *[Hades](https://en.wikipedia.org/wiki/Hades_(video_game))* (2020) or the *[Pokémon Mystery Dungeon](https://en.wikipedia.org/wiki/Pokémon_Mystery_Dungeon)* (2005) series inspired by the Japanese game series *[Mystery Dungeon](https://en.wikipedia.org/wiki/Mystery_Dungeon)* (1993).
 
@@ -40,7 +40,7 @@ To launch the game, go inside the folder downloaded in the previous step and dou
 ## Related projects
 During our foundations year, we didn't work on projects remotely close to this one, as it's the first time we worked on a game and Unity with C#.
 
-As for how we organized ourselves, the only project we did the three of us together was the [Sorting Algorithms](https://github.com/Pierre-Dureau/sorting_algorithms) project in C.
+As for how we organized ourselves, the only project we did the three of us together was the [Sorting Algorithms](https://github.com/Pierre-Dureau/sorting_algorithms) project in C, so we used that project as a base to divide all the work and also on what features we thought took priority to work on.
 
 ## Special Thanks
 A huge thanks to the people on sites like [OpenGameArt](https://opengameart.org/) and [itch.io](https://itch.io/), which provide usage-free sprites with animations or assets.
