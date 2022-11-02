@@ -14,7 +14,7 @@ More recent popular Rogue-like games are: *The Binding of Isaac* (2011), *Spelun
 In *Bluegun*, you play as a mage. This mage goes through a number of procedurally generated rooms to obtain different weapons, armors or artifacts to make yourself more powerful and resistant to the hordes of enemies trying to stop you from going further.
 
 | <img src="img/perso.png" height="100px" alt="Player" /> | <img src="img/wand.png" height="100px" alt="Weapon" /> | <img src="img/shield.png" height="100px" alt="Armor" /> | <img src="img/honey.png" height="100px" alt="Artifact" />
-|:--:|:--:|:--:|:--|
+|:--:|:--:|:--:|:--:|
 | *Player* | *Weapon* | *Armor* | *Artifact* |
 
 You can read more informations about the game by taking a look at the [landing page](adut24.github.io).
