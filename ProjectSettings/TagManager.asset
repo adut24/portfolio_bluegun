@@ -9,6 +9,10 @@ TagManager:
   - Armor
   - Artifact
   - Weapon
+  - ArtifactCooldown
+  - BossWeapon
+  - Boss
+  - BossProjectile
   layers:
   - Default
   - TransparentFX

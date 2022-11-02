@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public float dashingCooldown = 2f;
     [SerializeField] private TrailRenderer tr;
     [SerializeField] private Slider slider;
+    [SerializeField] private PlayerHealth player;
     private float fillTime = 0f;
     public float fillValue = 0.45f;
     void Update() //Player Inputs
@@ -68,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator Dash()
     {
+        player.isInvicible = true;
         canDash = false;
         isDashing = true;
         rb.velocity = new Vector2(moveDirection.x * dashingPower, moveDirection.y * dashingPower);//Dash
@@ -75,7 +77,9 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(dashingTime);//0.2f for the dashing time
         tr.emitting = false;
         isDashing = false;
-        yield return new WaitForSeconds(dashingCooldown);//2f for the cooldown
+        yield return new WaitForSeconds(0.5f);
+        player.isInvicible = false;
+        yield return new WaitForSeconds(dashingCooldown - 0.5f);//2f for the cooldown
         fillTime = 0f;
         canDash = true;
     }

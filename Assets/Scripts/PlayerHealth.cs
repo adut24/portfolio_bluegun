@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
     public int currenthealth;
 	public float armorValue = 0.0f;
     [SerializeField] private HealthBar hb;
-    [SerializeField] private bool isInvicible = false;
+    [SerializeField] public bool isInvicible = false;
     [SerializeField] private SpriteRenderer graphics;
     [SerializeField] private GameObject gameOverMenu;
     [SerializeField] private PauseControl pauseController;

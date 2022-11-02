@@ -45,19 +45,33 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
             return ;
         }
-        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-        if (enemy != null && enemy.alive == true)
+        switch (gameObject.tag)
         {
-            if (parent.dot.enabled == true)
-            {
-                Debuff dot = Instantiate(parent.dot.debuffPrefab, enemy.transform);
-                dot.dot = parent.dot;
-                dot.enemy = enemy;
-            }
-            if (pierce > 0)
-                pierce--;
-            else
-                Destroy(gameObject);
+            case "Projectile":
+                Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+                if (enemy != null && enemy.alive == true)
+                {
+                    if (parent.dot.enabled == true)
+                    {
+                        Debuff dot = Instantiate(parent.dot.debuffPrefab, enemy.transform);
+                        dot.dot = parent.dot;
+                        dot.enemy = enemy;
+                    }
+                    if (pierce > 0) 
+                        pierce--;
+                    else
+                        Destroy(gameObject);
+                }
+                break;
+            case "BossProjectile":
+                
+                PlayerHealth target = collision.gameObject.GetComponent<PlayerHealth>();
+                if (target != null)
+                {
+                    target.TakeDamage(parent.damage);
+                    Destroy(gameObject);
+                }
+                break;
         }
     }
 }

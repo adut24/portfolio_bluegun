@@ -1,13 +1,16 @@
 using System.Collections;
-using System;
 using UnityEngine;
+using System;
+using TMPro;
+using UnityEngine.UI;
 
 public class BossAttack : MonoBehaviour
 {
     private Coroutine phaseCoroutine = null;
     public delegate IEnumerator AttackMethod();
     public GameObject[,] attackPrefabs = new GameObject[3,3];
-    private int currentPhase;
+    private int currentPhase = 0;
+    public float attackPatternDelay = 5.0f;
     [SerializeField]
     public GameObject phaseOneAttackOne;
     public GameObject phaseOneAttackTwp;
@@ -18,6 +21,7 @@ public class BossAttack : MonoBehaviour
     public GameObject phaseThreeAttackOne;
     public GameObject phaseThreeAttackTwo;
     public GameObject phaseThreeAttackThree;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +35,7 @@ public class BossAttack : MonoBehaviour
         attackPrefabs[2, 0] = phaseThreeAttackOne;
         attackPrefabs[2, 1] = phaseThreeAttackTwo;
         attackPrefabs[2, 2] = phaseThreeAttackThree;
-        phaseCoroutine = StartCoroutine(FirstPhase());
+        phaseCoroutine = StartCoroutine(AttackPattern());
     }
 
     // Update is called once per frame
@@ -41,14 +45,34 @@ public class BossAttack : MonoBehaviour
     }
 
 
-    public IEnumerator FirstPhase()
+    public IEnumerator AttackPattern()
     {
+        int i = 0;
+        int id = 0;
+        int lastAttack = 0;
         while (true)
         {
-            Debug.Log("Hello");
-            Instantiate(attackPrefabs[0, 0]);
-            yield return new WaitForSeconds(4);
-
+            id = UnityEngine.Random.Range(1, 3);
+            Debug.Log(id);
+            lastAttack += id;
+            Attack attack = Instantiate(attackPrefabs[0, (lastAttack + id) % 3]).GetComponent<Attack>();
+            attack.currentPhase = currentPhase;
+            yield return new WaitForSeconds(attackPatternDelay);
+            i++;
+            currentPhase = Math.Min(i / 3, 2);
+            switch (currentPhase)
+            {
+                case 0:
+                    attackPatternDelay = 5.0f;
+                    break;
+                case 1:
+                    attackPatternDelay = 4.0f;
+                    break;
+                case 2:
+                    attackPatternDelay = 3.0f;
+                    break;
+            }
+            GameObject.Find("PhaseIndicator").GetComponent<TextMeshProUGUI>().text = "Phase " + (currentPhase + 1);
         }
     }
 }
