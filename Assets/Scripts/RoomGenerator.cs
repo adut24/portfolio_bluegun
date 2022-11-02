@@ -2,6 +2,9 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+/// <summary>
+/// Create a procedurally generated room.
+/// </summary>
 public class RoomGenerator : MonoBehaviour
 {
     private Vector2Int startPosition = Vector2Int.zero;
@@ -112,6 +115,11 @@ public class RoomGenerator : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Generate a spawn position
+    /// </summary>
+    /// <param name="floorPositions">All the positions of the floor</param>
+    /// <returns>The position of the gameObject</returns>
     public static Vector2 VerifySpawn(HashSet<Vector2Int> floorPositions)
     {
         bool goodSpawn = false;
