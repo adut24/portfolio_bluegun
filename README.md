@@ -8,7 +8,7 @@ This is our portfolio project to end our foundations year at [Holberton School](
 ### What's a Rogue-like game?
 Rogue-like games are a subgenre of video game characterized by **dungeon crawling** through **procedurally generated** levels with **permanent death** of the player. *Rogue* (1980), is the forerunner of the subgenre and gave it its name.
 
-More recent popular Rogue-like games are: *The Binding of Isaac* (2011), *Spelunky* (2008), *Hades* (2020) or the *Pokémon Mystery Dungeon* (2005) series inspired by the Japanese game series *Mystery Dungeon* (1993).
+More recent popular Rogue-like games are: *[The Binding of Isaac](https://en.wikipedia.org/wiki/The_Binding_of_Isaac_(video_game))* (2011), *[Spelunky](https://en.wikipedia.org/wiki/Spelunky)* (2008), *[Hades](https://en.wikipedia.org/wiki/Hades_(video_game))* (2020) or the *[Pokémon Mystery Dungeon](https://en.wikipedia.org/wiki/Pokémon_Mystery_Dungeon)* (2005) series inspired by the Japanese game series *[Mystery Dungeon](https://en.wikipedia.org/wiki/Mystery_Dungeon)* (1993).
 
 ### What is Bluegun like?
 In *Bluegun*, you play as a mage. This mage goes through a number of procedurally generated rooms to obtain different weapons, armors or artifacts to make yourself more powerful and resistant to the hordes of enemies trying to stop you from going further.
