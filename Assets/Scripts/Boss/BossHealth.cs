@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -11,6 +9,17 @@ public class BossHealth : Enemy
     public Slider slider;
     public int maxHealth;
     public BossAttack boss;
+
+    private void Awake()
+    {
+        GameObject bossIndic = GameObject.Find("Canvas").transform.Find("BossIndicator").gameObject;
+        GameObject phaseIndic = GameObject.Find("Canvas").transform.Find("PhaseIndicator").gameObject;
+        bossIndic.SetActive(true);
+        phaseIndic.SetActive(true);
+        slider = bossIndic.transform.Find("Slider").GetComponent<Slider>();
+        fill = slider.transform.Find("Fill Area").transform.Find("Fill").GetComponent<Image>();
+    }
+
     // Start is called before the first frame update
     protected override void Start()
     {
