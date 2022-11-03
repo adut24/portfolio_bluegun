@@ -234,8 +234,9 @@ MonoBehaviour:
   bombNumber: 2
   bombPower: 20
   enemyNumber: 6
+  enemyLevel: 3
   difficulty: Easy
-  mergeDifficulty: 1
+  mergeDifficulty: 0
   tilemap: {fileID: 2118883393}
   radius: 5
 --- !u!1 &1881968382

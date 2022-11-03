@@ -2,6 +2,9 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+/// <summary>
+/// Create a procedurally generated room.
+/// </summary>
 public class RoomGenerator : MonoBehaviour
 {
     private Vector2Int startPosition = Vector2Int.zero;
@@ -12,6 +15,7 @@ public class RoomGenerator : MonoBehaviour
     public int bombNumber;
     public int bombPower;
     public int enemyNumber;
+    public int enemyLevel = 1;
     public string difficulty;
     public bool mergeDifficulty = false;
     private GameObject[] enemies;
@@ -45,7 +49,9 @@ public class RoomGenerator : MonoBehaviour
         for (int i = 0; i < iterations; i++)
         {
             HashSet<Vector2Int> path = RandomWalk.RunRandomWalk(currentPosition, walkLength);
+
             floorPositions.UnionWith(path); /* Add element from path not already in floorPositions */
+
             if (randomStart)
                 currentPosition = floorPositions.ElementAt(Random.Range(0, floorPositions.Count));
         }
@@ -96,18 +102,24 @@ public class RoomGenerator : MonoBehaviour
         {
             GameObject[] easy = Resources.LoadAll<GameObject>("Enemies/Easy");
             GameObject[] normal = Resources.LoadAll<GameObject>("Enemies/Normal");
-            GameObject[] hard = Resources.LoadAll<GameObject>("Enemies/Hard");
-            GameObject[] middle = easy.Union(normal).ToArray();
-            enemies = middle.Union(hard).ToArray();
+            enemies = easy.Union(normal).ToArray();
         }
 
         for (int i = 0; i < enemyNumber; i++)
         {
             Vector2 position = VerifySpawn(floorPositions);
-            Instantiate(enemies[Random.Range(0, enemies.Length)], position, Quaternion.identity);
+
+            GameObject enemy = Instantiate(enemies[Random.Range(0, enemies.Length)], position, Quaternion.identity);
+            enemy.GetComponent<Enemy>().level = enemyLevel;
+            enemy.GetComponent<Enemy>().SetPower(); /* Change the stats according to the level */
         }
     }
 
+    /// <summary>
+    /// Generate a spawn position
+    /// </summary>
+    /// <param name="floorPositions">All the positions of the floor</param>
+    /// <returns>The position of the gameObject</returns>
     public static Vector2 VerifySpawn(HashSet<Vector2Int> floorPositions)
     {
         bool goodSpawn = false;
@@ -116,7 +128,7 @@ public class RoomGenerator : MonoBehaviour
         while (!goodSpawn)
         {
             int count = 0;
-            spawn = floorPositions.ElementAt(Random.Range(0, floorPositions.Count));
+            spawn = floorPositions.ElementAt(Random.Range(0, floorPositions.Count)); /* Take a random value inside floorPositions */
 
             foreach (Vector2Int direction in WallGenerator.allDirections)
             {
@@ -125,10 +137,11 @@ public class RoomGenerator : MonoBehaviour
                 count++;
             }
 
-            if (count == 8)
+            if (count == 8) /* if all surrounding positions are part of floorPositions */
             {
                 Collider2D[] result = Physics2D.OverlapCircleAll(spawn, checkRadius);
-                if (result.Length == 0)
+
+                if (result.Length == 0) /* if there aren't any other gameObjects in the radius checked */
                     goodSpawn = true;
             }
         }

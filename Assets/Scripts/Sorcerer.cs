@@ -47,4 +47,15 @@ public class Sorcerer : Enemy
         else
             return transform.Find("Right").position;
     }
+
+    public override void SetPower()
+    {
+        base.SetPower();
+        if (level != 1)
+        {
+            projectileSpeed *= level * 0.57f;
+            projectileLifeTime = 1.5f;
+            projectilePower = Mathf.RoundToInt(projectilePower * level * 0.54f);
+        }
+    }
 }
