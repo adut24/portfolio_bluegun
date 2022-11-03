@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
     protected Animator anim;
     protected float execTime = 2f;
     protected Vector2 dir;
-    private bool _alive = true;
+    protected bool _alive = true;
     private Color _nextColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 
     public bool alive
@@ -81,7 +81,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage)
     {
         health -= damage;
 

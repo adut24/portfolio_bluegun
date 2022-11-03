@@ -9,7 +9,7 @@ public class BossAttack : MonoBehaviour
     private Coroutine phaseCoroutine = null;
     public delegate IEnumerator AttackMethod();
     public GameObject[,] attackPrefabs = new GameObject[3,3];
-    private int currentPhase = 0;
+    public int currentPhase = 0;
     public float attackPatternDelay = 5.0f;
     [SerializeField]
     public GameObject phaseOneAttackOne;
@@ -53,13 +53,11 @@ public class BossAttack : MonoBehaviour
         while (true)
         {
             id = UnityEngine.Random.Range(1, 3);
-            Debug.Log(id);
             lastAttack += id;
             Attack attack = Instantiate(attackPrefabs[0, (lastAttack + id) % 3]).GetComponent<Attack>();
             attack.currentPhase = currentPhase;
             yield return new WaitForSeconds(attackPatternDelay);
             i++;
-            currentPhase = Math.Min(i / 3, 2);
             switch (currentPhase)
             {
                 case 0:
