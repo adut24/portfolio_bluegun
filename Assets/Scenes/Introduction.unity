@@ -15261,6 +15261,7 @@ MonoBehaviour:
   dashingCooldown: 2
   tr: {fileID: 1929888725}
   slider: {fileID: 2104296662}
+  player: {fileID: 1929888726}
   fillValue: 0.45
 --- !u!50 &1929888721
 Rigidbody2D:

@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    private Camera cam;
-    private GameObject player;
-    private float RotateSpeed = 15f;
-    private float Radius = 1.8f;
+    protected Camera cam;
+    protected GameObject player;
+    protected float RotateSpeed = 15f;
+    protected float Radius = 1.8f;
 
-    private Vector2 _centre;
-    private float _angle = 0.0f;
-    private float targetAngle;
-    private float rotValue;
-    private Vector3 v3Pos;
-    private bool shootPause = false;
-    private Coroutine shootCoroutine;
+    protected Vector2 _centre;
+    protected float _angle = 0.0f;
+    protected float targetAngle;
+    protected float rotValue;
+    protected Vector3 v3Pos;
+    protected bool shootPause = false;
+    protected Coroutine shootCoroutine;
     [System.Serializable]
     public struct dotEffect
     {
@@ -71,14 +71,14 @@ public class Weapon : MonoBehaviour
         return gamma < 0 ? -1 : 1;
     }
 
-    private IEnumerator ResumeShoot()
+    protected IEnumerator ResumeShoot()
     {
         shootPause = true;
         yield return new WaitForSeconds(shootDelay);
         shootPause = false;
     }
 
-    private void launchProjectile(Vector3 startPosition, Vector3 direction)
+    protected virtual void launchProjectile(Vector3 startPosition, Vector3 direction)
     {
         for (int i = 0; i < projectileNumber; i++)
         {
@@ -100,7 +100,7 @@ public class Weapon : MonoBehaviour
 
     }
 
-    private void ShootWeapon()
+    public virtual void ShootWeapon()
     {
         if (shootPause == false)
         {
@@ -117,7 +117,7 @@ public class Weapon : MonoBehaviour
         }
     }
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         v3Pos = cam.WorldToScreenPoint(player.transform.position);
         v3Pos = Input.mousePosition - v3Pos;
