@@ -109,7 +109,9 @@ MonoBehaviour:
   projectileOffset: 0.5
   projectileDuration: 2
   pierce: 1
+  effect: 
   dot:
+    name: 
     enabled: 1
     ticks: 1
     damage: 0
@@ -128,7 +130,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 9443ccb758d52f26c940112d8212d9ce, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 36533389f45400662bfa119b5b2869f4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f89d2ca434da1e14ca63e59df768ca22, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

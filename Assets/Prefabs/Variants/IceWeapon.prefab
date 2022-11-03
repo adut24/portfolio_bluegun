@@ -99,5 +99,9 @@ PrefabInstance:
       propertyPath: projectileSpeedRange
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 8760117094517242607, guid: d7440f4672103024dbe9ade82cd41aa9, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f89d2ca434da1e14ca63e59df768ca22, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7440f4672103024dbe9ade82cd41aa9, type: 3}
