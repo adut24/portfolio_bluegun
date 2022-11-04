@@ -16969,7 +16969,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1444266079}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
@@ -17747,7 +17747,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1444266079}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -18644,7 +18644,7 @@ RectTransform:
   - {fileID: 1465875751}
   - {fileID: 1220261407}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -20682,7 +20682,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1444266079}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -21326,7 +21326,7 @@ GameObject:
   - component: {fileID: 1202582760}
   - component: {fileID: 1202582759}
   m_Layer: 0
-  m_Name: Music Loop
+  m_Name: BossMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21454,7 +21454,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1206611508
 PrefabInstance:
@@ -22294,7 +22294,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1446401738
 GameObject:
@@ -22624,9 +22624,9 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1444266079}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
@@ -31201,7 +31201,7 @@ Transform:
   - {fileID: 558167518}
   - {fileID: 1960650164}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1543727200
 MonoBehaviour:
@@ -31491,7 +31491,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1618495308
 GameObject:
@@ -32801,68 +32801,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146167991}
   m_CullTransparentMesh: 1
---- !u!1001 &8628166368318262854
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8628166369555897052, guid: 13972c17b03a9886fb5fb1b7c36ffc99, type: 3}
-      propertyPath: floor
-      value: 
-      objectReference: {fileID: 1494309573}
-    - target: {fileID: 8628166369555897053, guid: 13972c17b03a9886fb5fb1b7c36ffc99, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628166369555897053, guid: 13972c17b03a9886fb5fb1b7c36ffc99, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628166369555897053, guid: 13972c17b03a9886fb5fb1b7c36ffc99, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628166369555897053, guid: 13972c17b03a9886fb5fb1b7c36ffc99, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628166369555897053, guid: 13972c17b03a9886fb5fb1b7c36ffc99, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628166369555897053, guid: 13972c17b03a9886fb5fb1b7c36ffc99, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628166369555897053, guid: 13972c17b03a9886fb5fb1b7c36ffc99, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628166369555897053, guid: 13972c17b03a9886fb5fb1b7c36ffc99, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628166369555897053, guid: 13972c17b03a9886fb5fb1b7c36ffc99, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628166369555897053, guid: 13972c17b03a9886fb5fb1b7c36ffc99, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628166369555897053, guid: 13972c17b03a9886fb5fb1b7c36ffc99, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628166369555897055, guid: 13972c17b03a9886fb5fb1b7c36ffc99, type: 3}
-      propertyPath: m_Name
-      value: TrapController
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628166369555897055, guid: 13972c17b03a9886fb5fb1b7c36ffc99, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 13972c17b03a9886fb5fb1b7c36ffc99, type: 3}
