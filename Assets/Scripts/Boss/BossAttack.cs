@@ -52,8 +52,8 @@ public class BossAttack : MonoBehaviour
         int lastAttack = 0;
         while (true)
         {
-            id = UnityEngine.Random.Range(1, 3);
-            lastAttack += id;
+            lastAttack = (lastAttack + id) % 3;
+            id = UnityEngine.Random.Range(1, 2);
             Attack attack = Instantiate(attackPrefabs[0, (lastAttack + id) % 3]).GetComponent<Attack>();
             attack.currentPhase = currentPhase;
             yield return new WaitForSeconds(attackPatternDelay);
@@ -61,10 +61,10 @@ public class BossAttack : MonoBehaviour
             switch (currentPhase)
             {
                 case 0:
-                    attackPatternDelay = 5.0f;
+                    attackPatternDelay = 4.0f;
                     break;
                 case 1:
-                    attackPatternDelay = 4.0f;
+                    attackPatternDelay = 3.5f;
                     break;
                 case 2:
                     attackPatternDelay = 3.0f;
