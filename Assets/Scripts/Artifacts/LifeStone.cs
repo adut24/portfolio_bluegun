@@ -49,6 +49,7 @@ public class LifeStone : Artifact
 
     public override void Upgrade()
     {
+        stoneData.level += 1;
         ph.maxHealth -= stoneData.maxHealth;
         stoneData.maxHealth = Mathf.RoundToInt(stoneData.maxHealth * 1.2f); /* Increase the value in the scriptable object */
         ph.maxHealth += stoneData.maxHealth;

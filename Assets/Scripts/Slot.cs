@@ -14,9 +14,9 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         if (weapon)
             TooltipSystem.instance.ShowWeapon(weapon.weaponPrefab.GetComponent<Weapon>(), weapon.name);
         else if (armor)
-            TooltipSystem.instance.ShowArmor(armor.name, armor.description, armor.defense, armor.speed);
+            TooltipSystem.instance.ShowArmor(armor);
         else if (artifact)
-            TooltipSystem.instance.ShowArtifact(artifact.description, artifact.name);
+            TooltipSystem.instance.ShowArtifact(artifact);
     }
 
     public void OnPointerExit(PointerEventData eventData)
