@@ -14,6 +14,7 @@ public class ArtifactData : ScriptableObject
     public float artifactActivation;
     public float value;
     public int slow;
+    public int level;
     public Sprite visual;
     public GameObject artifactPrefab;
 }

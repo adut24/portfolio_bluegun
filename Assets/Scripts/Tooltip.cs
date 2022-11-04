@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,20 +22,26 @@ public class Tooltip : MonoBehaviour
             contentField.text += ("\n" + "Effect: " + content.effect);
     }
 
-    public void SetTextArmor(string name, string desc, float defense, float speed)
+    public void SetTextArmor(ArmorData armor)
     {
         layout.enabled = true;
-        headerField.text = name;
-        contentField.text = desc + "\n"
-                          + "Damage Reduction: " + defense * 100 + "%" + "\n"
-                          + "Speed: " + speed * 100 + "%"; 
+        headerField.text = armor.name;
+        contentField.text = armor.description + "\n"
+                          + "Damage Reduction: " + armor.defense * 100 + "%" + "\n"
+                          + "Speed: " + armor.speed * 100 + "%"; 
     }
 
-    public void SetTextArtifact(string content, string header)
+    public void SetTextArtifact(ArtifactData artifact)
     {
         layout.enabled = true;
+        string header = artifact.name;
+        for (int i = 0; i < artifact.level; i++)
+        {
+            header += " ★";
+        }
         headerField.text = header;
-        contentField.text = content;
+        
+        contentField.text = artifact.description;
     }
 
     private void Update()

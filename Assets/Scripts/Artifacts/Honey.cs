@@ -66,6 +66,12 @@ public class Honey : Artifact
         timerIsRunning = true;
     }
 
+    public override void Upgrade()
+    {
+        honeyData.level += 1;
+        honeyData.health += 10;
+    }
+
     public override void Remove()
     {
         isInInv = false;

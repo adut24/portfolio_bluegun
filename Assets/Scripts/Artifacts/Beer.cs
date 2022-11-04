@@ -86,6 +86,13 @@ public class Beer : Artifact
         timerIsRunning = true;
     }
 
+    public override void Upgrade()
+    {
+        beerData.level += 1;
+        beerData.damage += 2;
+        beerData.health += 5;
+    }
+
     public override void Remove()
     {
         isInInv = false;
