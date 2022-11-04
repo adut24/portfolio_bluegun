@@ -35,6 +35,7 @@ public class Clover : Artifact
 
     public override void Upgrade()
     {
+        cloverData.level += 1;
         cloverData.value *= 1.15f;
     }
 }

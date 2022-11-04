@@ -50,6 +50,7 @@ public class SpeedStone : Artifact
 
     public override void Upgrade()
     {
+        stoneData.level += 1;
         if (effectApplied)
         {
             pm.speedModifier /= (1 + stoneData.speed);

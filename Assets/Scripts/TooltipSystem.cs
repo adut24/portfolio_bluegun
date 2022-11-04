@@ -18,15 +18,15 @@ public class TooltipSystem : MonoBehaviour
         tooltip.gameObject.SetActive(true);
     }
 
-    public void ShowArmor(string name, string desc, float defense, float speed)
+    public void ShowArmor(ArmorData armor)
     {
-        tooltip.SetTextArmor(name, desc, defense, speed);
+        tooltip.SetTextArmor(armor);
         tooltip.gameObject.SetActive(true);
     }
 
-    public void ShowArtifact(string content, string header)
+    public void ShowArtifact(ArtifactData artifact)
     {
-        tooltip.SetTextArtifact(content, header);
+        tooltip.SetTextArtifact(artifact);
         tooltip.gameObject.SetActive(true);
     }
 
