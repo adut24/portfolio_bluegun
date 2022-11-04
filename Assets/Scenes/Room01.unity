@@ -238,7 +238,7 @@ MonoBehaviour:
   difficulty: Easy
   mergeDifficulty: 0
   tilemap: {fileID: 2118883393}
-  radius: 3
+  radius: 5
 --- !u!1 &1881968382
 GameObject:
   m_ObjectHideFlags: 0

@@ -228,12 +228,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17a5ece332db401cb6dc4b67648193d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iterations: 90
+  iterations: 80
   walkLength: 50
   randomStart: 1
   bombNumber: 3
   bombPower: 30
-  enemyNumber: 6
+  enemyNumber: 8
   enemyLevel: 3
   difficulty: Easy
   mergeDifficulty: 0
