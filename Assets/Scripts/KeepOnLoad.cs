@@ -9,6 +9,7 @@ public class KeepOnLoad : MonoBehaviour
     {
         foreach (GameObject element in objects)
         {
+            if (element != null)
                 DontDestroyOnLoad(element);
         }
     }
