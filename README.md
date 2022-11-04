@@ -23,14 +23,12 @@ You can read more informations about the game by taking a look at the [landing p
 
 ## Download
 Here are the links to download the game depending on the operating system you are using:
-- [Windows]()
-- [Linux]()
-- [MacOS]()
-
-**Currently none of the links work as we didn't release any builds yet**.
+- [Windows](build/windows/)
+- [Linux](build/linux/)
+- [MacOS](build/macos/)
 
 ## Usage
-To launch the game, go inside the folder downloaded in the previous step and double click on the executable file named after the game.
+To launch the game, go inside the folder downloaded in the previous step and double click on the executable file.
 
 ## Contributing
 - **Nicolas Bouté**: [Github](https://github.com/nboute) - [LinkedIn](https://www.linkedin.com/in/nicolas-boute/)
