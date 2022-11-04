@@ -23,6 +23,7 @@ public class BossHealth : Enemy
     // Start is called before the first frame update
     protected override void Start()
     {
+        Destroy(GameObject.Find("Music Loop"));
         sprite = GetComponent<SpriteRenderer>();
         health = maxHealth;
         fill.color = gradur.Evaluate(1f);
