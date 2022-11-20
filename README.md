@@ -22,10 +22,7 @@ You go through each room, one at a time inspired by *Hades* on that aspect, with
 You can read more informations about the game by taking a look at the [landing page](adut24.github.io).
 
 ## Download
-Here are the links to download the game depending on the operating system you are using:
-- [Windows](build/windows/)
-- [Linux](build/linux/)
-- [MacOS](build/macos/)
+You can download the demo build of the game by clicking on the link [here](https://github.com/adut24/portfolio_bluegun/releases/tag/v1.0.0).
 
 ## Usage
 To launch the game, go inside the folder downloaded in the previous step and double click on the executable file.
